@@ -1,0 +1,285 @@
+<?php 
+include("conect.php");
+$dni=$_GET['dni'];
+//Controla que la persona este en el padron
+conectar();
+	mysql_query("SET NAMES 'utf8'");
+	$result = mysql_query("SELECT dni FROM padron_electoral WHERE dni=$dni");
+	desconectar();
+	$row = mysql_fetch_array($result);
+	$evaluado=$row[0];	
+if($evaluado==""){
+	header("Location: error.html");
+	exit;
+	}
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="img/icono.ico" />
+<style type="text/css">
+body {
+	background-color: #999;
+}
+</style>
+<title>Empleado Publico 2014</title>
+</head>
+
+<body>
+  <p>&nbsp;</p>
+  <table width="810" border="0" align="center">
+    <tr>
+      <td width="397" align="center" bgcolor="#FFFFFF"><img src="img/emp.png" width="303" height="200" /></td>
+      <td width="397" align="center" bgcolor="#FFFFFF"><h2 style="color:#06F"><em>VOTA AL EMPLEADO<br />
+        <br />
+PUBLICO DEL ÑO 2014<br />
+<br />
+DEL PODER EJECUTIVO</em></h2></td>
+    </tr>
+  </table>
+  <table width="810" border="1" align="center">
+    <tr>
+      <td colspan="2" align="left" bgcolor="#FFFFFF"><p><br />
+        El <strong>Premio Empleado Público del Año</strong> tiene como objetivo motivar a todos los empleados a ser mejores servidores públicos.<br />
+Se premia como máximo a un empleado por Jurisdicción que reúna el perfil establecido en el reglamento del premio. <br />
+<br />
+<strong>Como CIUDADANO tiene la oportunidad de elegir en esta instancia,</strong> entre los ganadores de cada jurisdicción, al <strong>EMPLEADO PÚBLICO DEL PODER EJECUTIVO DEL AÑO 2014</strong>, por ello, a continuación se presentan 9 (nueve) perfiles correspondientes a los ganadores de las 9 (nueve) jurisdicciones participantes. La identidad se mantiene oculta para garantizar la transparencia  y objetividad del concurso.<br />
+<br />
+
+<strong>Explicativo de la información que contiene los perfiles:</strong>
+<strong>Conceptos a evaluar:</strong> Dedicación, Deseos de Superación, Proactividad, Aprendizaje continuo, Compromiso y Responsabilidad, Respeto a sus personas y a sus pares,  Colaboración y Cooperación,  Ética Laboral y  Puntualidad.<br /><br />
+
+<strong>Antigüedad: </strong>para no develar la antigüedad exacta de los candidatos se utilizaran los siguientes rangos:
+- 1 a 5 años   
+- 5 a 10 años
+- 10 a 15 años
+- 15 a 20 años 
+- 20 a 25 años
+- 25 a 30 años
+- 30 a 35 años
+- 35 a 40 años
+<br /><br />
+<strong>Puntuación máxima del jefe en los conceptos:</strong> 90 puntos (100 %)<br />
+<br />
+
+<strong>Puntuación  máxima de compañeros en los conceptos: </strong>45 puntos (100%)<br />
+        <br />
+      </p></td>
+    </tr>
+    <tr>
+      <th width="640" align="center" bgcolor="#FFFFFF">PERFIL DEL EMPLEADO PUBLICO</th>
+      <th width="154" bgcolor="#FFFFFF">&nbsp;</th>
+    </tr>
+    <tr>
+      <td bgcolor="#FFFFFF"><p align="center"><strong>PERFIL A</strong></p>
+        <p><strong>Antigüedad entre: </strong>1 a 5 años <strong> </strong><br />
+        <br />
+          <strong>Evaluación del Jefe: </strong>100% <br />
+		El jefe ha fundamentado cada concepto evaluado <br />
+          <br />
+          <strong>Votos recibidos: </strong>5 agentes votaron <br /><br />
+<strong>Evaluación de compañeros: </strong>de acuerdo a la opinión de sus compañeros su desempeño equivale a 44 puntos (98 %)<br /><br />
+5 (cinco) compañeros le atribuyeron 100% “Dedicación”,  100% Deseos de Superación, 100% Pro actividad, 100% “Aprendizaje continuo”, 100% “Compromiso y Responsabilidad”, 100%  “Respeto a sus personas y a sus pares”, 100% “Colaboración y Cooperación”, 100% “Ética Laboral” y 80% “Puntualidad”
+          <br />
+	  <br />
+
+          <strong>Nivel de Instrucción: </strong>Secundario completo, Universitario en curso.<br />
+          <br />
+          <strong>Capacitaciones: </strong><br /><br />
+Presentó cerca de 6 (seis) cursos vinculados a las funciones que realiza, desde principios del año 2000 hasta la actualidad. Temáticas: atención al público, computación, administración pública, normativa, entre otros.<br />
+<br />
+<strong>Trayectoria laboral:</strong></p>
+Desde su ingreso en la jurisdicción realizó tareas de atención al público.. </td>
+      <td align="center" valign="middle" bgcolor="#FFFFFF"><a href="guarda.php?perfil=A&dni=<?php echo $dni; ?>"><img src="img/voto.jpg"/>Votar Perfil A</a></td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#FFFFFF"><p align="center"><strong>PERFIL B</strong></p>
+        <p><strong>Antigüedad</strong><strong>: </strong>25 a 30 años<strong> </strong><br />
+        <br />
+        <strong>Evaluación del Jefe: </strong>67%.<br />
+        <br />
+
+<strong>Votos recibidos: </strong>8 agentes votaron <br /><br />
+
+<strong>Evaluación de compañeros: </strong>de acuerdo a la opinión de sus compañeros su desempeño equivale a 45 puntos (100 %)<br /><br />
+8 compañeros le atribuyeron 100% “Dedicación”,  100% Deseos de Superación, 100% Pro actividad, 100% “Aprendizaje continuo”, 100% “Compromiso y Responsabilidad”, 100%  “Respeto a sus personas y a sus pares”,  100% “Colaboración y Cooperación”,  100% “Ética Laboral” y  100% “Puntualidad”
+          <br />
+	  <br />
+
+
+      <strong>Nivel de Instrucción: </strong>Título de Nivel terciario   -  Estudio universitario en curso.<br />
+        <br />
+        <strong>Capacitaciones: </strong><br />
+Presentó 29 (veintinueve) cursos vinculados a las funciones que realiza, desde fines de los años ’80 hasta la actualidad. Temáticas: idiomas, computación, normativas, administración pública, entre otros..<br />
+<br />
+<strong>Trayectoria laboral:</strong>Desde fines de los años 80 hasta la actualidad ocupó diferentes puestos dentro de la jurisdicción actual y en otras jurisdicciones, pasando por cargos administrativos y jerárquicos.</p></td>
+      <td align="center" valign="middle" bgcolor="#FFFFFF"><a href="guarda.php?perfil=B&dni=<?php echo $dni; ?>"><img src="img/voto.jpg"/>Votar Perfil B</a></td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#FFFFFF"><p align="center"><strong>PERFIL C</strong></p>
+<p><strong> Antigüedad</strong><strong>: </strong>20 a 25 años<strong> </strong><br />
+        <br />
+        <strong>Evaluación del Jefe: </strong>100%.<br /><br />
+         <strong>Votos recibidos: </strong>21 agentes votaron <br /><br />
+        
+	<strong>Evaluación de compañeros: </strong>de acuerdo a la opinión de sus compañeros su desempeño equivale a 44 puntos (95%)<br /><br />
+21 compañeros le atribuyeron 100% “Dedicación”,  100% “Compromiso y Responsabilidad”, 100%  “Respeto a sus personas y a sus pares”,  100% “Colaboración y Cooperación”, 100% “Ética Laboral” y  100% “Puntualidad”; 81% Deseos de Superación, 81% Pro actividad y 90% “Aprendizaje continuo”.
+          <br />
+	  <br />       
+  
+ 
+  <strong>Nivel de Instrucción: </strong>Primario<strong></strong><br />
+  <br />
+  <strong>Capacitaciones: </strong><br />
+        no ha presentado cursos.<br />
+        <br />
+  <strong>Trayectoria laboral:</strong>Desde principios de los años 90 hasta la actualidad ocupó diferentes puestos dentro de la jurisdicción actual y en otras jurisdicciones, pasando por cargos como personal de maestranza.</p></td>
+      <td align="center" valign="middle" bgcolor="#FFFFFF"><a href="guarda.php?perfil=C&dni=<?php echo $dni; ?>"><img src="img/voto.jpg"/>Votar Perfil C</a></td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#FFFFFF"><p align="center"><strong>PERFIL D</strong></p>
+<p><strong> Antigüedad</strong><strong>: </strong>5 a 10 años<strong> </strong><br />
+        <br />
+        <strong>Evaluación del Jefe: </strong>100%.<br />
+        <br />
+	
+	<strong>Votos recibidos: </strong>38 agentes votaron <br /><br />
+        
+	<strong>Evaluación de compañeros: </strong>de acuerdo a la opinión de sus compañeros su desempeño equivale a 44,8 puntos (99,5%)<br /><br />
+38 compañeros le atribuyeron 100% “Dedicación”,  100% Deseos de Superación, 100% “Compromiso y Responsabilidad”, 100%  “Respeto a sus personas y a sus pares,  100% “Ética Laboral” y  100% “Puntualidad”; 97,4% Pro actividad, 97,4% “Aprendizaje continuo” y 97,4% “Colaboración y Cooperación”.
+          <br />
+	  <br />  
+        
+        <strong>Nivel de Instrucción: </strong>Secundario completo, título en trámite.<strong></strong><br />
+        <br />
+      <strong>Capacitaciones: </strong>Presentó 2 (dos) cursos vinculados a la salud y las funciones que realiza. <br />
+      <br />
+      <strong>Trayectoria laboral: </strong>Desde principios de la década del 2000 ocupó diferentes puestos dentro de su jurisdicción. Realizando primero actividades de servicios y luego, hasta la actualidad, tareas administrativas.</p></td>
+      <td align="center" valign="middle" bgcolor="#FFFFFF"><a href="guarda.php?perfil=D&dni=<?php echo $dni; ?>"><img src="img/voto.jpg"/>Votar Perfil D</a></td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#FFFFFF"><p align="center"><strong>PERFIL E</strong></p>
+        <p><strong>Antigüedad</strong><strong>: </strong>15 a 20 años. <br />
+        <br />
+        <strong>Evaluación del Jefe: </strong>94,44%<br />
+        <br />
+
+        <strong>Votos recibidos: </strong>5 agentes votaron <br /><br />
+        
+	<strong>Evaluación de compañeros: </strong>de acuerdo a la opinión de sus compañeros su desempeño equivale a 44,5 puntos (99%)<br /><br />
+5 compañeros le atribuyeron 100% “Dedicación”,  100% “Deseos de Superación”, 100% “Compromiso y Responsabilidad”, 100%  “Respeto a sus personas y a sus pares,  100% “Ética Laboral” y  100% “Puntualidad”; 80% “Pro actividad”, 100% “Aprendizaje continuo” y 100% “Colaboración y Cooperación”.
+          <br />
+	  <br />  
+	
+        <strong>Nivel de Instrucción: </strong>Secundario completo.<br />
+        <br />
+        <strong>Capacitaciones: </strong>Presentó 2 (dos) cursos, uno vinculado a temas de salud y otro a computación.</p>
+      <strong>Trayectoria laboral: </strong>Comenzó a fines de los años 90 y  ocupó diferentes puestos dentro de su jurisdicción. Realizando primero actividades de servicios y luego, hasta la actualidad, tareas administrativas.</td>
+      <td align="center" valign="middle" bgcolor="#FFFFFF"><a href="guarda.php?perfil=E&dni=<?php echo $dni; ?>"><img src="img/voto.jpg"/>Votar Perfil E</a></td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#FFFFFF"><p align="center"><strong>PERFIL F</strong></p>
+        <p><strong>Antigüedad</strong><strong>: </strong>30 a 35 años.<strong> </strong><br />
+        <br />
+        <strong>Evaluación del Jefe: </strong>94,44%<br />
+       
+	<strong>Votos recibidos: </strong>22 agentes votaron <br /><br />
+        
+	<strong>Evaluación de compañeros: </strong>e acuerdo a la opinión de sus compañeros su desempeño equivale a 45 puntos (100%)<br /><br />
+22 compañeros le atribuyeron 100% “Dedicación”,  100% Deseos de Superación, 100% “Compromiso y Responsabilidad”, 100%  “Respeto a sus personas y a sus pares,  100% “Ética Laboral” y  100% “Puntualidad”; 100% Pro actividad, 100% “Aprendizaje continuo” y 100% “Colaboración y Cooperación”.
+          <br />
+	  <br />  
+  <strong>Nivel de Instrucción: </strong>Secundario completo. Estudios terciarios y universitarios incompletos.<br />
+  <br />
+  <strong>Capacitaciones: </strong>Presentó 5 (cinco) cursos vinculados a la temática de la administración pública y normativas.<br />
+      <strong>Trayectoria laboral: </strong>Desde principios de los años 80 ocupó diferentes puestos dentro de su jurisdicción. Realizando primero actividades técnicas, y luego, cargos jerárquicos hasta la actualidad.</td>
+      <td align="center" valign="middle" bgcolor="#FFFFFF"><a href="guarda.php?perfil=F&dni=<?php echo $dni; ?>"><img src="img/voto.jpg"/>Votar Perfil F</a></td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#FFFFFF"><p align="center"><strong>PERFIL G</strong></p>
+        <p><strong>        Antigüedad</strong><strong>: </strong>20 a 25 años.<strong> </strong><br />
+        <br />
+        <strong>Evaluación del Jefe: </strong>86,11%<br />
+	El jefe ha fundamentado varios conceptosde la evaluación.
+        <br />
+        
+        <strong>Votos recibidos: </strong>32 agentes votaron <br /><br />
+        
+	<strong>Evaluación de compañeros: </strong>de acuerdo a la opinión de sus compañeros su desempeño equivale a 44,5 puntos (98%)<br /><br />
+32 compañeros le atribuyeron 97% “Dedicación”,  100% Deseos de Superación, 100% “Compromiso y Responsabilidad”, 97%  “Respeto a sus personas y a sus pares,  97% “Ética Laboral” y  97% “Puntualidad”; 100% Pro actividad, 97% “Aprendizaje continuo” y 97% “Colaboración y Cooperación”.
+          <br />
+	  <br />  
+
+        <strong>Nivel de Instrucción: </strong>Terciario incompleto.<br />
+        <br />
+        <strong>Capacitaciones: </strong>Presentó 15 (quince) cursos vinculados a computación, temáticas de la administración pública, normativas y relacionadas a su puesto.</p>
+      <strong>Trayectoria laboral: </strong>Desde principio de los años 90  trabaja en la jurisdicción, en una primera etapa en oficinas vinculadas a la atención de personas. Actualmente tiene un cargo jerárquico.</td>
+      <td align="center" valign="middle" bgcolor="#FFFFFF"><a href="guarda.php?perfil=G&dni=<?php echo $dni; ?>"><img src="img/voto.jpg"/>Votar Perfil G</a></td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#FFFFFF"><p align="center"><strong>PERFIL H</strong></p>
+        <p><strong>Antigüedad</strong><strong>: </strong>1 a 5 años<strong> </strong><br />
+        <br />
+        <strong>Evaluación del Jefe: </strong>97,2%<br />
+        <br />
+        <strong>Votos recibidos: </strong>6 agentes votaron <br /><br />
+        
+	<strong>Evaluación de compañeros: </strong>de acuerdo a la opinión de sus compañeros su desempeño equivale a 41,25 puntos (92%)<br /><br />
+6 compañeros le atribuyeron 83% “Dedicación”,  83% Deseos de Superación, 83% “Compromiso y Responsabilidad”, 83%  “Respeto a sus personas y a sus pares,  83% “Ética Laboral” y  83% “Puntualidad”; 83% Pro actividad, 83% “Aprendizaje continuo” y 83% “Colaboración y Cooperación”.
+          <br />
+	  <br />  
+        <strong>Nivel de Instrucción: </strong>Universitario incompleto.<br />
+        <br />
+        <strong>Capacitaciones: </strong>Presentó  2 (dos) cursos vinculados a computación.</p>
+      <strong>Trayectoria laboral:</strong> Desde principios de la década del 2010 trabaja en su jurisdicción, realizando tareas administrativas. </td>
+      <td align="center" valign="middle" bgcolor="#FFFFFF"><a href="guarda.php?perfil=H&dni=<?php echo $dni; ?>"><img src="img/voto.jpg"/>Votar Perfil H</a></td>
+    </tr>
+    <tr>
+      <td align="left" bgcolor="#FFFFFF"><p align="center"><strong>PERFIL I</strong></p>
+	<p><strong>Antigüedad</strong><strong>: </strong>35 a 40 años.<strong> </strong><br />
+        <br />
+        <strong>Evaluación del Jefe: </strong>75%<br />
+
+        <strong>Votos recibidos: </strong>7 agentes votaron <br /><br />
+        
+	<strong>Evaluación de compañeros: </strong>de acuerdo a la opinión de sus compañeros su desempeño equivale a  43 puntos (95,5%)<br /><br />
+7 compañeros le atribuyeron 100% “Dedicación”,  86% Deseos de Superación, 86% “Compromiso y Responsabilidad”, 86% “Respeto a sus personas y a sus pares, 100% “Ética Laboral”, 100% “Puntualidad”; 86% Pro actividad, 86% “Aprendizaje continuo” y 86% “Colaboración y Cooperación”.
+          <br />
+	  <br />  
+  <strong>Nivel de Instrucción: </strong>Secundario (Ciclo Básico)<strong></strong><br />
+  <br />
+  <strong>Capacitaciones: </strong><br />
+        PPresentó 18 (dieciocho) cursos vinculados a temáticas de la administración pública, computación, normativa, entre otros.<strong></strong><br />
+        <br />
+  <strong>Trayectoria laboral:</strong>Trabajó desde fines de los años 70 hasta la actualidad en su jurisdicción, desempeñando tareas administrativas estando en cargos jerárquicos en diferentes oportunidades.</p></td>
+      <td align="center" valign="middle" bgcolor="#FFFFFF"><a href="guarda.php?perfil=I&dni=<?php echo $dni; ?>"><img src="img/voto.jpg"/>Votar Perfil I</a></td>
+    </tr>
+    
+    <tr>
+      <td colspan="2" align="left" bgcolor="#FFFFFF"><p><strong>Las características  que se tuvieron en cuenta para postular a los agentes, de acuerdo a lo  establecido en el Artículo 7 del <a href="http://scgp.chaco.gov.ar/scgpchaco/images/PROFyM/premioempleadopublico/2013/reglamentopremioempleado2013_v2.pdf">Reglamento del premio</a>, son las siguientes:</strong><br />
+        <br />
+        <strong>Dedicación:</strong> ocupación  plena de su tiempo laboral para la consecución de los objetivos y tareas  encomendadas por su superior. <br />
+        <br />
+        <strong>Deseos de superación:</strong> gran espíritu de superación y una gran necesidad de alcanzar los objetivos  que se fijen. El deseo de superación debe estar presente en todo momento. <br />
+        <br />
+        <strong>Proactividad:</strong> significa tomar la iniciativa y asumir la responsabilidad de hacer que las  cosas sucedan; decidir en cada momento lo que queremos hacer y cómo lo vamos a  hacer. <br />
+        <br />
+        <strong>Aprendizaje continuo:</strong> busca y comparte información útil para la resolución de situaciones del  servicio utilizando todo el potencial de la institución. Incluye la capacidad  de capitalizar la experiencia de otros y la propia. <br />
+        <br />
+        <strong>Compromiso y Responsabilidad:</strong> trabaja a la par de autoridades y colegas, defiende los intereses de la  organización como si fueran propios. <br />
+        <br />
+        <strong>Respeto a su persona y sus pares:</strong> sabe recibir abiertamente opiniones y críticas, las cuales toma en cuenta.  Es tolerante y comprensivo hacia otras ideologías, cultos y costumbres las  cuales puede aceptar sin compartir. <br />
+        <br />
+        <strong>Puntualidad:</strong> acude  regularmente en tiempo y forma a su lugar de trabajo. Comunica de su  inasistencia, y procura compensar el trabajo atrasado. <br />
+        <br />
+      <strong>Colaboración y Cooperación:</strong> ambos conceptos refieren sobre la contribución y trabajo con otra u otras  personas en pos de la realización de una tarea o tareas encomendadas. <br />
+      <br />
+      <strong>Honestidad:</strong> consiste en comportarse y expresarse con  coherencia y sinceridad. Refiere al simple respeto a la verdad en relación con  el mundo, los hechos y las personas, incluso consigo mismo. </p></td>
+    </tr>
+	<tr>
+	<td colspan ="2" align="center" valign="middle" bgcolor="#FFFFFF"><a href="comentarios_sinvotos.php?dni=<?php echo $dni; ?>"/>Sugerencias y/o Comentarios sobre el Premio</a></td>
+	</tr>
+  </table>
+</body>
+</html>

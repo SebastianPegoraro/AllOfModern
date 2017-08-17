@@ -1,0 +1,56 @@
+<div class="row" >
+	<div class="col-sm-12" >
+		<div class="slider-container">
+			<div class="slider">
+			  <div class="slider-img-container">
+			  	<img src="images/slide1.png" alt="" class="img-responsive slider-img">
+			  </div>
+			  <div class="slider-img-container">
+			  	<img src="images/slide2.png" alt="" class="img-responsive slider-img">
+			  </div>
+			  <div class="slider-img-container">
+			  	<img src="images/slide3.png" alt="" class="img-responsive slider-img">
+			  </div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row" style="color: white">
+	<div class="col-sm-7 text-justify" style="background-color: rgba(0,159,227,0.25); border-radius: 25px;">
+		<h2 class="text-left">
+			<strong><i class="fa fa-bug"></i> ¿Quienes somos? </strong>
+		</h2>
+		<p>	
+			Desde la Dirección de Soporte Técnico, trabajando bajo las indicaciones de la Dirección General de Tecnologías de Información, creamos el programa de Seguridad Activa con el objetivo de contribuir a  la cultura de la ciberseguridad y a la concientización sobre el uso seguro de internet y tecnologías de la comunicación al empleado público y a la ciudadanía en general, generando contenidos que colaboren a conformar digital más seguro.
+		</p>
+
+	</div>
+	<div class="col-sm-5">
+		<div class="embed-responsive embed-responsive-16by9" style="border-radius: 25px">
+			<iframe src="https://www.youtube.com/embed/QRnGb8I5Sa4?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	(function($){
+		$('.slider').slick({
+			dots: true,
+			infinite: true,
+			speed: 300,
+			slidesToShow: 1,
+			//adaptiveHeight: true,
+			autoplay: true,
+			pauseOnFocus: false,
+			mobileFirst: true,
+			arrows: false,
+			responsive: [
+			    {
+			      breakpoint: 768,
+			      settings: {
+			        arrows: true
+			      }
+			    }
+		    ]
+		});
+	}(jQuery));
+</script>
