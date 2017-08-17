@@ -74,21 +74,63 @@ if($dnipost==""){
 					SELECCIONA UNA DE LAS CATEGORIAS<br>
 				</h2>
 				<form id="form1" name="form1" method="post" action="consulta.php" class="form-horizontal well">
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						<!--Primer-->
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingOne">
+								<h1 class="panel-tittle">
+									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+										Proyectos Transmutables
+									</a>
+								</h1>
+							</div>
+							<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+					      <div class="list-group">
+									<div data-toggle="buttons">
+										<label class="btn btn-primary">
+									    <input type="radio" name="options" id="option1" autocomplete="off">Transparencia
+									  </label>
+										<br>
+										<label class="btn btn-primary">
+									    <input type="radio" name="options" id="option2" autocomplete="off">Gestion
+									  </label>
+										<br>
+										<label class="btn btn-primary">
+									    <input type="radio" name="options" id="option3" autocomplete="off">Mejora
+									  </label>
+									</div>
+					      </div>
+					    </div>
+						</div>
+						<!--Second-->
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingTwo">
+								<h1 class="panel-tittle">
+									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+										Capacitación
+									</a>
+								</h1>
+							</div>
+							<div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+					      <div class="list-group">
+									<option value="">Adquiridas</option>
+									<option value="">Impartidas</option>
+					      </div>
+					    </div>
+						</div>
 
- 				<div class="form-group">
- 						<label for="dnipostulante" class="col-sm-2 control-label">DNI</label>
-					<div class="col-sm-10">
-							<input type="hidden" name="dnipostulante" id="dnipostulante" value="<?php echo $dnipost ?>"/>
-            				<input type="hidden" name="jurpost" id="jurpost" value="<?php echo $jurpost ?>" />
-						   	<span id="dnivotante"></span>
-						    <input type="text" name="dnivotante" id="dnivotante" class="form-control"/>
-						    <input name="oculto" type="hidden" id="oculto" value="votante" />
-				    </div>
-				</div>
-				<div class="form-group">
-					    <label for="jurpost" class="col-sm-2 control-label">JURISDICCI&Oacute;N</label>
+					</div>
 
-				    </div>
+						<ul class="list-group">
+							<li class="list-group-item">
+								<select >
+
+								</select></li>
+							<li class="list-group-item"><label>Capacitacion</label></li>
+							<li class="list-group-item"><label>Entidades Civiles</label></li>
+							<li class="list-group-item"><label>Innovacion Puestos de Trabajo</label></li>
+						</ul>
+
 				<button type="submit" name="Consultar" id="Consultar" class="btn btn-default">
 			    		SIGUIENTE <i class="fa fa-arrow-right"></i>
 			    </button>

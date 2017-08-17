@@ -180,8 +180,19 @@ img.header-logo-gob {
 	width: auto;
 }
 
-/*Para el logo de la cabezara izquierda */
-header.main .header-left {
+/*Para el logo de la cabezara izquierda Olimpiadas */
+header.main .header-left-olim {
+	height: 189px;
+	width: 228px;
+	background: url(../images/logo-olimpiadas.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 100;
+	left: 10%;
+}
+
+/*Para el logo de la cabezara izquierda Premio*/
+header.main .header-left-prem {
 	height: 189px;
 	width: 228px;
 	background: url(../images/logo-olimpiadas.png);
@@ -336,7 +347,7 @@ header.main .header-right {
 .boton-voto {
 	position: fixed;
 	right: 0px;
-	top: 5px;
+	top: 200px;
 	z-index: 200;
 }
 
@@ -424,12 +435,7 @@ header.main .header-right {
 		text-align: right;
 	}
 
-	.boton-voto {
-		top: 164px;
-	}
-
 	.boton-voto img {
-
 		width: 150px;
 		height: auto;
 	}
