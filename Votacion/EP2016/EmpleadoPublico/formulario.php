@@ -1,4 +1,4 @@
-<?php 
+<?php
 include("conect.php");
 //controlar seguridad
 $dnipost=$_REQUEST['postul'];
@@ -34,7 +34,7 @@ abrirBase();
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>CHACO - Premio al Empleado P�blico 2016</title>
+	<title>CHACO - Premio al Empleado P�blico 2016</title>
 	<!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
@@ -51,7 +51,7 @@ abrirBase();
     <![endif]-->
 </head>
 <body>
-	<a class="boton-voto" href="#"><img src="images/gracias.png" alt="Vot� ac�"></a>
+	<a class="boton-voto" href="#"><img src="images/gracias.png" alt="Vot� ac�"></a>
 	<div class="header-container">
 		<header class="main container">
 			<div class="header-left"></div>
@@ -84,14 +84,14 @@ abrirBase();
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	      <ul class="nav navbar-nav navbar-center"> 
-	             	
+	      <ul class="nav navbar-nav navbar-center">
+
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
 	<div class="container">
-		
+
 
 
 
@@ -105,11 +105,11 @@ abrirBase();
 
 function ocultar($nombre){
 	if ($nombre.style.display=='none'){
-	$nombre.style.display='block'; 
+	$nombre.style.display='block';
 	$nombre.required="required";
 	}
 	else {
-	$nombre.style.display='none'; 
+	$nombre.style.display='none';
 	$nombre.required=false;
 	}
 	}
@@ -120,12 +120,12 @@ error_reporting(0);
 ?>
 <body>
 <table width="1033" height="446" border="1" align="center" cellspacing="4" bgcolor="#CCCCCC">
-  
-    <th colspan="2" align="left" valign="top" bgcolor="#FFFFFF" scope="row"><form id="form1" name="form1" method="post" action="guarda.php">   
+
+    <th colspan="2" align="left" valign="top" bgcolor="#FFFFFF" scope="row"><form id="form1" name="form1" method="post" action="guarda.php">
 <p style="color:rgb(248,67,67)">Nota: Recuerde que podrá votar una (1) sóla vez y a un (1) compañero.</p>
 <table width="1013" border="0" cellspacing="4">
         <tr>
-          <th width="558" bgcolor="#FFFFFF" scope="row"><h2>1. Datos del Empleado a quien quiere votar</h2>
+          <th width="558" bgcolor="#FFFFFF" scope="row"><h2>Ingrese sus Datos para Postularse</h2>
           </th>
         </tr>
         <tr>
@@ -153,19 +153,38 @@ error_reporting(0);
               <th bgcolor="#FFFFFF" scope="row"><input name="oficina" type="text" id="oficina" value="<?php echo $ofi;?>" size="40" readonly="readonly"/></th>
               <td align="center" valign="middle" bgcolor="#FFFFFF">Localidad</td>
               <td align="left" bgcolor="#FFFFFF"><input name="local" type="text" id="local" size="40" /></td>
-	    </tr>
+	    			</tr>
             <tr>
               <th align="center" valign="middle" bgcolor="#FFFFFF" scope="row">DNI</th>
               <th bgcolor="#FFFFFF" scope="row"><input name="dni" type="text" id="dni" value="<?php echo $dnipost;?>" size="40" readonly="readonly"/></th>
               <td align="center" valign="middle" bgcolor="#FFFFFF">Tipo de Atención</td>
-	      	<th colspan="2" align="left" valign="middle" scope="row">
-		    <select name="depen" id="depen">
-		      <option value="1">On Line</option>
-		      <option value="2">Telefónico</option>
-		      <option value="3">Presencial</option>
-		    </select>
-          	</th>
+			      	<th colspan="2" align="left" valign="middle" scope="row">
+						    <select name="depen" id="depen">
+						      <option value="1">On Line</option>
+						      <option value="2">Telefónico</option>
+						      <option value="3">Presencial</option>
+						    </select>
+		          </th>
             </tr>
+						<tr>
+              <th align="center" valign="middle" bgcolor="#FFFFFF" scope="row">Cargo</th>
+              <th bgcolor="#FFFFFF" scope="row"><input name="cargo" type="text" id="cargo" size="40"/></th>
+              <td align="center" valign="middle" bgcolor="#FFFFFF">Jefe Inmediato Superior</td>
+              <td align="left" bgcolor="#FFFFFF"><input name="jefeSup" type="text" id="jefeSup" size="40" /></td>
+	    			</tr>
+						<tr>
+              <th align="center" valign="middle" bgcolor="#FFFFFF" scope="row">Correo Electrónico</th>
+              <th bgcolor="#FFFFFF" scope="row"><input name="correo" type="text" id="correo" size="40"/></th>
+							<td align="center" valign="middle" bgcolor="#FFFFFF">Como se Enteró del Premio</td>
+			      	<th colspan="2" align="left" valign="middle" scope="row">
+						    <select name="seEntero" id="seEntero">
+						      <option value="1">Diario</option>
+						      <option value="2">Internet</option>
+						      <option value="3">Radio</option>
+									<option value="4">Compañero de Trabajo</option>
+						    </select>
+		          </th>
+	    			</tr>
             <tr>
               <th colspan="4" bgcolor="#FFFFFF" scope="row">&nbsp;</th>
               </tr>
@@ -236,7 +255,7 @@ error_reporting(0);
             </table>
             <span class="radioRequiredMsg">Realice una selección.</span></div></td>
         </tr>
-        
+
       </table>
       <table width="100%" border="1">
         <tr>
@@ -270,7 +289,7 @@ error_reporting(0);
               </table>
             <span class="radioRequiredMsg">Realice una selección.</span></div></td>
 </tr>
-        
+
         </table>
       <table width="100%" border="1">
         <tr>
@@ -304,7 +323,7 @@ error_reporting(0);
               </table>
             <span class="radioRequiredMsg">Realice una selección.</span></div></td>
 </tr>
-        
+
       </table>
       <table width="100%" border="1">
         <tr>
@@ -371,7 +390,7 @@ error_reporting(0);
               </table>
             <span class="radioRequiredMsg">Realice una selección.</span></div></td>
 </tr>
-        
+
       </table>
       <table width="100%" border="1">
         <tr>
@@ -405,7 +424,7 @@ error_reporting(0);
               </table>
             <span class="radioRequiredMsg">Realice una selección.</span></div></td>
 </tr>
-        
+
       </table>
       <table width="100%" border="1">
         <tr>
@@ -439,7 +458,7 @@ error_reporting(0);
               </table>
             <span class="radioRequiredMsg">Realice una selección.</span></div></td>
 </tr>
-        
+
       </table>
       <table width="100%" border="1">
         <tr>
@@ -473,33 +492,33 @@ error_reporting(0);
               </table>
             <span class="radioRequiredMsg">Realice una selección.</span></div></td>
 	</tr>
-	
-	
+
+
 </th>
 </tr>
 </table>
-<!--Termina tabla con formulario--> 
+<!--Termina tabla con formulario-->
 
 <!--Empiezan las preguntas abiertas -->
 <p>&nbsp;</p>
 <table>
-	<tr>	
+	<tr>
 		<td align="left" valign="top"><span id="obser1">
 			<label align="left"> 10) Explique y justifique por qué vota a esta persona como candidato al Mejor Empleado Público del año 2016, de su 				jurisdicción. </label>
                         <textarea name="obser1" id="obser1" cols="120" rows="11"></textarea>
                         <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">No se cumple el mínimo de caracteres 				requerido(150).</span></span>
 		</td>
-			
+
 	</tr>
 	<tr>
 		<td align="left" valign="top"><span id="obser2">
-			<label align="left"> 11) Cuente una anécdota o situación de este postulante que haya ocurrido en el ámbito laboral, en la que se 
+			<label align="left"> 11) Cuente una anécdota o situación de este postulante que haya ocurrido en el ámbito laboral, en la que se
 				se expresen cualidades que lo hagan candidato al Mejor Empleado Público del año 2016.
 				Recuerde que se vota al mejor empleado, no al mejor compañero. </label>
                         <textarea name="obser2" id="obser2" cols="120" rows="11"></textarea>
                         <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">No se cumple el mínimo de caracteres 				requerido(150).</span></span>
 		</td>
-		
+
 	</tr>
 </table>
 <!-- Terminan las preguntas abiertas -->
@@ -535,7 +554,7 @@ error_reporting(0);
                           <input name="emailvot" type="text" id="emailvot" size="40" />
                           <span class="textfieldRequiredMsg">Se necesita un valor.</span><span class="textfieldInvalidFormatMsg">Formato no válido.</span></span></th>
                           <th scope="row"><label for="apynomvot"></label></th>
-                          
+
 			 <th><label>Medio</label></th>
 			      	<th colspan="2" align="left" valign="middle" scope="row">
 				    <select name="medio" id="medio">

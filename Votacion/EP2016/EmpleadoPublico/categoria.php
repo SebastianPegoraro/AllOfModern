@@ -75,12 +75,12 @@ if($dnipost==""){
 				</h2>
 				<form id="form1" name="form1" method="post" action="consulta.php" class="form-horizontal well">
 					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-						<!--Primer-->
+						<!--Primero-->
 						<div class="panel panel-default">
 							<div class="panel-heading" role="tab" id="headingOne">
 								<h1 class="panel-tittle">
 									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-										Proyectos Transmutables
+										Proyectos Especiales/Transversales
 									</a>
 								</h1>
 							</div>
@@ -98,11 +98,23 @@ if($dnipost==""){
 										<label class="btn btn-primary">
 									    <input type="radio" name="options" id="option3" autocomplete="off">Mejora
 									  </label>
+										<br>
+										<label class="btn btn-primary">
+									    <input type="radio" name="options" id="option4" autocomplete="off">Participacion Ciudadana
+									  </label>
+										<br>
+										<label class="btn btn-primary">
+									    <input type="radio" name="options" id="option5" autocomplete="off">Servicio de Atencion al Ciudadano
+									  </label>
+										<br>
+										<label class="btn btn-primary">
+									    <input type="radio" name="options" id="option6" autocomplete="off">Mejora a la Gestion Publica
+									  </label>
 									</div>
 					      </div>
 					    </div>
 						</div>
-						<!--Second-->
+						<!--Segundo-->
 						<div class="panel panel-default">
 							<div class="panel-heading" role="tab" id="headingTwo">
 								<h1 class="panel-tittle">
@@ -113,23 +125,110 @@ if($dnipost==""){
 							</div>
 							<div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
 					      <div class="list-group">
-									<option value="">Adquiridas</option>
-									<option value="">Impartidas</option>
+									<div data-toggle="buttons">
+										<label class="btn btn-primary">
+									    <input type="radio" name="options" id="option7" autocomplete="off">Adquiridas
+									  </label>
+										<br>
+										<label class="btn btn-primary">
+									    <input type="radio" name="options" id="option8" autocomplete="off">Impartidas
+									  </label>
+									</div>
+					      </div>
+					    </div>
+						</div>
+						<!--Tercero-->
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingTree">
+								<h1 class="panel-tittle">
+									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTree" aria-expanded="true" aria-controls="collapseTree">
+										Colaboración en Proyectos Sociales
+									</a>
+								</h1>
+							</div>
+							<div id="collapseTree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTree">
+					      <div class="list-group">
+									<div data-toggle="buttons">
+										<label class="btn btn-primary">
+									    <input type="radio" name="options" id="option9" autocomplete="off">Medioambiente
+									  </label>
+										<br>
+										<label class="btn btn-primary">
+									    <input type="radio" name="options" id="option10" autocomplete="off">Salud
+									  </label>
+										<br>
+										<label class="btn btn-primary">
+									    <input type="radio" name="options" id="option11" autocomplete="off">Inclusión Social
+									  </label>
+										<br>
+										<label class="btn btn-primary">
+									    <input type="radio" name="options" id="option12" autocomplete="off">Seguridad
+									  </label>
+										<br>
+										<label class="btn btn-primary">
+									    <input type="radio" name="options" id="option13" autocomplete="off">Defensa al Consumidor
+									  </label>
+										<br>
+										<label class="btn btn-primary">
+									    <input type="radio" name="options" id="option14" autocomplete="off">Educación
+									  </label>
+										<br>
+										<label class="btn btn-primary">
+									    <input type="radio" name="options" id="option15" autocomplete="off">Niñez, Adolecencia y Familia
+									  </label>
+										<br>
+										<label class="btn btn-primary">
+									    <input type="radio" name="options" id="option16" autocomplete="off">Asistencia Social
+									  </label>
+										<br>
+										<label class="btn btn-primary">
+									    <input type="radio" name="options" id="option17" autocomplete="off">Recreación
+									  </label>
+										<br>
+										<label class="btn btn-primary">
+									    <input type="radio" name="options" id="option18" autocomplete="off">Comunicación
+									  </label>
+									</div>
+					      </div>
+					    </div>
+						</div>
+						<!--Cuarto-->
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingFour">
+								<h1 class="panel-tittle">
+									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+										Innovación en el Puesto de Trabajo
+									</a>
+								</h1>
+							</div>
+							<div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour">
+					      <div class="list-group">
+									<div data-toggle="buttons">
+										<label class="btn btn-primary">
+									    <input type="radio" name="options" id="option19" autocomplete="off">M Procesos
+									  </label>
+										<br>
+										<label class="btn btn-primary">
+									    <input type="radio" name="options" id="option20" autocomplete="off">Incorporación de nuevas tecnologias
+									  </label>
+										<br>
+										<label class="btn btn-primary">
+									    <input type="radio" name="options" id="option21" autocomplete="off">Canales de Comunicaión
+									  </label>
+										<br>
+										<label class="btn btn-primary">
+									    <input type="radio" name="options" id="option22" autocomplete="off">Alternati a los Servicios
+									  </label>
+										<br>
+										<label class="btn btn-primary">
+									    <input type="radio" name="options" id="option23" autocomplete="off">Reutilización de Insumos
+									  </label>
+									</div>
 					      </div>
 					    </div>
 						</div>
 
 					</div>
-
-						<ul class="list-group">
-							<li class="list-group-item">
-								<select >
-
-								</select></li>
-							<li class="list-group-item"><label>Capacitacion</label></li>
-							<li class="list-group-item"><label>Entidades Civiles</label></li>
-							<li class="list-group-item"><label>Innovacion Puestos de Trabajo</label></li>
-						</ul>
 
 				<button type="submit" name="Consultar" id="Consultar" class="btn btn-default">
 			    		SIGUIENTE <i class="fa fa-arrow-right"></i>

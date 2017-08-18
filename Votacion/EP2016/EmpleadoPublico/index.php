@@ -73,7 +73,7 @@
 					    <label for="dnipostulante" class="col-sm-2 control-label">DNI</label>
 					    <div class="col-sm-10">
 					    	<span id="dnipostulante"></span>
-						    <input type="text" name="dnipostulante" id="dnipostulante" class="form-control"/>
+						    <input type="text" name="dnipostulante" id="dnipostulante" class="form-control" required/>
 						    <input name="oculto" type="hidden" id="oculto" value="postulante" />
 					    </div>
 				  	</div>
