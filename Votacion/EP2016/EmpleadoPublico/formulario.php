@@ -1,11 +1,11 @@
 <?php
 include("conect.php");
 //controlar seguridad
-$dnipost=$_REQUEST['postul'];
+$dnipost=isset($_REQUEST['postul']) ? $_REQUEST['postul'] : null;
 $jurpost=$_REQUEST['jurpost'];
 $votante=$_REQUEST['votante'];
 if($dnipost==""){
-	header("Location: index.html");
+//	header("Location: index.html");
 	}
 //Tiramos una consulta a la base para traer los datos
 //Postulante
