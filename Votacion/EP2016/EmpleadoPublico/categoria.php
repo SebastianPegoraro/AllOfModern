@@ -67,11 +67,12 @@ if($dnipost==""){
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
+
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-8 col-sm-offset-2">
 				<h2>
-					SELECCIONA UNA DE LAS CATEGORIAS<br>
+					SELECCIONA UNA DE LAS CATEGORIAS Y SUBCATEGORIA<br>
 				</h2>
 				<form id="form1" name="form1" method="post" action="consulta.php" class="form-horizontal well">
 					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -87,28 +88,26 @@ if($dnipost==""){
 							<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
 					      <div class="list-group">
 									<div data-toggle="buttons">
+										<a href="formulario-proyectos.php" class="btn btn-primary">Transparencia</a>
+										<br>
 										<label class="btn btn-primary">
-									    <input type="radio" name="options" id="option1" autocomplete="off">Transparencia
+									    <input type="radio" name="options" id="pe2" autocomplete="off">Gestion
 									  </label>
 										<br>
 										<label class="btn btn-primary">
-									    <input type="radio" name="options" id="option2" autocomplete="off">Gestion
+									    <input type="radio" name="options" id="pe3" autocomplete="off">Mejora
 									  </label>
 										<br>
 										<label class="btn btn-primary">
-									    <input type="radio" name="options" id="option3" autocomplete="off">Mejora
+									    <input type="radio" name="options" id="pe4" autocomplete="off">Participacion Ciudadana
 									  </label>
 										<br>
 										<label class="btn btn-primary">
-									    <input type="radio" name="options" id="option4" autocomplete="off">Participacion Ciudadana
+									    <input type="radio" name="options" id="pe5" autocomplete="off">Servicio de Atencion al Ciudadano
 									  </label>
 										<br>
 										<label class="btn btn-primary">
-									    <input type="radio" name="options" id="option5" autocomplete="off">Servicio de Atencion al Ciudadano
-									  </label>
-										<br>
-										<label class="btn btn-primary">
-									    <input type="radio" name="options" id="option6" autocomplete="off">Mejora a la Gestion Publica
+									    <input type="radio" name="options" id="pe6" autocomplete="off">Mejora a la Gestion Publica
 									  </label>
 									</div>
 					      </div>

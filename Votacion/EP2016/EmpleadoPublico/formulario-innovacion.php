@@ -3,8 +3,7 @@ include("conect.php");
 //controlar seguridad
 $dnipost=$_REQUEST['postul'];
 $jurpost=$_REQUEST['jurpost'];
-//$votante=$_REQUEST['votante'];
-$categoria = $_REQUEST['']
+$votante=$_REQUEST['votante'];
 if($dnipost==""){
 	header("Location: index.html");
 	}
@@ -190,169 +189,82 @@ error_reporting(0);
               </tr>
             <tr>
               <th colspan="4" bgcolor="#FFFFFF" scope="row"><p>&nbsp;</p>
-                <h2>CATEGORIA: Capacitaci&oacuten</h2>
-                <h4>Se eval&uacutea el nivel educativo alcanzado como as&iacute tambi&eacuten todos los cursos realizados
-                y participaci&oacuten en seminarios con tem&aacuteticas acordes al puesto de trabajo</h4>
+                <h2>CATEGORIA: Innovaci&oacuten</h2>
+                
 
 <!--Empiezan las preguntas abiertas -->
 <p>&nbsp;</p>
 <table>
 	<tr>
-		<td align="left" valign="top"><span id="descrip">
-			<label align="left">DESCRIPCI&oacuteN DEL PUESTO</label>
-        <textarea name="descrip" id="descrip" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
-        </span>
-		</td>
-	</tr>
-	<tr>
-		<td><br></td>
-	</tr>
-	<tr>
-		<td>
-			<table>
-				<tbody>
-					<h5><u>&uacuteltimos estudios terciarios y/o universitarios</u></h5>
-				</tbody>
-				<tr>
-					<td>Fecha de inicio</td>
-					<td><input type="text" name="EInicio" id="EInicio" placeholder="AAAA-MM-DD"></td>
-				</tr>
-				<tr>
-					<td>Fecha de Finalizaci&oacuten</td>
-					<td><input type="text" name="EFinal" id="EFinal" placeholder="AAAA-MM-DD"></td>
-				</tr>
-				<tr>
-					<td>Nombre de la Instituci&oacuten</td>
-					<td><input type="text" name="Einsti" id="Einsti"></td>
-				</tr>
-				<tr>
-					<td>Programa acad&eacutemico</td>
-					<td><input type="text" name="acade" id="acade"></td>
-				</tr>
-				<tr>
-					<td>Grado Obtenido</td>
-					<td><input type="text" name="grado" id="grado"></td>
-				</tr>
-				<tr>
-					<td>Distinciones y Reconocimiento</td>
-					<td><input type="text" name="distReco" id="distReco"></td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-	<tr>
-		<td><br></td>
-	</tr>
-	<tr>
-		<td align="left" valign="top"><span id="nivelAca">
-			<label align="left">¿C&oacutemo constribuye su nivel acad&eacutemico a su desempeño laboral?</label>
-        <textarea name="nivelAca" id="nivelAca" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
-        </span>
-		</td>
-	</tr>
-	<tr>
-		<td><br></td>
-	</tr>
-	<tr>
-		<td align="left" valign="top"><span id="nivelAca">
-			<label align="left">Cursos y seminarios</label>
-        <textarea name="nivelAca" id="nivelAca" cols="120" rows="11" placeholder="Detalle aqu&iacute el nombre de la instituci&oacuten, el nombre del curso y su duraci&oacuten. Si son varios, repita el procedimiento."></textarea>
-        </span>
-		</td>
-	</tr>
-	<tr>
-		<td><br></td>
-	</tr>
-	<tr>
-		<td align="left" valign="top"><span id="descrip">
-			<label align="left">¿C&oacutemo contribuy&oacute la capacitaci&oacuten en su puesto de trabajo?</label>
-        <textarea name="descrip" id="descrip" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
-        </span>
-		</td>
-	</tr>
-	<tr>
-		<td><br></td>
-	</tr>
-	<tr>
-		<td align="left" valign="top"><span id="descrip">
-			<label align="left">¿Comparte los conocimientos adquiridos con sus compañeros de trabajo?</label>
-        <textarea name="descrip" id="descrip" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
-        </span>
-		</td>
-	</tr>
-	<tr>
-		<td><br></td>
-	</tr>
-	<tr>
-		<td align="left" valign="top"><span id="descrip">
-			<label align="left">¿En qu&eacute otras tem&aacuteticas que aporten a su puesto de trabajo le gustar&iacutea capacitarse?</label>
-        <textarea name="descrip" id="descrip" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
-        </span>
-		</td>
-	</tr>
-	<tr>
-		<td><br></td>
-	</tr>
-	<tr>
-		<td align="left" valign="top"><span id="descrip">
-			<label align="left">¿Por qu&eacute se est&aacute postulando al premio?¿Por qu&eacute se postula en esta categor&iacutea?</label>
-        <textarea name="descrip" id="descrip" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
-        </span>
-		</td>
-	</tr>
-	<tr>
-		<td><br></td>
-	</tr>
-	<tr>
-		<td align="left" valign="top"><span id="descrip">
-			<label align="left">¿Qu&eacute otras categor&iacuteas adem&aacutes de las actuales cree que merecen reconocimiento?</label>
-        <textarea name="descrip" id="descrip" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
-        </span>
-		</td>
-	</tr>
-	<tr>
-		<td><br></td>
-	</tr>
-	<tr>
-		<td align="left" valign="top"><span id="descrip">
-			<label align="left">Sugerencias</label></label>
-        <textarea name="descrip" id="descrip" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
-        </span>
-		</td>
-	</tr>
+		<td align="left" valign="top"><span id="obser1">
+			<p><label align="left">Qu&eacute soluci&oacuten se ha propuesto para el mismo? </label></p>
+       <p>                 <textarea name="obser1" id="obser1" cols="120" rows="11"></textarea>
+                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">aca no deber�a controlar</span></span>
+		  </p>
+    </td>
 
-</table>
-<!-- Terminan las preguntas abiertas -->
+	</tr>
+	<tr>
+		<td align="left" valign="top"><span id="obser2">
+			<p><label align="left">Qu&eacute resultados dio la soluci&oacuten planteada o qu&eacute resultados espera de la misma?</label></p>
+       <p>                 <textarea name="obser2" id="obser2" cols="120" rows="11"></textarea>
+                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">aca no deber�a controlar</span></span>
+		  </p>
+    </td>
 
-                      <p>&nbsp;</p>
-                      <table width="100%" height="186" border="0,5" cellspacing="4">
+	</tr>
+  <tr>
+    <td align="left" valign="top"><span id="obser2">
+      <p><label align="left">De qu&eacute manera Ud. contribuy&oacute al estudio del problema y/o soluci&oacuten? Cu&aacuteles fueron sus tareas? </label></p>
+       <p>                 <textarea name="obser2" id="obser2" cols="120" rows="11"></textarea>
+                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">aca no deber�a controlar</span></span>
+        </p>
+    </td>
 
+  </tr>
+  <tr>
+    <td align="left" valign="top"><span id="obser2">
+      <p><label align="left">Considera que sus aportes fueron determinantes? </label></p>
+      <p>                  <textarea name="obser2" id="obser2" cols="120" rows="11"></textarea>
+                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">aca no deber�a controlar</span></span>
+      </p>
+    </td>
 
-                        <tr>
-                          <th height="26" align="left" scope="row">&nbsp;</th>
-                          <th height="26" scope="row">&nbsp;</th>
-                          <th scope="row"><a href="index.php">Volver a Ingresar Datos</a></th>
-                          <td colspan="2" align="center"><input type="submit" name="button2" id="button2" value="Confirmar la Votacion" /></td>
-                          <td>&nbsp;</td>
-                          </tr>
-                        </table>
-                      </th>
-                  </tr>
-                </table><p align="center">*Campos obligatorios</p>
-              </th>
-            </tr>
-          </table></th>
-        </tr>
-      </table>
-    </form></th>
+  </tr>
+  <tr>
+    <td align="left" valign="top"><span id="obser2">
+     <p><label align="left">Por qu&eacute se est&aacute postulando al premio? Por qu&eacute se postula en esta categor&iacute?</label></p>
+     <p>                   <textarea name="obser2" id="obser2" cols="120" rows="11"></textarea>
+                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">aca no deber�a controlar</span></span>
+    </p>
+    </td>
+  </tr>
+  <tr>
+    <td align="left" valign="top"><span id="obser2">
+      <p><label align="left">Qu&eacute otras categor&iacuteas adem&aacutes de las actuales cree que merecen reconocimiento?</label></p>
+      <p>                  <textarea name="obser2" id="obser2" cols="120" rows="11"></textarea>
+                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">aca no deber�a controlar</span></span>
+      </p>
+    </td>
+
+  </tr>
+   <tr>
+    <td align="left" valign="top"><span id="obser2">
+     <p> <label align="left">Sugerencias</label></p>
+     <p>                   <textarea name="obser2" id="obser2" cols="120" rows="11"></textarea>
+                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">aca no deber�a controlar</span></span>
+    </p>
+    </td>
+
   </tr>
 </table>
+
 <script type="text/javascript">
 var sprytextfield1 = new Spry.Widget.ValidationTextField("telvot", "none", {minChars:7, maxChars:12});
 var sprytextfield2 = new Spry.Widget.ValidationTextField("telef", "none", {minChars:7, maxChars:12});
 var sprytextfield3 = new Spry.Widget.ValidationTextField("sprytextfield3", "email");
-var sprytextarea1 = new Spry.Widget.ValidationTextarea("descrip", {minChars:5});
-var sprytextarea2 = new Spry.Widget.ValidationTextarea("obser2", {minChars:5});
+var sprytextarea1 = new Spry.Widget.ValidationTextarea("obser1", {minChars:150, hint:"Ingrese Como Minimo 150 Caracteres", validateOn:["blur"]});
+var sprytextarea2 = new Spry.Widget.ValidationTextarea("obser2", {minChars:150, hint:"Ingrese Como Minimo 150 Caracteres", validateOn:["blur"]});
 var spryradio1 = new Spry.Widget.ValidationRadio("spryradio1");
 var spryradio3 = new Spry.Widget.ValidationRadio("spryradio3");
 var spryradio5 = new Spry.Widget.ValidationRadio("spryradio5");

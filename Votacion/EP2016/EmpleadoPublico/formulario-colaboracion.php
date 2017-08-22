@@ -3,8 +3,7 @@ include("conect.php");
 //controlar seguridad
 $dnipost=$_REQUEST['postul'];
 $jurpost=$_REQUEST['jurpost'];
-//$votante=$_REQUEST['votante'];
-$categoria = $_REQUEST['']
+$votante=$_REQUEST['votante'];
 if($dnipost==""){
 	header("Location: index.html");
 	}
@@ -146,7 +145,7 @@ error_reporting(0);
               <input name="telef" type="text" id="telef" size="40" />
               <br />
               <span class="textfieldRequiredMsg">Se necesita un valor.</span><span class="textfieldMinCharsMsg"><br />
-              No se cumple el m&iacutenimo de caracteres requerido(7).</span><span class="textfieldMaxCharsMsg">Se ha superado el n&uacutemero m&aacuteximo de caracteres(12).</span></span></td>
+              No se cumple el m&iacutenimo de caracteres requerido(7).</span><span class="textfieldMaxCharsMsg">Se ha superado el n&uacutemero máximo de caracteres(12).</span></span></td>
             </tr>
             <tr>
               <th align="center" valign="middle" bgcolor="#FFFFFF" scope="row">Oficina</th>
@@ -190,74 +189,41 @@ error_reporting(0);
               </tr>
             <tr>
               <th colspan="4" bgcolor="#FFFFFF" scope="row"><p>&nbsp;</p>
-                <h2>CATEGORIA: Capacitaci&oacuten</h2>
-                <h4>Se eval&uacutea el nivel educativo alcanzado como as&iacute tambi&eacuten todos los cursos realizados
-                y participaci&oacuten en seminarios con tem&aacuteticas acordes al puesto de trabajo</h4>
+                <h2>CATEGORIA: Colaboraci&oacuten en proyactos sociales</h2>
+                <h4>Temática: Señale la o las correspondientes</h4>
 
 <!--Empiezan las preguntas abiertas -->
 <p>&nbsp;</p>
 <table>
 	<tr>
-		<td align="left" valign="top"><span id="descrip">
-			<label align="left">DESCRIPCI&oacuteN DEL PUESTO</label>
-        <textarea name="descrip" id="descrip" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
-        </span>
-		</td>
-	</tr>
-	<tr>
-		<td><br></td>
-	</tr>
-	<tr>
 		<td>
-			<table>
-				<tbody>
-					<h5><u>&uacuteltimos estudios terciarios y/o universitarios</u></h5>
-				</tbody>
-				<tr>
-					<td>Fecha de inicio</td>
-					<td><input type="text" name="EInicio" id="EInicio" placeholder="AAAA-MM-DD"></td>
-				</tr>
-				<tr>
-					<td>Fecha de Finalizaci&oacuten</td>
-					<td><input type="text" name="EFinal" id="EFinal" placeholder="AAAA-MM-DD"></td>
-				</tr>
-				<tr>
-					<td>Nombre de la Instituci&oacuten</td>
-					<td><input type="text" name="Einsti" id="Einsti"></td>
-				</tr>
-				<tr>
-					<td>Programa acad&eacutemico</td>
-					<td><input type="text" name="acade" id="acade"></td>
-				</tr>
-				<tr>
-					<td>Grado Obtenido</td>
-					<td><input type="text" name="grado" id="grado"></td>
-				</tr>
-				<tr>
-					<td>Distinciones y Reconocimiento</td>
-					<td><input type="text" name="distReco" id="distReco"></td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-	<tr>
-		<td><br></td>
-	</tr>
-	<tr>
-		<td align="left" valign="top"><span id="nivelAca">
-			<label align="left">¿C&oacutemo constribuye su nivel acad&eacutemico a su desempeño laboral?</label>
-        <textarea name="nivelAca" id="nivelAca" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
-        </span>
-		</td>
-	</tr>
-	<tr>
-		<td><br></td>
-	</tr>
-	<tr>
-		<td align="left" valign="top"><span id="nivelAca">
-			<label align="left">Cursos y seminarios</label>
-        <textarea name="nivelAca" id="nivelAca" cols="120" rows="11" placeholder="Detalle aqu&iacute el nombre de la instituci&oacuten, el nombre del curso y su duraci&oacuten. Si son varios, repita el procedimiento."></textarea>
-        </span>
+			<div class="checkbox">
+			 <label><input type="checkbox" name="optradio">Medioambiente</label>
+			</div>
+			<div class="checkbox">
+			 <label><input type="checkbox" name="optradio">Salud</label>
+			</div>
+			<div class="checkbox">
+			 <label><input type="checkbox" name="optradio">Inclusi&oacuten Social</label>
+			</div>
+			<div class="checkbox">
+			 <label><input type="checkbox" name="optradio">Seguridad</label>
+			</div>
+			<div class="checkbox">
+			 <label><input type="checkbox" name="optradio">Defensa del Consumidor</label>
+			</div>
+			<div class="checkbox">
+			 <label><input type="checkbox" name="optradio">Educaci&oacuten</label>
+			</div>
+			<div class="checkbox">
+			 <label><input type="checkbox" name="optradio">Niñez, Adolescencia y Familia</label>
+			</div>
+			<div class="checkbox">
+			 <label><input type="checkbox" name="optradio">Asistencia Social</label>
+			</div>
+			<div class="checkbox">
+			 <label><input type="checkbox" name="optradio">Recreaci&oacuten</label>
+			</div>
 		</td>
 	</tr>
 	<tr>
@@ -265,7 +231,7 @@ error_reporting(0);
 	</tr>
 	<tr>
 		<td align="left" valign="top"><span id="descrip">
-			<label align="left">¿C&oacutemo contribuy&oacute la capacitaci&oacuten en su puesto de trabajo?</label>
+			<label align="left">Organizaci&oacuten a la que pertenece:</label>
         <textarea name="descrip" id="descrip" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
         </span>
 		</td>
@@ -275,7 +241,7 @@ error_reporting(0);
 	</tr>
 	<tr>
 		<td align="left" valign="top"><span id="descrip">
-			<label align="left">¿Comparte los conocimientos adquiridos con sus compañeros de trabajo?</label>
+			<label align="left">T&iacutetulo del proyecto:</label>
         <textarea name="descrip" id="descrip" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
         </span>
 		</td>
@@ -285,7 +251,7 @@ error_reporting(0);
 	</tr>
 	<tr>
 		<td align="left" valign="top"><span id="descrip">
-			<label align="left">¿En qu&eacute otras tem&aacuteticas que aporten a su puesto de trabajo le gustar&iacutea capacitarse?</label>
+			<label align="left">Breve descripci&oacuten del proyecto:</label>
         <textarea name="descrip" id="descrip" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
         </span>
 		</td>
@@ -295,7 +261,7 @@ error_reporting(0);
 	</tr>
 	<tr>
 		<td align="left" valign="top"><span id="descrip">
-			<label align="left">¿Por qu&eacute se est&aacute postulando al premio?¿Por qu&eacute se postula en esta categor&iacutea?</label>
+			<label align="left">¿Cuál es el problema a solucionar a trav&eacutes del proyecto?</label>
         <textarea name="descrip" id="descrip" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
         </span>
 		</td>
@@ -305,7 +271,37 @@ error_reporting(0);
 	</tr>
 	<tr>
 		<td align="left" valign="top"><span id="descrip">
-			<label align="left">¿Qu&eacute otras categor&iacuteas adem&aacutes de las actuales cree que merecen reconocimiento?</label>
+			<label align="left">¿Cuál es la soluci&oacuten planteada para el problema?</label>
+        <textarea name="descrip" id="descrip" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
+        </span>
+		</td>
+	</tr>
+	<tr>
+		<td><br></td>
+	</tr>
+	<tr>
+		<td align="left" valign="top"><span id="descrip">
+			<label align="left">¿Qu&eacute resultados dio el proyecto?</label>
+        <textarea name="descrip" id="descrip" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
+        </span>
+		</td>
+	</tr>
+	<tr>
+		<td><br></td>
+	</tr>
+	<tr>
+		<td align="left" valign="top"><span id="descrip">
+			<label align="left">¿Por qu&eacute se está postulando al premio?¿Por qu&eacute se postula en esta categor&iacutea?</label>
+        <textarea name="descrip" id="descrip" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
+        </span>
+		</td>
+	</tr>
+	<tr>
+		<td><br></td>
+	</tr>
+	<tr>
+		<td align="left" valign="top"><span id="descrip">
+			<label align="left">¿Qu&eacute otras categor&iacuteas además de las actuales cree que merecen reconocimiento?</label>
         <textarea name="descrip" id="descrip" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
         </span>
 		</td>

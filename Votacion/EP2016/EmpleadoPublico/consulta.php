@@ -25,7 +25,7 @@ $jurvot=$_POST['jurvot'];
 
 //Si el Postulante o el votante es jur. insssep pasa solo
 if(($jurpost==16)&&($ac=='postulante')){
-	header("Location: Votante.php?dni=$dnipostul&jur=$jurpost");
+	header("Location: categoria.php?dni=$dnipostul&jur=$jurpost");
 	exit;
 	}
 if(($jurvot==16)&&($ac=='votante'))

@@ -82,11 +82,11 @@
 					    <div class="col-sm-10">
 					    	<select class="form-control" name="jurpost" id="jurpost">
 				              <option value="2">SECRETARIA GENERAL DE GOBIERNO Y COORDINACION</option>
-				              <option value="3">MINISTERIO DE GOBIERNO, JUSTICIA Y RELACION CON LA COMUNIDAD</option>
-											<option value="7">MINISTERIO DE SEGURIDAD PUBLICA</option>
+				              <option value="3">MINISTERIO DE GOBIERNO, JUSTICIA Y RELACION CON LA COMUNIDAD</option>											
 				              <option value="4">MINISTERIO DE HACIENDA Y FINANZAS</option>
 				              <option value="5">MINISTERIO DE PRODUCCION</option>
 				              <option value="6">MINISTERIO DE SALUD PUBLICA</option>
+											<option value="7">MINISTERIO DE SEGURIDAD PUBLICA</option>
 											<option value="8">INSTITUTO DE DEPORTE</option>
 				              <option value="10">INSTITUTO DE DESARROLLO URBANO Y VIVIENDA</option>
 				              <option value="11">MINISTERIO DE INDUSTRIA, COMERCIO Y SERVICIOS</option>
