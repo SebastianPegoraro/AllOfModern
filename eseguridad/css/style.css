@@ -143,7 +143,7 @@ header.main {
 }
 /*Titulos de Acto, Olimpiadas y Nuevo Premio*/
 .header-title-olim {
-	text-align: right;
+	text-align: center;
 	margin: 0;
 	display: none;
 	font-weight: medium;
@@ -158,7 +158,7 @@ header.main {
 
 /*Titulos de Nuevo Premio*/
 .header-title-premio {
-	text-align: right;
+	text-align: center;
 	margin: 0;
 	display: none;
 	font-weight: medium;
