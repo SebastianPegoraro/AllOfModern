@@ -27,6 +27,11 @@
     font-weight: normal;
     font-style: normal;
 }
+/*Para quitar la sombra del carousel de bootstrap*/
+.carousel-control.left, .carousel-control.right {
+   background-image:none !important;
+   filter:none !important;
+}
 
 /*Imagen de la pag de contacto y quienes somos*/
 .contacto img{
@@ -34,6 +39,9 @@
   height: auto;
 }
 
+.formu{
+  background: rgba(33,70,126, 0.9);
+}
 
 body {
 	/*background-color: #EEE;*/
@@ -42,7 +50,6 @@ body {
 	/*background-size: 200px 200px;*/
 	font-family: 'geomanist_regularregular', sans-serif;
   padding-top: 200px;
-  padding-bottom: 150px;
 }
 
 .logos-olim img{
@@ -110,8 +117,6 @@ body {
 }
 /*Header de Olimpiadas, Acto y Nuevo Premio*/
 .header-container-olim{
-  position: fixed;
-  top: 0;
   width: 100%;
   background: rgb(255,255,255);
 }
@@ -134,10 +139,6 @@ header.main {
 	font-weight: bold;
 	color: white;
 	font-size: 400%;
-  /*position: absolute;
-	z-index: 100;
-	left: -100px;
-	top: 25px;*/
   text-shadow: 5px 5px 20px #000000;
 }
 /*Titulos de Acto, Olimpiadas y Nuevo Premio*/
@@ -147,24 +148,27 @@ header.main {
 	display: none;
 	font-weight: medium;
 	color: black;
-	font-size: 600%;
-  position: absolute;
-	z-index: 100;
-  right: 300px;
-	top: 25px;
+	font-size: 400%;
 }
 
-.header-title-olim-anio {
-	text-align: center;
+.header-title-olim .anio {
+	font-weight: medium;
+	color: #599897;
+}
+
+/*Titulos de Nuevo Premio*/
+.header-title-premio {
+	text-align: right;
 	margin: 0;
 	display: none;
 	font-weight: medium;
 	color: black;
-	font-size: 600%;
-  position: absolute;
-	z-index: 100;
-  right: 500px;
-	top: 25px;
+	font-size: 400%;
+}
+
+.header-title-premio .anio {
+	font-weight: medium;
+	color: #599897;
 }
 
 .header-title .anio {
@@ -195,8 +199,7 @@ header.main .header-left-olim {
 header.main .header-left-prem {
 	height: 189px;
 	width: 228px;
-	background: url(../images/logo-olimpiadas.png);
-	background-repeat: no-repeat;
+	background: url(../images/logo-Premio-12.png);
 	position: absolute;
 	z-index: 100;
 	left: 10%;
@@ -299,10 +302,8 @@ header.main .header-right {
 }
 
 .footer-container {
-  bottom: 0;
-  width: 100%;
 	background-color: #323232;
-	padding: 20px 0;
+  padding: 20px 0;
 	margin-top: 20px;
 }
 
@@ -323,7 +324,7 @@ header.main .header-right {
 }
 
 .logo-footer {
-	height: 100px;
+	height: 100%;
 }
 
 .slider-img-container {
@@ -351,16 +352,21 @@ header.main .header-right {
 }
 
 .boton input {
-	width: 500px;
+	width: 100%;
 	height: auto;
 }
 
-.pdf-red-color {
-	color: #ff3500;
+.pdf-white-color {
+	color: white;
 }
 
 .fa-8x {
 	font-size: 8em;
+}
+
+.row .separador{
+  background: url(../images/linea ondulada-01.png);
+  background-repeat: repeat-x;
 }
 
 /* LOGOS GOBIERNO */
@@ -369,12 +375,8 @@ header.main .header-right {
 	padding:0 8em;
 }
 
-.embed-responsive iframe {
-	border: none;
-}
-
 @media only screen and (min-width: 500px) {
-    header.main .header-left {
+    header.main .header-left-olim {
     height: 189px;
     width: 228px;
     background: url(../images/logo-olimpiadas.png);
@@ -383,6 +385,15 @@ header.main .header-right {
     z-index: 100;
     left: 10%;
   }
+
+  header.main .header-left-prem {
+  height: 189px;
+  width: 228px;
+  background: url(../images/logo-Premio-12.png);
+  position: absolute;
+  z-index: 100;
+  left: 10%;
+}
 
     img.header-logo-gob {
 		display: inline-block;
@@ -398,10 +409,15 @@ header.main .header-right {
 		padding: 0 0 0 43px;
 	}
 
-  header.main .header-left {
+  header.main .header-left-olim {
 		left: -16px;
 		background: url(../images/logo-olimpiadas.png);
     }
+
+    header.main .header-left-prem {
+  		left: -16px;
+  		background: url(../images/logo-Premio-12.png);
+      }
 
 	.header-title {
 		display: block;
@@ -411,7 +427,7 @@ header.main .header-right {
 		display: block;
 	}
 
-  .header-title-olim-anio {
+  .header-title-premio {
 		display: block;
 	}
 
@@ -522,7 +538,6 @@ float: center;
     padding: 15px;
     background:#f8f8f8;
     border:1px solid rgba(0, 0, 0, 0.075);
-    margin-bottom:25px;
     color:#727272 !important;
     font-size:13px;
     -webkit-transition: all 0.4s;
