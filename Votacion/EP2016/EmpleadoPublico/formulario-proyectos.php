@@ -1,4 +1,4 @@
-<?php 
+<?php
 include("conect.php");
 //controlar seguridad
 $dnipost=$_REQUEST['postul'];
@@ -27,71 +27,92 @@ abrirBase();
 ?>
 <!DOCTYPE html>
 <html lang="es">
-<link href="../SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
-<!--<script src="../SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>-->
 
 <head>
-	<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>CHACO - Premio al Empleado P�blico 2016</title>
-	<!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/slick/slick.css" rel="stylesheet">
-    <link href="css/slick/slick-theme.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formulario de Proyectos</title>
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/slick/slick.css" rel="stylesheet">
+  <link href="css/slick/slick-theme.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet/less" type="text/css" href="styles.less" />
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+  <script>
+    function mostrar(id) {
+      obj = document.getElementById(id);
+      obj.style.visibility = (obj.style.visibility == 'hidden') ? 'visible' : 'hidden';
+    }
+  </script>
+
 </head>
-<body>
-	<a class="boton-voto" href="#"><img src="images/gracias.png" alt="Vot� ac�"></a>
-	<div class="header-container">
-		<header class="main container">
-			<div class="header-left"></div>
-			<div class="header-middle">
-				<div class="dt title-container">
-					<div class="dtc va-middle">
-						<h1 class="header-title">
-							Empleado P&uacuteblico del a&ntildeo <span class="anio">2016</span>
+
+<body ng-app="pep2016">
+  <div class="navbar-fixed-top">
+    <header class="main container header-container-olim">
+      <div class="header-left-prem"></div>
+      <div class="header-middle">
+        <div class="dt title-container">
+          <div class="dtc va-middle">
+            <h1 class="header-title-premio">
+							Empleado P&uacuteblico del a&ntildeo <span class="anio">2017</span>
 						</h1>
-					</div>
-					<div class="dtc va-bottom-middle text-right">
-						<img class="header-logo-gob" src="images/logo-chacogob.png" alt="Logo Gobierno del Chaco">
-					</div>
-				</div>
-			</div>
-		</header>
-	</div>
-	<nav class="navbar navbar-default">
-	  <div class="container">
-	    <!-- Brand and toggle get grouped for better mobile display -->
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          </div>
+          <div class="dtc va-middle text-right">
+            <ul class="fa-ul">
+              <li><img src="images/logo chaco gris-01.png" alt="" class="img header-logo-gob"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 	        <span class="sr-only">Toggle navigation</span>
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="#"></a>
-	    </div>
+        <a class="navbar-brand" href="#"></a>
+      </div>
 
-	    <!-- Collect the nav links, forms, and other content for toggling -->
-	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	      <ul class="nav navbar-nav navbar-center"> 
-	             	
-	      </ul>
-	    </div><!-- /.navbar-collapse -->
-	  </div><!-- /.container-fluid -->
-	</nav>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <!--<li><a href="../eseguridad/index.html">INICIO</a></li>
+          <li><a href="../eseguridad/quienes-somos.html">QUIENES SOMOS</a></li>
+          <li><a href="../eseguridad/contacto.html">CONTACTO</a></li>
+          <li><a href="https://web.facebook.com/ModernizacionC"><i class="fa fa-facebook"></i></a></li>
+           Buscagor, para m&aacutes adelante...
+          <li><a href="#" class="fa fa-search"></a></li>
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Buscador">
+            </div>
+          </form>-->
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
 	<div class="container">
-		
+
 
 
 
@@ -105,11 +126,11 @@ abrirBase();
 
 function ocultar($nombre){
 	if ($nombre.style.display=='none'){
-	$nombre.style.display='block'; 
+	$nombre.style.display='block';
 	$nombre.required="required";
 	}
 	else {
-	$nombre.style.display='none'; 
+	$nombre.style.display='none';
 	$nombre.required=false;
 	}
 	}
@@ -120,9 +141,9 @@ error_reporting(0);
 ?>
 <body>
 <table width="1033" height="446" border="1" align="center" cellspacing="4" bgcolor="#CCCCCC">
-  
-    <th colspan="2" align="left" valign="top" bgcolor="#FFFFFF" scope="row"><form id="form1" name="form1" method="post" action="guarda.php">   
-<p style="color:rgb(248,67,67)">Nota: Recuerde que podrá votar una (1) sóla vez y a un (1) compañero.</p>
+
+    <th colspan="2" align="left" valign="top" bgcolor="#FFFFFF" scope="row"><form id="form1" name="form1" method="post" action="guarda.php">
+<p style="color:rgb(248,67,67)">Nota: Recuerde que podr&aacute votar una (1) s&oacutela vez y a un (1) compa&ntildeero.</p>
 <table width="1013" border="0" cellspacing="4">
         <tr>
           <th width="558" bgcolor="#FFFFFF" scope="row"><h2>1. Datos del Empleado a quien quiere votar</h2>
@@ -135,18 +156,18 @@ error_reporting(0);
               <th width="28%" bgcolor="#FFFFFF" scope="row"><label for="dni">
                 <input name="apeynom" type="text" id="apeynom" value="<?php echo $apeynompost;?>" size="40" readonly="readonly"/>
               </label></th>
-              <td width="22%" align="center" valign="middle" bgcolor="#FFFFFF">Dirección Laboral<br /></td>
+              <td width="22%" align="center" valign="middle" bgcolor="#FFFFFF">Direcci&oacuten Laboral<br /></td>
               <td width="28%" align="left" bgcolor="#FFFFFF"><input name="direc" type="text" id="direc" size="40" /></td>
             </tr>
             <tr>
-              <th align="center" valign="middle" bgcolor="#FFFFFF" scope="row">Jurisdicción</th>
+              <th align="center" valign="middle" bgcolor="#FFFFFF" scope="row">Jurisdicci&oacuten</th>
               <th bgcolor="#FFFFFF" scope="row"><input name="jur" type="text" id="jur" value="<?php echo $jurdenomin;?>" size="40" readonly="readonly"/></th>
-              <td align="center" valign="middle" bgcolor="#FFFFFF">Teléfono Personal/Laboral*</td>
+              <td align="center" valign="middle" bgcolor="#FFFFFF">Tel&eacutefono Personal/Laboral*</td>
               <td align="left" bgcolor="#FFFFFF"><span id="telef">
               <input name="telef" type="text" id="telef" size="40" />
               <br />
               <span class="textfieldRequiredMsg">Se necesita un valor.</span><span class="textfieldMinCharsMsg"><br />
-              No se cumple el mínimo de caracteres requerido(7).</span><span class="textfieldMaxCharsMsg">Se ha superado el número máximo de caracteres(12).</span></span></td>
+              No se cumple el m&iacutenimo de caracteres requerido(7).</span><span class="textfieldMaxCharsMsg">Se ha superado el n&uacutemero m&aacuteximo de caracteres(12).</span></span></td>
             </tr>
             <tr>
               <th align="center" valign="middle" bgcolor="#FFFFFF" scope="row">Oficina</th>
@@ -157,11 +178,11 @@ error_reporting(0);
             <tr>
               <th align="center" valign="middle" bgcolor="#FFFFFF" scope="row">DNI</th>
               <th bgcolor="#FFFFFF" scope="row"><input name="dni" type="text" id="dni" value="<?php echo $dnipost;?>" size="40" readonly="readonly"/></th>
-              <td align="center" valign="middle" bgcolor="#FFFFFF">Tipo de Atención</td>
+              <td align="center" valign="middle" bgcolor="#FFFFFF">Tipo de Atenci&oacuten</td>
 	      	<th colspan="2" align="left" valign="middle" scope="row">
 		    <select name="depen" id="depen">
 		      <option value="1">On Line</option>
-		      <option value="2">Telefónico</option>
+		      <option value="2">Telef&oacutenico</option>
 		      <option value="3">Presencial</option>
 		    </select>
           	</th>
@@ -175,81 +196,81 @@ error_reporting(0);
 
 <!--Empieza tabla con formulario que agregamos-->
 <table width="100%" border="1">
-        
-      
+
+
 <p>&nbsp;</p>
 <table>
-	<tr>	
+	<tr>
 		<td align="left" valign="top"><span id="obser1">
 			<p><label align="left"> T&iacutetulo del Proyecto: </label></p>
       <p>                  <textarea name="obser1" id="obser1" cols="120" rows="11"></textarea>
-                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">No se cumple el mínimo de caracteres 				requerido(150).</span></span></p>
+                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">No se cumple el m&iacutenimo de caracteres 				requerido(150).</span></span></p>
 		</td>
-			
+
 	</tr>
-	<tr> 
+	<tr>
     <td align="left" valign="top"><span id="obser2">
       <p><label align="left"> Breve descripci&oacuten del Proyecto: </label></p>
       <p>                  <textarea name="obser2" id="obser2" cols="120" rows="11"></textarea>
-                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">No se cumple el mínimo de caracteres         requerido(150).</span></span></p>
+                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">No se cumple el m&iacutenimo de caracteres         requerido(150).</span></span></p>
     </td>
-      
+
   </tr>
-  <tr>  
+  <tr>
     <td align="left" valign="top"><span id="obser1">
       <p><label align="left"> Cu&aacutel es el problema a solucionar a trav&eacute del Proyecto? </label></p>
       <p>                  <textarea name="obser1" id="obser1" cols="120" rows="11"></textarea>
-                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">No se cumple el mínimo de caracteres         requerido(150).</span></span></p>
+                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">No se cumple el m&iacutenimo de caracteres         requerido(150).</span></span></p>
     </td>
-      
+
   </tr>
-  <tr>  
+  <tr>
     <td align="left" valign="top"><span id="obser1">
       <p><label align="left">  Cu&aacutel es la soluci&oacuten planteada para el problema? </label></p>
       <p>                  <textarea name="obser1" id="obser1" cols="120" rows="11"></textarea>
-                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">No se cumple el mínimo de caracteres         requerido(150).</span></span></p>
+                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">No se cumple el m&iacutenimo de caracteres         requerido(150).</span></span></p>
     </td>
-      
+
   </tr>
-  <tr>  
+  <tr>
     <td align="left" valign="top"><span id="obser1">
       <p><label align="left"> Qu&eacute resultados dio el proyecto o qu&eacute resultados espera del proyecto? </label></p>
       <p>                  <textarea name="obser1" id="obser1" cols="120" rows="11"></textarea>
-                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">No se cumple el mínimo de caracteres         requerido(150).</span></span></p>
+                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">No se cumple el m&iacutenimo de caracteres         requerido(150).</span></span></p>
     </td>
-      
+
   </tr>
-  <tr>  
+  <tr>
     <td align="left" valign="top"><span id="obser1">
       <p><label align="left"> De qu&eacute manera contribuy&oacute al proyecto? Cu&aacuteles fueron sus tareas? </label></p>
       <p>                  <textarea name="obser1" id="obser1" cols="120" rows="11"></textarea>
-                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">No se cumple el mínimo de caracteres         requerido(150).</span></span></p>
+                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">No se cumple el m&iacutenimo de caracteres         requerido(150).</span></span></p>
     </td>
-      
+
   </tr>
-  <tr>  
+  <tr>
     <td align="left" valign="top"><span id="obser1">
       <p><label align="left"> Por qu&eacute se est&aacute postulando al premio? Por qu&eacute se postula en esta categor&iacutea? </label></p>
       <p>                  <textarea name="obser1" id="obser1" cols="120" rows="11"></textarea>
-                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">No se cumple el mínimo de caracteres         requerido(150).</span></span></p>
+                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">No se cumple el m&iacutenimo de caracteres         requerido(150).</span></span></p>
     </td>
-      
+
   </tr>
-  <tr>  
+  <tr>
     <td align="left" valign="top"><span id="obser1">
       <p><label align="left"> Qu&eacute otras categor&iacuteas adem&aacutes de las actuales cree que merece reconocimiento?</label></p>
       <p>                  <textarea name="obser1" id="obser1" cols="120" rows="11"></textarea>
-                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">No se cumple el mínimo de caracteres         requerido(150).</span></span></p>
+                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">No se cumple el m&iacutenimo de caracteres         requerido(150).</span></span></p>
     </td>
-      
+
   </tr>
-  <tr>  
+  <tr>
     <td align="left" valign="top"><span id="obser1">
       <p><label align="left"> Sugerencias: </label></p>
       <p>                  <textarea name="obser1" id="obser1" cols="120" rows="11"></textarea>
-                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">No se cumple el mínimo de caracteres         requerido(150).</span></span></p>
+                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">No se cumple el m&iacutenimo de caracteres         requerido(150).</span></span></p>
     </td>
-      
+
   </tr>
 </table>
 <!-- Terminan las preguntas abiertas -->
@@ -268,34 +289,34 @@ error_reporting(0);
                           <td width="6%"><label for="apynomvot"></label></td>
                           </tr>
                         <tr>
-                          <th height="26" align="left" scope="row">Jurisdicción</th>
+                          <th height="26" align="left" scope="row">Jurisdicci&oacuten</th>
                           <th height="26" scope="row"><input name="jurvot" type="text" id="textfield3" value="<?php echo $jurdenomin;?>" size="40" readonly="readonly"/></th>
                           <th scope="row"><label for="apynomvot"></label></th>
-                          <td>Teléfono*</td>
+                          <td>Tel&eacutefono*</td>
                           <td><span id="telvot">
                           <input name="telvot" type="text" id="telvot" size="40" />
                           <br />
-                          <span class="textfieldRequiredMsg">Se necesita un valor.</span><span class="textfieldMinCharsMsg">No se cumple el mínimo de caracteres requerido(7).</span><span class="textfieldMaxCharsMsg">Se ha superado el número máximo de caracteres(12).</span></span></td>
+                          <span class="textfieldRequiredMsg">Se necesita un valor.</span><span class="textfieldMinCharsMsg">No se cumple el m&iacutenimo de caracteres requerido(7).</span><span class="textfieldMaxCharsMsg">Se ha superado el n&uacutemero m&aacuteximo de caracteres(12).</span></span></td>
                           <td><label for="apynomvot"></label></td>
                           </tr>
                         <tr>
-                          <th height="26" align="left" scope="row">Correo Electrónico*</th>
+                          <th height="26" align="left" scope="row">Correo Electr&oacutenico*</th>
                           <th height="26" scope="row"><span id="sprytextfield3">
                           <label for="emailvot"></label>
                           <input name="emailvot" type="text" id="emailvot" size="40" />
-                          <span class="textfieldRequiredMsg">Se necesita un valor.</span><span class="textfieldInvalidFormatMsg">Formato no válido.</span></span></th>
+                          <span class="textfieldRequiredMsg">Se necesita un valor.</span><span class="textfieldInvalidFormatMsg">Formato no v&aacutelido.</span></span></th>
                           <th scope="row"><label for="apynomvot"></label></th>
-                          
+
 			 <th><label>Medio</label></th>
 			      	<th colspan="2" align="left" valign="middle" scope="row">
 				    <select name="medio" id="medio">
 				      <option value="1">Diario</option>
 				      <option value="2">Internet</option>
 				      <option value="3">Radio</option>
-				      <option value="4">Compañeros de trabajo</option>
+				      <option value="4">Compa&ntildeeros de trabajo</option>
 				      <option value="5">Otros</option>
 				    </select>
-				(Medio por el cual se enteró del premio)
+				(Medio por el cual se enter&oacute del premio)
 			  </th>
                           <td><label for="apynomvot"></label></td>
                          </tr>

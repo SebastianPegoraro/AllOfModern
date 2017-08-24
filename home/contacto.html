@@ -1,10 +1,3 @@
-<?php
-$dnipost=$_REQUEST['dni'];
-$jurpost=$_REQUEST['jur'];
-if($dnipost==""){
-	header("Location: index.html");
-	}
-?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -12,7 +5,7 @@ if($dnipost==""){
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Formulario de Capacitacion</title>
+  <title>Contacto</title>
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/bootstrap-theme.min.css" rel="stylesheet">
@@ -39,18 +32,17 @@ if($dnipost==""){
 
 <body ng-app="pep2016">
   <div class="navbar-fixed-top">
-    <header class="main container header-container-olim">
-      <div class="header-left-prem"></div>
+    <header class="main container header-container">
       <div class="header-middle">
         <div class="dt title-container">
           <div class="dtc va-middle">
-            <h1 class="header-title-premio">
-							Empleado P&uacuteblico del a&ntildeo <span class="anio">2017</span>
+            <h1 class="header-title">
+							Empleado P&uacuteblico <span class="anio">2017</span>
 						</h1>
           </div>
           <div class="dtc va-middle text-right">
             <ul class="fa-ul">
-              <li><img src="images/logo chaco gris-01.png" alt="" class="img header-logo-gob"></li>
+              <li><img src="images/logo-chaco.png" alt="" class="img header-logo-gob"></li>
             </ul>
           </div>
         </div>
@@ -74,11 +66,11 @@ if($dnipost==""){
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <!--<li><a href="../eseguridad/index.html">INICIO</a></li>
-          <li><a href="../eseguridad/quienes-somos.html">QUIENES SOMOS</a></li>
-          <li><a href="../eseguridad/contacto.html">CONTACTO</a></li>
+          <li><a href="../home/index.html">INICIO</a></li>
+          <li><a href="../home/quienes-somos.html">QUIENES SOMOS</a></li>
+          <li><a href="../home/contacto.html">CONTACTO</a></li>
           <li><a href="https://web.facebook.com/ModernizacionC"><i class="fa fa-facebook"></i></a></li>
-           Buscagor, para m&aacutes adelante...
+          <!-- Buscagor, para más adelante...
           <li><a href="#" class="fa fa-search"></a></li>
           <form class="navbar-form navbar-left">
             <div class="form-group">
@@ -92,41 +84,42 @@ if($dnipost==""){
     <!-- /.container-fluid -->
   </nav>
 
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-8 col-sm-offset-2">
-				<h2>
-					SELECCIONA UNA DE LAS CATEGORIAS Y SUBCATEGORIA<br>
-				</h2>
-				<div class="form-horizontal">
+  <div class="container">
+    <div class="row contacto">
+      <div class="col-md-12">
+        <h1>CONTACTO</h1>
+        <img src="images/CONTACTO-01.png" alt="">
+      </div>
+    </div>
+  </div>
 
-				</div>
 
-		</div>
-	</div>
-</div>
-	<div class="footer-container">
-		<footer class="main container-fluid">
-			<div class="row">
-				<div class="col-sm-5 left">
-					<img class="logo-footer" src="images/logo-sggc.png" alt="">
-				</div>
-				<div class="col-sm-3 middle">
-					<img class="logo-footer" src="images/logo-sub-cgpe.png" alt="">
-				</div>
-				<div class="col-sm-4 right">
-					<img class="logo-footer" src="images/logo-dgme.png" alt="">
-				</div>
-			</div>
-		</footer>
-	</div>
-	<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="../SpryAssets/SpryValidationTextField.js"></script>
-	<script type="text/javascript">
-		(function($){
-			var sprytextfield1 = new Spry.Widget.ValidationTextField("dnivotante", "integer", {minChars:7, maxChars:8});
-		}(jQuery));
-	</script>
+  <!-- Footer -->
+  <div class="footer-container">
+    <footer class="main container-fluid">
+      <div class="logos-gobierno text-center">
+        <div class="logos-img">
+          <img class="logo-footer" src="images/modenizacion blanco-01.png" alt="">
+        </div>
+        <div class="logos-img">
+          <img class="logo-footer" src="images/secretaria blanco-01.png" alt="">
+        </div>
+        <div class="logos-img">
+          <img class="logo-footer" src="images/chaco blanco-01.png" alt="">
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+  <script type="text/javascript" src="js/slide.js"></script>
+  <script src="less.js" type="text/javascript"></script>
+
 </body>
+
 </html>

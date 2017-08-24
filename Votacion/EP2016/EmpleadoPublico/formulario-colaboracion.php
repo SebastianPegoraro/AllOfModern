@@ -32,7 +32,7 @@ abrirBase();
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>e - Seguridad Chaco</title>
+  <title>Formulario de Colaboracion</title>
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/bootstrap-theme.min.css" rel="stylesheet">
@@ -65,7 +65,7 @@ abrirBase();
         <div class="dt title-container">
           <div class="dtc va-middle">
             <h1 class="header-title-premio">
-							Empleado Público del año <span class="anio">2017</span>
+							Empleado P&uacuteblico del a&ntildeo <span class="anio">2017</span>
 						</h1>
           </div>
           <div class="dtc va-middle text-right">
@@ -98,7 +98,7 @@ abrirBase();
           <li><a href="../eseguridad/quienes-somos.html">QUIENES SOMOS</a></li>
           <li><a href="../eseguridad/contacto.html">CONTACTO</a></li>
           <li><a href="https://web.facebook.com/ModernizacionC"><i class="fa fa-facebook"></i></a></li>
-           Buscagor, para más adelante...
+           Buscagor, para m&aacutes adelante...
           <li><a href="#" class="fa fa-search"></a></li>
           <form class="navbar-form navbar-left">
             <div class="form-group">
@@ -165,7 +165,7 @@ error_reporting(0);
               <input name="telef" type="text" id="telef" size="40" />
               <br />
               <span class="textfieldRequiredMsg">Se necesita un valor.</span><span class="textfieldMinCharsMsg"><br />
-              No se cumple el m&iacutenimo de caracteres requerido(7).</span><span class="textfieldMaxCharsMsg">Se ha superado el n&uacutemero máximo de caracteres(12).</span></span></td>
+              No se cumple el m&iacutenimo de caracteres requerido(7).</span><span class="textfieldMaxCharsMsg">Se ha superado el n&uacutemero m&aacuteximo de caracteres(12).</span></span></td>
             </tr>
             <tr>
               <th align="center" valign="middle" bgcolor="#FFFFFF" scope="row">Oficina</th>
@@ -200,7 +200,7 @@ error_reporting(0);
 						      <option value="1">Diario</option>
 						      <option value="2">Internet</option>
 						      <option value="3">Radio</option>
-									<option value="4">Compañero de Trabajo</option>
+									<option value="4">Compa&ntildeero de Trabajo</option>
 						    </select>
 		          </th>
 	    			</tr>
@@ -210,7 +210,7 @@ error_reporting(0);
             <tr>
               <th colspan="4" bgcolor="#FFFFFF" scope="row"><p>&nbsp;</p>
                 <h2>CATEGORIA: Colaboraci&oacuten en proyactos sociales</h2>
-                <h4>Temática: Señale la o las correspondientes</h4>
+                <h4>Tem&aacutetica: Se&ntildeale la o las correspondientes</h4>
 
 <!--Empiezan las preguntas abiertas -->
 <p>&nbsp;</p>
@@ -236,7 +236,7 @@ error_reporting(0);
 			 <label><input type="checkbox" name="optradio" value="Educaci&oacuten">Educaci&oacuten</label>
 			</div>
 			<div class="checkbox">
-			 <label><input type="checkbox" name="optradio" value="Niñez, Adolescencia y Familia">Niñez, Adolescencia y Familia</label>
+			 <label><input type="checkbox" name="optradio" value="Ni&ntildeez, Adolescencia y Familia">Ni&ntildeez, Adolescencia y Familia</label>
 			</div>
 			<div class="checkbox">
 			 <label><input type="checkbox" name="optradio" value="Asistencia Social">Asistencia Social</label>
@@ -281,7 +281,7 @@ error_reporting(0);
 	</tr>
 	<tr>
 		<td align="left" valign="top"><span id="obser4">
-			<label align="left">¿Cuál es el problema a solucionar a trav&eacutes del proyecto?</label>
+			<label align="left">¿Cu&aacutel es el problema a solucionar a trav&eacutes del proyecto?</label>
         <textarea name="obser4" id="obser4" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
         </span>
 		</td>
@@ -291,7 +291,7 @@ error_reporting(0);
 	</tr>
 	<tr>
 		<td align="left" valign="top"><span id="obser5">
-			<label align="left">¿Cuál es la soluci&oacuten planteada para el problema?</label>
+			<label align="left">¿Cu&aacutel es la soluci&oacuten planteada para el problema?</label>
         <textarea name="obser5" id="obser5" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
         </span>
 		</td>
@@ -311,7 +311,7 @@ error_reporting(0);
 	</tr>
 	<tr>
 		<td align="left" valign="top"><span id="obser7">
-			<label align="left">¿Por qu&eacute se está postulando al premio?¿Por qu&eacute se postula en esta categor&iacutea?</label>
+			<label align="left">¿Por qu&eacute se est&aacute postulando al premio?¿Por qu&eacute se postula en esta categor&iacutea?</label>
         <textarea name="obser7" id="obser7" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
         </span>
 		</td>
@@ -321,7 +321,7 @@ error_reporting(0);
 	</tr>
 	<tr>
 		<td align="left" valign="top"><span id="obser8">
-			<label align="left">¿Qu&eacute otras categor&iacuteas además de las actuales cree que merecen reconocimiento?</label>
+			<label align="left">¿Qu&eacute otras categor&iacuteas adem&aacutes de las actuales cree que merecen reconocimiento?</label>
         <textarea name="obser8" id="obser8" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
         </span>
 		</td>

@@ -22,7 +22,7 @@ $dnipostul=$_REQUEST['dnipostulante'];
 $dnivotante=$_POST['dnivotante'];
 $jurpost=$_REQUEST['jurpost'];
 $jurvot=$_POST['jurvot'];
-$categoria=$_REQUEST['categoria'];
+
 //Si el Postulante o el votante es jur. insssep pasa solo
 if(($jurpost==16)&&($ac=='postulante')){
 	header("Location: categoria.php?dni=$dnipostul&jur=$jurpost");
@@ -40,9 +40,9 @@ if(($jurvot==16)&&($ac=='votante'))
 		header("Location: error.php");
 		exit;
 	}
-	//control($dnivotante);
-	//header("Location: Datos-Jefe.php?votante=$dnivotante&postul=$dnipostul&jurpost=$jurpost");
-	//exit;
+	control($dnivotante);
+	header("Location: Datos-Jefe.php?votante=$dnivotante&postul=$dnipostul&jurpost=$jurpost");
+	exit;
 }
 
 //Comprueba que el postulante y el votante sean aptos
@@ -62,9 +62,7 @@ if($ac=='postulante'){
 		exit;
 		}
 	}
-
 	//aca controla a los votantes
-
 else if($ac=='votante'){
 	if($dnipostul==$dnivotante){
 		//echo "no puede ser el mismo dni";
@@ -79,7 +77,7 @@ else if($ac=='votante'){
 	control($dnivotante);
 	abrirBase();
 	mysql_query("SET NAMES 'utf8'");
-	$result = mysql_query("SELECT * FROM padron WHERE Jur=$jurvot");
+	$result = mysql_query("SELECT * FROM padron WHERE Documento=$dnivotante and Jur=$jurvot");
 	cerrarBase();
 	$row = mysql_fetch_array($result);
 	if($row[1]==""){
@@ -87,7 +85,7 @@ else if($ac=='votante'){
 		}
 	else{
 
-		header("Location: formularioPE.php?votante=$dnivotante&postul=$dnipostul&jurpost=$jurpost");
+		header("Location: Datos-Jefe.php?votante=$dnivotante&postul=$dnipostul&jurpost=$jurpost");
 		}
 	}
 ?>

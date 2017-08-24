@@ -1,4 +1,4 @@
-<?php 
+<?php
 $dnipost=$_REQUEST['dni'];
 $jurpost=$_REQUEST['jur'];
 if($dnipost==""){
@@ -11,7 +11,7 @@ if($dnipost==""){
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>CHACO - Premio al Empleado Público 2016</title>
+	<title>CHACO - Premio al Empleado Pï¿½blico 2016</title>
 	<!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
@@ -28,7 +28,7 @@ if($dnipost==""){
     <![endif]-->
 </head>
 <body>
-	<a class="boton-voto" href="#"><img src="images/boton-voto.png" alt="Votá acá"></a>
+	<a class="boton-voto" href="#"><img src="images/boton-voto.png" alt="Votï¿½ acï¿½"></a>
 	<div class="header-container">
 		<header class="main container">
 			<div class="header-left"></div>
@@ -61,8 +61,8 @@ if($dnipost==""){
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	      <ul class="nav navbar-nav navbar-center"> 
-	             	
+	      <ul class="nav navbar-nav navbar-center">
+
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
@@ -75,7 +75,7 @@ if($dnipost==""){
 					<small>Y LA JURISDICCI&Oacute;N QUE APARECE EN EL RECIBO DE SUELDO</small>
 				</h2>
 				<form id="form1" name="form1" method="post" action="consulta.php" class="form-horizontal well">
-		
+
  				<div class="form-group">
  						<label for="dnipostulante" class="col-sm-2 control-label">DNI</label>
 					<div class="col-sm-10">
@@ -97,7 +97,7 @@ if($dnipost==""){
 				              <option value="6">MINISTERIO DE SALUD PUBLICA</option>
 				              <option value="10">INSTITUTO DE DESARROLLO URBANO Y VIVIENDA</option>
 				              <option value="11">MINISTERIO DE INDUSTRIA,EMPLEO Y TRABAJO</option>
-				              <option value="12">LOTERIA CHAQUEÃ‘A</option>
+				              <option value="12">LOTERIA CHAQUE&NtildeA</option>
 				              <option value="14">INSTITUTO DE COLONIZACION</option>
 				              <option value="15">INSTITUTO DE INVESTIGACION FORESTAL Y AGROPECUARIA</option>
 				              <option value="16">INSSSEP</option>
@@ -107,7 +107,7 @@ if($dnipost==""){
 				              <option value="21">POLICIA PROVINCIAL</option>
 				              <option value="23">MINISTERIO DE INFRAESTRUCTURA Y SERVICIOS PUBLICOS</option>
 				              <option value="24">ADMINISTRACION PROVINCIAL DEL AGUA</option>
-				              <option value="25">INSTITUTO DEL ABORIGEN CHAQUEÃ‘O</option>
+				              <option value="25">INSTITUTO DEL ABORIGEN CHAQUE&NtildeO</option>
 				              <option value="26">TESORERIA GENERAL DE LA PROVINCIA</option>
 				              <option value="28">MINISTERIO DE DESARROLLO SOCIAL</option>
 				              <option value="29">MINISTERIO DE EDUCACION CULTURA CIENCIA Y TECNOLOGIA</option>
