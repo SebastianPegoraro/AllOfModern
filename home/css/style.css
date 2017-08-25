@@ -188,7 +188,7 @@ img.header-logo-gob {
 header.main .header-left-olim {
 	height: 122px;
 	width: 220px;
-	background: url(../images/logo-olimpiadas.png);
+	background: url(../images/logo-olimp.png);
 	background-repeat: no-repeat;
 	position: absolute;
 	z-index: 100;
@@ -200,6 +200,16 @@ header.main .header-left-prem {
 	height: 122px;
 	width: 220px;
 	background: url(../images/logo-Premio-12.png);
+	position: absolute;
+	z-index: 100;
+	left: 10%;
+}
+
+/*Para el logo de la cabezara izquierda Acto*/
+header.main .header-left-acto {
+	height: 122px;
+	width: 220px;
+	background: url(../images/logo-acto.png);
 	position: absolute;
 	z-index: 100;
 	left: 10%;
@@ -388,7 +398,7 @@ header.main .header-right {
     header.main .header-left-olim {
     height: 122px;
     width: 220px;
-    background: url(../images/logo-olimpiadas.png);
+    background: url(../images/logo-olimp.png);
     background-repeat: no-repeat;
     position: absolute;
     z-index: 100;
@@ -402,6 +412,15 @@ header.main .header-right {
   position: absolute;
   z-index: 100;
   left: 10%;
+}
+
+header.main .header-left-acto {
+height: 122px;
+width: 220px;
+background: url(../images/logo-acto.png);
+position: absolute;
+z-index: 100;
+left: 10%;
 }
 
     img.header-logo-gob {
@@ -420,13 +439,18 @@ header.main .header-right {
 
   header.main .header-left-olim {
 		left: -16px;
-		background: url(../images/logo-olimpiadas.png);
+		background: url(../images/logo-olimp.png);
     }
 
     header.main .header-left-prem {
   		left: -16px;
   		background: url(../images/logo-Premio-12.png);
       }
+
+      header.main .header-left-acto {
+    		left: -16px;
+    		background: url(../images/logo-acto.png);
+        }
 
 	.header-title {
 		display: block;

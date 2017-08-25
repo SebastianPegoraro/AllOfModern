@@ -220,7 +220,7 @@ error_reporting(0);
 <table>
 	<tr>
 		<td align="left" valign="top"><span id="descrip">
-			<label align="left">DESCRIPCI&oacuteN DEL PUESTO</label>
+			<label align="left">DESCRIPCI&OacuteN DEL PUESTO</label>
         <textarea name="descrip" id="descrip" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
         </span>
 		</td>
@@ -229,36 +229,11 @@ error_reporting(0);
 		<td><br></td>
 	</tr>
 	<tr>
-		<td>
-			<table>
-				<tbody>
-					<h5><u>&uacuteltimos estudios terciarios y/o universitarios</u></h5>
-				</tbody>
-				<tr>
-					<td>Fecha de inicio</td>
-					<td><input type="text" name="EInicio" id="EInicio" placeholder="AAAA-MM-DD"></td>
-				</tr>
-				<tr>
-					<td>Fecha de Finalizaci&oacuten</td>
-					<td><input type="text" name="EFinal" id="EFinal" placeholder="AAAA-MM-DD"></td>
-				</tr>
-				<tr>
-					<td>Nombre de la Instituci&oacuten</td>
-					<td><input type="text" name="Einsti" id="Einsti"></td>
-				</tr>
-				<tr>
-					<td>Programa acad&eacutemico</td>
-					<td><input type="text" name="acade" id="acade"></td>
-				</tr>
-				<tr>
-					<td>Grado Obtenido</td>
-					<td><input type="text" name="grado" id="grado"></td>
-				</tr>
-				<tr>
-					<td>Distinciones y Reconocimiento</td>
-					<td><input type="text" name="distReco" id="distReco"></td>
-				</tr>
-			</table>
+		<td align="left" valign="top"><span id="descrip">
+			<label align="left">Detalle los cursos, licenciaturas, posgrados o diplomaturas que ha tomado. Pude incluir cursos cortos.</label><br>
+      <label align="left">Estudios terciarios y/o universitarios</label>
+        <textarea name="descrip" id="descrip" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
+        </span>
 		</td>
 	</tr>
 	<tr>

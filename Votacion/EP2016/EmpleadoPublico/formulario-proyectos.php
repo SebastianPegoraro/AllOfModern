@@ -143,10 +143,9 @@ error_reporting(0);
 <table width="1033" height="446" border="1" align="center" cellspacing="4" bgcolor="#CCCCCC">
 
     <th colspan="2" align="left" valign="top" bgcolor="#FFFFFF" scope="row"><form id="form1" name="form1" method="post" action="guarda.php">
-<p style="color:rgb(248,67,67)">Nota: Recuerde que podr&aacute votar una (1) s&oacutela vez y a un (1) compa&ntildeero.</p>
 <table width="1013" border="0" cellspacing="4">
         <tr>
-          <th width="558" bgcolor="#FFFFFF" scope="row"><h2>1. Datos del Empleado a quien quiere votar</h2>
+          <th width="558" bgcolor="#FFFFFF" scope="row"><h2>Ingrese sus Datos para Postularse</h2>
           </th>
         </tr>
         <tr>
@@ -174,177 +173,193 @@ error_reporting(0);
               <th bgcolor="#FFFFFF" scope="row"><input name="oficina" type="text" id="oficina" value="<?php echo $ofi;?>" size="40" readonly="readonly"/></th>
               <td align="center" valign="middle" bgcolor="#FFFFFF">Localidad</td>
               <td align="left" bgcolor="#FFFFFF"><input name="local" type="text" id="local" size="40" /></td>
-	    </tr>
+	    			</tr>
             <tr>
               <th align="center" valign="middle" bgcolor="#FFFFFF" scope="row">DNI</th>
               <th bgcolor="#FFFFFF" scope="row"><input name="dni" type="text" id="dni" value="<?php echo $dnipost;?>" size="40" readonly="readonly"/></th>
               <td align="center" valign="middle" bgcolor="#FFFFFF">Tipo de Atenci&oacuten</td>
-	      	<th colspan="2" align="left" valign="middle" scope="row">
-		    <select name="depen" id="depen">
-		      <option value="1">On Line</option>
-		      <option value="2">Telef&oacutenico</option>
-		      <option value="3">Presencial</option>
-		    </select>
-          	</th>
+			      	<th colspan="2" align="left" valign="middle" scope="row">
+						    <select name="depen" id="depen">
+						      <option value="1">On Line</option>
+						      <option value="2">Telef&oacutenico</option>
+						      <option value="3">Presencial</option>
+						    </select>
+		          </th>
             </tr>
+						<tr>
+              <th align="center" valign="middle" bgcolor="#FFFFFF" scope="row">Cargo</th>
+              <th bgcolor="#FFFFFF" scope="row"><input name="cargo" type="text" id="cargo" size="40"/></th>
+              <td align="center" valign="middle" bgcolor="#FFFFFF">Jefe Inmediato Superior</td>
+              <td align="left" bgcolor="#FFFFFF"><input name="jefeSup" type="text" id="jefeSup" size="40" /></td>
+	    			</tr>
+						<tr>
+              <th align="center" valign="middle" bgcolor="#FFFFFF" scope="row">Correo Electr&oacutenico</th>
+              <th bgcolor="#FFFFFF" scope="row"><input name="correo" type="text" id="correo" size="40"/></th>
+							<td align="center" valign="middle" bgcolor="#FFFFFF">Como se Enter&oacute del Premio</td>
+			      	<th colspan="2" align="left" valign="middle" scope="row">
+						    <select name="seEntero" id="seEntero">
+						      <option value="1">Diario</option>
+						      <option value="2">Internet</option>
+						      <option value="3">Radio</option>
+									<option value="4">Compa&ntildeero de Trabajo</option>
+						    </select>
+		          </th>
+	    			</tr>
             <tr>
               <th colspan="4" bgcolor="#FFFFFF" scope="row">&nbsp;</th>
               </tr>
             <tr>
               <th colspan="4" bgcolor="#FFFFFF" scope="row"><p>&nbsp;</p>
-                <h2>CATEGORIA: Proyectos Especiales/Transversales</h2>
+                <h2>CATEGORIA: Proyectos especiales/transversales</h2>
+                <h4>Señale la o las temáticas correspondientes: </h4>
 
 <!--Empieza tabla con formulario que agregamos-->
 <table width="100%" border="1">
-
-
 <p>&nbsp;</p>
 <table>
+  <tr>
+    <td>
+			<div class="checkbox">
+			 <label><input type="checkbox" name="optradio" value="Transparencia y acceso a la información">Transparencia y acceso a la información</label>
+			</div>
+			<div class="checkbox">
+			 <label><input type="checkbox" name="optradio" value="Gestión de trámites">Gestión de trámites</label>
+			</div>
+			<div class="checkbox">
+			 <label><input type="checkbox" name="optradio" value="Mejora continua de trámites">Mejora continua de trámites</label>
+			</div>
+			<div class="checkbox">
+			 <label><input type="checkbox" name="optradio" value="Participación ciudadana">Participación ciudadana</label>
+			</div>
+			<div class="checkbox">
+			 <label><input type="checkbox" name="optradio" value="Servicio de atención al ciudadano">Servicio de atención al ciudadano</label>
+			</div>
+			<div class="checkbox">
+			 <label><input type="checkbox" name="optradio" value="Mejoras en la gestión pública">Mejoras en la gestión pública</label>
+			</div>
+		</td>
+  </tr>
+  <tr>
+		<td><br></td>
+	</tr>
 	<tr>
 		<td align="left" valign="top"><span id="obser1">
 			<p><label align="left"> T&iacutetulo del Proyecto: </label></p>
-      <p>                  <textarea name="obser1" id="obser1" cols="120" rows="11"></textarea>
-                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">No se cumple el m&iacutenimo de caracteres 				requerido(150).</span></span></p>
+      <p>                  <textarea name="obser1" id="obser1" cols="120" rows="11"placeholder="Escriba aqu&iacute"></textarea>
+                         </span></p>
 		</td>
-
+	</tr>
+  <tr>
+		<td><br></td>
 	</tr>
 	<tr>
-    <td align="left" valign="top"><span id="obser2">
+    <td align="left" valign="top"><span id="obser">
       <p><label align="left"> Breve descripci&oacuten del Proyecto: </label></p>
-      <p>                  <textarea name="obser2" id="obser2" cols="120" rows="11"></textarea>
-                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">No se cumple el m&iacutenimo de caracteres         requerido(150).</span></span></p>
+      <p>                  <textarea name="obser" id="obser" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
+                        </span></p>
     </td>
-
   </tr>
+  <tr>
+		<td><br></td>
+	</tr>
   <tr>
     <td align="left" valign="top"><span id="obser1">
       <p><label align="left"> Cu&aacutel es el problema a solucionar a trav&eacute del Proyecto? </label></p>
-      <p>                  <textarea name="obser1" id="obser1" cols="120" rows="11"></textarea>
-                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">No se cumple el m&iacutenimo de caracteres         requerido(150).</span></span></p>
+      <p>                  <textarea name="obser1" id="obser1" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
+                        </span></p>
     </td>
-
   </tr>
+  <tr>
+		<td><br></td>
+	</tr>
   <tr>
     <td align="left" valign="top"><span id="obser1">
       <p><label align="left">  Cu&aacutel es la soluci&oacuten planteada para el problema? </label></p>
-      <p>                  <textarea name="obser1" id="obser1" cols="120" rows="11"></textarea>
-                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">No se cumple el m&iacutenimo de caracteres         requerido(150).</span></span></p>
+      <p>                  <textarea name="obser1" id="obser1" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
+                        </span></p>
     </td>
-
   </tr>
+  <tr>
+		<td><br></td>
+	</tr>
   <tr>
     <td align="left" valign="top"><span id="obser1">
       <p><label align="left"> Qu&eacute resultados dio el proyecto o qu&eacute resultados espera del proyecto? </label></p>
-      <p>                  <textarea name="obser1" id="obser1" cols="120" rows="11"></textarea>
-                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">No se cumple el m&iacutenimo de caracteres         requerido(150).</span></span></p>
+      <p>                  <textarea name="obser1" id="obser1" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
+                        </span></p>
     </td>
-
   </tr>
+  <tr>
+		<td><br></td>
+	</tr>
   <tr>
     <td align="left" valign="top"><span id="obser1">
       <p><label align="left"> De qu&eacute manera contribuy&oacute al proyecto? Cu&aacuteles fueron sus tareas? </label></p>
-      <p>                  <textarea name="obser1" id="obser1" cols="120" rows="11"></textarea>
-                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">No se cumple el m&iacutenimo de caracteres         requerido(150).</span></span></p>
+      <p>                  <textarea name="obser1" id="obser1" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
+                        </span></p>
     </td>
-
   </tr>
+  <tr>
+		<td><br></td>
+	</tr>
   <tr>
     <td align="left" valign="top"><span id="obser1">
       <p><label align="left"> Por qu&eacute se est&aacute postulando al premio? Por qu&eacute se postula en esta categor&iacutea? </label></p>
-      <p>                  <textarea name="obser1" id="obser1" cols="120" rows="11"></textarea>
-                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">No se cumple el m&iacutenimo de caracteres         requerido(150).</span></span></p>
+      <p>                  <textarea name="obser1" id="obser1" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
+                        </span></p>
     </td>
-
   </tr>
+  <tr>
+		<td><br></td>
+	</tr>
   <tr>
     <td align="left" valign="top"><span id="obser1">
       <p><label align="left"> Qu&eacute otras categor&iacuteas adem&aacutes de las actuales cree que merece reconocimiento?</label></p>
-      <p>                  <textarea name="obser1" id="obser1" cols="120" rows="11"></textarea>
-                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">No se cumple el m&iacutenimo de caracteres         requerido(150).</span></span></p>
+      <p>                  <textarea name="obser1" id="obser1" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
+                        </span></p>
     </td>
-
   </tr>
+  <tr>
+		<td><br></td>
+	</tr>
   <tr>
     <td align="left" valign="top"><span id="obser1">
       <p><label align="left"> Sugerencias: </label></p>
-      <p>                  <textarea name="obser1" id="obser1" cols="120" rows="11"></textarea>
-                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">No se cumple el m&iacutenimo de caracteres         requerido(150).</span></span></p>
+      <p>                  <textarea name="obser1" id="obser1" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
+                        </span></p>
     </td>
-
   </tr>
 </table>
 <!-- Terminan las preguntas abiertas -->
 
-                      <p>&nbsp;</p>
-                      <table width="100%" height="186" border="0,5" cellspacing="4">
-                        <tr>
-                          <th colspan="6" scope="row"><h2>2. Datos de la Persona Votante</h2></th>
-                          </tr>
-                        <tr>
-                          <th width="18%" height="26" align="left" scope="row">Nombre y Apellido</th>
-                          <th width="25%" scope="row"><input name="apynomvot" type="text" id="textfield2" value="<?php echo $apeynomvot;?>" size="40" readonly="readonly"/></th>
-                          <th width="13%" scope="row"><label for="apynomvot"></label></th>
-                          <td width="10%">DNI</td>
-                          <td width="28%"><input name="dnivot" type="text" id="textfield6" value="<?php echo $votante?>" size="40" readonly="readonly"/></td>
-                          <td width="6%"><label for="apynomvot"></label></td>
-                          </tr>
-                        <tr>
-                          <th height="26" align="left" scope="row">Jurisdicci&oacuten</th>
-                          <th height="26" scope="row"><input name="jurvot" type="text" id="textfield3" value="<?php echo $jurdenomin;?>" size="40" readonly="readonly"/></th>
-                          <th scope="row"><label for="apynomvot"></label></th>
-                          <td>Tel&eacutefono*</td>
-                          <td><span id="telvot">
-                          <input name="telvot" type="text" id="telvot" size="40" />
-                          <br />
-                          <span class="textfieldRequiredMsg">Se necesita un valor.</span><span class="textfieldMinCharsMsg">No se cumple el m&iacutenimo de caracteres requerido(7).</span><span class="textfieldMaxCharsMsg">Se ha superado el n&uacutemero m&aacuteximo de caracteres(12).</span></span></td>
-                          <td><label for="apynomvot"></label></td>
-                          </tr>
-                        <tr>
-                          <th height="26" align="left" scope="row">Correo Electr&oacutenico*</th>
-                          <th height="26" scope="row"><span id="sprytextfield3">
-                          <label for="emailvot"></label>
-                          <input name="emailvot" type="text" id="emailvot" size="40" />
-                          <span class="textfieldRequiredMsg">Se necesita un valor.</span><span class="textfieldInvalidFormatMsg">Formato no v&aacutelido.</span></span></th>
-                          <th scope="row"><label for="apynomvot"></label></th>
+<p>&nbsp;</p>
+<table width="100%" height="186" border="0,5" cellspacing="4">
 
-			 <th><label>Medio</label></th>
-			      	<th colspan="2" align="left" valign="middle" scope="row">
-				    <select name="medio" id="medio">
-				      <option value="1">Diario</option>
-				      <option value="2">Internet</option>
-				      <option value="3">Radio</option>
-				      <option value="4">Compa&ntildeeros de trabajo</option>
-				      <option value="5">Otros</option>
-				    </select>
-				(Medio por el cual se enter&oacute del premio)
-			  </th>
-                          <td><label for="apynomvot"></label></td>
-                         </tr>
-                        <tr>
-                          <th height="26" align="left" scope="row">&nbsp;</th>
-                          <th height="26" scope="row">&nbsp;</th>
-                          <th scope="row"><a href="index.php">Volver a Ingresar Datos</a></th>
-                          <td colspan="2" align="center"><input type="submit" name="button2" id="button2" value="Confirmar la Votacion" /></td>
-                          <td>&nbsp;</td>
-                          </tr>
-                        </table>
-                      </th>
-                  </tr>
-                </table><p align="center">*Campos obligatorios</p>
-              </th>
-            </tr>
-          </table></th>
-        </tr>
-      </table>
-    </form></th>
-  </tr>
+
+  <tr>
+    <th height="26" align="left" scope="row">&nbsp;</th>
+    <th height="26" scope="row">&nbsp;</th>
+    <th scope="row"><a href="index.php">Volver a Ingresar Datos</a></th>
+    <td colspan="2" align="center"><input type="submit" name="button2" id="button2" value="Confirmar la Votacion" /></td>
+    <td>&nbsp;</td>
+    </tr>
+  </table>
+</th>
+</tr>
+</table><p align="center">*Campos obligatorios</p>
+</th>
+</tr>
+</table></th>
+</tr>
 </table>
+</form></th>
+</tr>
+</table>
+
 <script type="text/javascript">
 var sprytextfield1 = new Spry.Widget.ValidationTextField("telvot", "none", {minChars:7, maxChars:12});
 var sprytextfield2 = new Spry.Widget.ValidationTextField("telef", "none", {minChars:7, maxChars:12});
 var sprytextfield3 = new Spry.Widget.ValidationTextField("sprytextfield3", "email");
-var sprytextarea1 = new Spry.Widget.ValidationTextarea("obser1", {minChars:150, hint:"Ingrese Como Minimo 150 Caracteres", validateOn:["blur"]});
-var sprytextarea2 = new Spry.Widget.ValidationTextarea("obser2", {minChars:150, hint:"Ingrese Como Minimo 150 Caracteres", validateOn:["blur"]});
 var spryradio1 = new Spry.Widget.ValidationRadio("spryradio1");
 var spryradio3 = new Spry.Widget.ValidationRadio("spryradio3");
 var spryradio5 = new Spry.Widget.ValidationRadio("spryradio5");

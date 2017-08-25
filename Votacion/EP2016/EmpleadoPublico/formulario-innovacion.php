@@ -216,67 +216,124 @@ error_reporting(0);
 <!--Empiezan las preguntas abiertas -->
 <p>&nbsp;</p>
 <table>
+  <tr>
+    <td>¿Ha detectado algún problema en su ámbito de trabajo relacionado con las siguientes temáticas? Seleccione:</td>
+  </tr>
+  <tr>
+    <td>
+			<div class="checkbox">
+			 <label><input type="checkbox" name="optradio" value="Procesos deficientes">Procesos deficientes</label>
+			</div>
+			<div class="checkbox">
+			 <label><input type="checkbox" name="optradio" value="Tecnologías obsoletas o desactualizadas">Tecnologías obsoletas o desactualizadas</label>
+			</div>
+			<div class="checkbox">
+			 <label><input type="checkbox" name="optradio" value="Canales de información/comunicación inapropiados o inexistentes">Canales de información/comunicación inapropiados o inexistentes</label>
+			</div>
+			<div class="checkbox">
+			 <label><input type="checkbox" name="optradio" value="Atención deficiente a los ciudadanos">Atención deficiente a los ciudadanos</label>
+			</div>
+			<div class="checkbox">
+			 <label><input type="checkbox" name="optradio" value="Desperdicio de insumos">Desperdicio de insumos</label>
+			</div>
+		</td>
+  </tr>
 	<tr>
-		<td align="left" valign="top"><span id="obser1">
-			<p><label align="left">Qu&eacute soluci&oacuten se ha propuesto para el mismo? </label></p>
-       <p>                 <textarea name="obser1" id="obser1" cols="120" rows="11"></textarea>
-                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">aca no deber�a controlar</span></span>
-		  </p>
-    </td>
-
+    <td align="left" valign="top"><span id="descrip">
+			<label align="left">Qué solución se ha propuesto para el mismo?</label>
+        <textarea name="descrip" id="descrip" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
+        </span>
+		</td>
+	</tr>
+  <tr>
+		<td><br></td>
 	</tr>
 	<tr>
-		<td align="left" valign="top"><span id="obser2">
-			<p><label align="left">Qu&eacute resultados dio la soluci&oacuten planteada o qu&eacute resultados espera de la misma?</label></p>
-       <p>                 <textarea name="obser2" id="obser2" cols="120" rows="11"></textarea>
-                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">aca no deber�a controlar</span></span>
-		  </p>
-    </td>
-
+    <td align="left" valign="top"><span id="descrip">
+			<label align="left">Qué resultados dio la solución planteada o qué resultados espera de la misma?</label>
+        <textarea name="descrip" id="descrip" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
+        </span>
+		</td>
+	</tr>
+  <tr>
+		<td><br></td>
 	</tr>
   <tr>
     <td align="left" valign="top"><span id="obser2">
       <p><label align="left">De qu&eacute manera Ud. contribuy&oacute al estudio del problema y/o soluci&oacuten? Cu&aacuteles fueron sus tareas? </label></p>
-       <p>                 <textarea name="obser2" id="obser2" cols="120" rows="11"></textarea>
-                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">aca no deber�a controlar</span></span>
+       <p>                 <textarea name="obser2" id="obser2" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
+                        <span class="textareaRequiredMsg">Se necesita un valor.</span> </span>
         </p>
     </td>
-
   </tr>
+  <tr>
+		<td><br></td>
+	</tr>
   <tr>
     <td align="left" valign="top"><span id="obser2">
       <p><label align="left">Considera que sus aportes fueron determinantes? </label></p>
-      <p>                  <textarea name="obser2" id="obser2" cols="120" rows="11"></textarea>
-                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">aca no deber�a controlar</span></span>
+      <p>                  <textarea name="obser2" id="obser2" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
+                        <span class="textareaRequiredMsg">Se necesita un valor.</span> </span>
       </p>
     </td>
-
   </tr>
+  <tr>
+		<td><br></td>
+	</tr>
   <tr>
     <td align="left" valign="top"><span id="obser2">
      <p><label align="left">Por qu&eacute se est&aacute postulando al premio? Por qu&eacute se postula en esta categor&iacute?</label></p>
-     <p>                   <textarea name="obser2" id="obser2" cols="120" rows="11"></textarea>
-                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">aca no deber�a controlar</span></span>
+     <p>                   <textarea name="obser2" id="obser2" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
+                        <span class="textareaRequiredMsg">Se necesita un valor.</span> </span>
     </p>
     </td>
   </tr>
   <tr>
+		<td><br></td>
+	</tr>
+  <tr>
     <td align="left" valign="top"><span id="obser2">
       <p><label align="left">Qu&eacute otras categor&iacuteas adem&aacutes de las actuales cree que merecen reconocimiento?</label></p>
-      <p>                  <textarea name="obser2" id="obser2" cols="120" rows="11"></textarea>
-                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">aca no deber�a controlar</span></span>
+      <p>                  <textarea name="obser2" id="obser2" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
+                        <span class="textareaRequiredMsg">Se necesita un valor.</span> </span>
       </p>
     </td>
-
   </tr>
+  <tr>
+		<td><br></td>
+	</tr>
    <tr>
     <td align="left" valign="top"><span id="obser2">
      <p> <label align="left">Sugerencias</label></p>
-     <p>                   <textarea name="obser2" id="obser2" cols="120" rows="11"></textarea>
-                        <span class="textareaRequiredMsg">Se necesita un valor.</span><span class="textareaMinCharsMsg">aca no deber�a controlar</span></span>
+     <p>                   <textarea name="obser2" id="obser2" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
+                        <span class="textareaRequiredMsg">Se necesita un valor.</span> </span>
     </p>
     </td>
+  </tr>
+</table>
+<!-- Terminan las preguntas abiertas -->
 
+                      <p>&nbsp;</p>
+                      <table width="100%" height="186" border="0,5" cellspacing="4">
+
+
+                        <tr>
+                          <th height="26" align="left" scope="row">&nbsp;</th>
+                          <th height="26" scope="row">&nbsp;</th>
+                          <th scope="row"><a href="index.php">Volver a Ingresar Datos</a></th>
+                          <td colspan="2" align="center"><input type="submit" name="button2" id="button2" value="Confirmar la Votacion" /></td>
+                          <td>&nbsp;</td>
+                          </tr>
+                        </table>
+                      </th>
+                  </tr>
+                </table><p align="center">*Campos obligatorios</p>
+              </th>
+            </tr>
+          </table></th>
+        </tr>
+      </table>
+    </form></th>
   </tr>
 </table>
 
@@ -284,8 +341,6 @@ error_reporting(0);
 var sprytextfield1 = new Spry.Widget.ValidationTextField("telvot", "none", {minChars:7, maxChars:12});
 var sprytextfield2 = new Spry.Widget.ValidationTextField("telef", "none", {minChars:7, maxChars:12});
 var sprytextfield3 = new Spry.Widget.ValidationTextField("sprytextfield3", "email");
-var sprytextarea1 = new Spry.Widget.ValidationTextarea("obser1", {minChars:150, hint:"Ingrese Como Minimo 150 Caracteres", validateOn:["blur"]});
-var sprytextarea2 = new Spry.Widget.ValidationTextarea("obser2", {minChars:150, hint:"Ingrese Como Minimo 150 Caracteres", validateOn:["blur"]});
 var spryradio1 = new Spry.Widget.ValidationRadio("spryradio1");
 var spryradio3 = new Spry.Widget.ValidationRadio("spryradio3");
 var spryradio5 = new Spry.Widget.ValidationRadio("spryradio5");
