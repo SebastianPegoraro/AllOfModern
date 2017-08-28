@@ -1,0 +1,21 @@
+/* http://www.AprendaAProgramarEnPHPya.com/blog   */
+#carga {
+	background-image:url(img/shade1x1.png);    
+	position:absolute; 
+	left:0; 
+	top:0;
+	width:100%; 
+	z-index:100;
+	}
+
+#cargando{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 300px;
+	height: 200px;
+	margin-top: -100px;
+	margin-left: -150px;
+	
+	overflow: auto;
+	}
