@@ -92,7 +92,7 @@
       <form class="well">
         <h2>
   				VOTO GUARDADO CORRECTAMENTE<br>
-  				<small>SE HA ENVIADO UN MENSAJE A SU CORREO CON LOS DATOS INGRESADOS</small>
+  				<small>RECUERDE QUE LA INSCRIPCI&OacuteN SE COMPLETAR&Aacute CUANDO PRESENTE LOS COMPROBANTES CORRESPONDIENTES</small>
   			</h2>
       </form>
 

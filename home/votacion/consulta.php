@@ -1,7 +1,7 @@
 <?php
 header("Content-Type: text/html;charset=utf-8");
 include("conect.php");?>
-<?php
+<?php 
 function control($dni){
 	abrirBase();
 	mysql_query("SET NAMES 'utf8'");
@@ -14,36 +14,18 @@ function control($dni){
 	}
 	}
 ?>
-<?php
+<?php 
 error_reporting(0);
 
 $ac=$_POST['oculto'];
 $dnipostul=$_REQUEST['dnipostulante'];
-$dnivotante=$_POST['dnivotante'];
 $jurpost=$_REQUEST['jurpost'];
-$jurvot=$_POST['jurvot'];
-$categoria=$_REQUEST['categoria'];
+$categoria=$_POST['categoria'];
 //Si el Postulante o el votante es jur. insssep pasa solo
-if(($jurpost==16)&&($ac=='postulante')){
-	header("Location: categoria.php?dni=$dnipostul&jur=$jurpost");
-	exit;
-	}
-if(($jurvot==16)&&($ac=='votante'))
-{
-	if($dnipostul==$dnivotante){
-//		echo "no puede ser el mismo dni";
-		header("Location: error.php");
-		exit;
-		}
-	if($jurpost!=$jurvot){
-//		echo "no puede ser distina jurisdiccion";
-		header("Location: error.php");
-		exit;
-	}
 	//control($dnivotante);
 	//header("Location: Datos-Jefe.php?votante=$dnivotante&postul=$dnipostul&jurpost=$jurpost");
 	//exit;
-}
+
 
 //Comprueba que el postulante y el votante sean aptos
 
@@ -58,36 +40,27 @@ if($ac=='postulante'){
 		exit;
 		}
 	else{
-		header("Location: categoria.php?dni=$dnipostul&jur=$jurpost");
+			if($categoria=='1'){
+				header("Location: formulario-colaboracion.php?dni=$dnipostul&jur=$jurpost&categoria=$categoria");
+				exit;
+			}
+			if ($categoria=='2'){
+				header("Location: formulario-capacitacion.php?dni=$dnipostul&jur=$jurpost&categoria=$categoria");
+				exit;
+			}
+			if ($categoria=='3'){
+				header("Location: formulario-proyectos.php?dni=$dnipostul&jur=$jurpost&categoria=$categoria");
+				exit;
+			}
+			if ($categoria=='4'){
+				header("Location: formulario-innovacion.php?dni=$dnipostul&jur=$jurpost&categoria=$categoria");
+				exit;
+			}
+
+
+//			header("Location: formularioPE.php?dni=$dnipostul&jur=$jurpost");
 		exit;
 		}
 	}
 
-	//aca controla a los votantes
-
-else if($ac=='votante'){
-	if($dnipostul==$dnivotante){
-		//echo "no puede ser el mismo dni";
-		header("Location: error.php");
-		exit;
-		}
-	if($jurpost!=$jurvot){
-		//echo "no puede ser distina jurisdiccion";
-		header("Location: error.php");
-		exit;
-		}
-	control($dnivotante);
-	abrirBase();
-	mysql_query("SET NAMES 'utf8'");
-	$result = mysql_query("SELECT * FROM padron WHERE Jur=$jurvot");
-	cerrarBase();
-	$row = mysql_fetch_array($result);
-	if($row[1]==""){
-		header("Location: error.php");
-		}
-	else{
-
-		header("Location: formularioPE.php?votante=$dnivotante&postul=$dnipostul&jurpost=$jurpost");
-		}
-	}
 ?>
