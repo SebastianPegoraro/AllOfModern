@@ -9,13 +9,28 @@
     font-weight: normal;
     font-style: normal;
 }
+
 /*Fuente Medium*/
+@font-face {
+	font-family: 'Geomanist_medium';
+	src: url('../fonts/geomanist/Geomanist-Medium.eot');
+	src: url('../fonts/geomanist/Geomanist-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/geomanist/Geomanist-Medium.woff2') format('woff2'),
+		url('../fonts/geomanist/Geomanist-Medium.woff') format('woff'),
+		url('../fonts/geomanist/Geomanist-Medium.ttf') format('truetype'),
+		url('../fonts/geomanist/Geomanist-Medium.svg#Geomanist-Medium') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
 .medium {
-    font-family: 'Geomanist';
+    font-family: 'Geomanist_medium';
     font-weight: 500;
     font-style: normal;
 }
+
 /*Fuente Regular*/
+
+
 .regular {
     font-family: 'Geomanist';
     font-weight: normal;
@@ -136,7 +151,6 @@ header.main {
 	text-align: center;
 	margin: 0;
 	display: none;
-	font-weight: bold;
 	color: white;
 	font-size: 400%;
   text-shadow: 5px 5px 20px #000000;
