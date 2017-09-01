@@ -29,19 +29,41 @@
 }
 
 /*Fuente Regular*/
-
-
+@font-face {
+	font-family: 'Geomanist_regular';
+	src: url('../fonts/geomanist/Geomanist-Regular.eot');
+	src: url('../fonts/geomanist/Geomanist-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/geomanist/Geomanist-Regular.woff2') format('woff2'),
+		url('../fonts/geomanist/Geomanist-Regular.woff') format('woff'),
+		url('../fonts/geomanist/Geomanist-Regular.ttf') format('truetype'),
+		url('../fonts/geomanist/Geomanist-Regular.svg#Geomanist-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 .regular {
-    font-family: 'Geomanist';
+    font-family: 'Geomanist_regular';
     font-weight: normal;
     font-style: normal;
 }
+
 /*Fuente Book*/
+@font-face {
+	font-family: 'Geomanist_Book';
+	src: url('../fonts/geomanist/Geomanist-Book.eot');
+	src: url('../fonts/geomanist/Geomanist-Book.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/geomanist/Geomanist-Book.woff2') format('woff2'),
+		url('../fonts/geomanist/Geomanist-Book.woff') format('woff'),
+		url('../fonts/geomanist/Geomanist-Book.ttf') format('truetype'),
+		url('../fonts/geomanist/Geomanist-Book.svg#Geomanist-Book') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 .book {
-    font-family: 'Geomanist Book';
+    font-family: 'Geomanist_Book';
     font-weight: normal;
     font-style: normal;
 }
+
 /*Para quitar la sombra del carousel de bootstrap*/
 .carousel-control.left, .carousel-control.right {
    background-image:none !important;
@@ -58,17 +80,20 @@
   background: rgba(33,70,126, 0.9);
 }
 
+.video{
+  background: rgb(38, 128, 204);
+}
+
 body {
 	/*background-color: #EEE;*/
 	background-image: url(../images/TRAMA-01.jpg);
   background-size: contain;
 	/*background-size: 200px 200px;*/
-	font-family: 'geomanist_regularregular', sans-serif;
   padding-top: 200px;
 }
 
 .logos-olim img{
-  max-width: 50%;
+  max-width: 18%;
   height: auto;
 }
 
@@ -81,7 +106,7 @@ body {
 }
 
 .boton-olim input{
-  max-width: 80%;
+  max-width: 30%;
   height: auto;
 }
 
@@ -98,7 +123,7 @@ body {
 
 .navbar-default {
 	  background: transparent;
-    background-color: #4cb2d4;
+    background-color: rgb(38, 128, 204);
     position: fixed;
     top: 120px;
 }
@@ -161,13 +186,13 @@ header.main {
 	margin: 0;
 	display: none;
 	font-weight: medium;
-	color: black;
+	color: rgb(51, 51, 51);
 	font-size: 400%;
 }
 
 .header-title-olim .anio {
 	font-weight: medium;
-	color: #599897;
+	color: rgb(69, 113, 183);
 }
 
 /*Titulos de Nuevo Premio*/
@@ -187,8 +212,7 @@ header.main {
 
 .header-title .anio {
 	font-size: 1.2em;
-	font-weight: bold;
-	color: #599897;
+	color: white;
 }
 
 img.header-logo-gob {
@@ -388,8 +412,9 @@ header.main .header-right {
 	font-size: 8em;
 }
 
-.row .separador{
+.separador{
   background: url(../images/linea ondulada-01.png);
+  background-size: contain;
   background-repeat: repeat-x;
 }
 
@@ -426,16 +451,16 @@ header.main .header-right {
   position: absolute;
   z-index: 100;
   left: 10%;
-}
+  }
 
-header.main .header-left-acto {
-height: 122px;
-width: 220px;
-background: url(../images/logo-acto.png);
-position: absolute;
-z-index: 100;
-left: 10%;
-}
+  header.main .header-left-acto {
+  height: 122px;
+  width: 220px;
+  background: url(../images/logo-acto.png);
+  position: absolute;
+  z-index: 100;
+  left: 10%;
+  }
 
     img.header-logo-gob {
 		display: inline-block;
@@ -454,17 +479,17 @@ left: 10%;
   header.main .header-left-olim {
 		left: -16px;
 		background: url(../images/logo-olimp.png);
-    }
+  }
 
-    header.main .header-left-prem {
-  		left: -16px;
-  		background: url(../images/logo-Premio-12.png);
-      }
+  header.main .header-left-prem {
+		left: -16px;
+		background: url(../images/logo-Premio-12.png);
+  }
 
-      header.main .header-left-acto {
-    		left: -16px;
-    		background: url(../images/logo-acto.png);
-        }
+  header.main .header-left-acto {
+		left: -16px;
+		background: url(../images/logo-acto.png);
+  }
 
 	.header-title {
 		display: block;
@@ -523,36 +548,40 @@ left: 10%;
 		padding: 1em 0;
 	}
 }
+
 img {
-border: none;
+  border: none;
 }
+
 .izquierda {
-float: left;
+  float: left;
 }
+
 .derecha {
-float: right;
+  float: right;
 }
+
 .centro {
-float: center;
+  float: center;
 }
 
 .botonMostrarMas{
-	  position:absolute;
-    bottom:1390px;
-    text-decoration: none;
-    padding: 5px;
-    font-weight: 60;
-    font-size: 12px;
-    color: #ffff;
-    background-color: #1883ba;
-    border-radius: 3px;
-    border: 2px solid #124a72;
-  }
+  position:absolute;
+  bottom:1390px;
+  text-decoration: none;
+  padding: 5px;
+  font-weight: 60;
+  font-size: 12px;
+  color: #ffff;
+  background-color: #1883ba;
+  border-radius: 3px;
+  border: 2px solid #124a72;
+}
 
-  .botonMostrarMas:hover{
-    color: #124a72;
-    background-color: #ffffff;
-  }
+.botonMostrarMas:hover{
+  color: #124a72;
+  background-color: #ffffff;
+}
 
 /*CSS para la transicion del slide*/
 .carousel-fade .carousel-inner > .item {
