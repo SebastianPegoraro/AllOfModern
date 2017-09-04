@@ -4,7 +4,7 @@ include("conect.php");
 $dnipost=$_REQUEST['dni'];
 $jurpost=$_REQUEST['jurpost'];
 if($dnipost==""){
-  header("Location: index.html");
+  //header("Location: index.html");
   }
 //Tiramos una consulta a la base para traer los datos
 //Postulante
@@ -148,14 +148,14 @@ error_reporting(0);
                 <input name="apeynom" type="text" id="apeynom" value="<?php echo $apeynompost;?>" size="40" readonly="readonly"/>
               </label></th>
               <td width="22%" align="center" valign="middle" bgcolor="#FFFFFF">Direcci&oacuten Laboral<br /></td>
-              <td width="28%" align="left" bgcolor="#FFFFFF"><input name="direc" type="text" id="direc" size="40" /></td>
+              <td width="28%" align="left" bgcolor="#FFFFFF"><input name="direc" type="text" id="direc" size="40" data-toggle="popover" data-placement="left" data-content="Debe rellenar este campo" /></td>
             </tr>
             <tr>
               <th align="center" valign="middle" bgcolor="#FFFFFF" scope="row">Jurisdicci&oacuten</th>
               <th bgcolor="#FFFFFF" scope="row"><input name="jur" type="text" id="jur" value="<?php echo $jurdenomin;?>" size="40" readonly="readonly"/></th>
               <td align="center" valign="middle" bgcolor="#FFFFFF">Tel&eacutefono Personal/Laboral*</td>
               <td align="left" bgcolor="#FFFFFF"><span id="telef">
-              <input name="telef" type="text" id="telef" size="40" />
+              <input name="telef" type="text" id="telef" size="40" data-toggle="popover" data-placement="left" data-content="Debe rellenar este campo"/>
               <br />
               <span class="textfieldRequiredMsg">Se necesita un valor.</span><span class="textfieldMinCharsMsg"><br />
               No se cumple el m&iacutenimo de caracteres requerido(7).</span><span class="textfieldMaxCharsMsg">Se ha superado el n&uacutemero m&aacuteximo de caracteres(12).</span></span></td>
@@ -164,7 +164,7 @@ error_reporting(0);
               <th align="center" valign="middle" bgcolor="#FFFFFF" scope="row">Oficina</th>
               <th bgcolor="#FFFFFF" scope="row"><input name="oficina" type="text" id="oficina" value="<?php echo $ofi;?>" size="40" readonly="readonly"/></th>
               <td align="center" valign="middle" bgcolor="#FFFFFF">Localidad</td>
-              <td align="left" bgcolor="#FFFFFF"><input name="local" type="text" id="local" size="40" /></td>
+              <td align="left" bgcolor="#FFFFFF"><input name="local" type="text" id="local" size="40" data-toggle="popover" data-placement="left" data-content="Debe rellenar este campo"/></td>
 	    			</tr>
             <tr>
               <th align="center" valign="middle" bgcolor="#FFFFFF" scope="row">DNI</th>
@@ -180,13 +180,13 @@ error_reporting(0);
             </tr>
 						<tr>
               <th align="center" valign="middle" bgcolor="#FFFFFF" scope="row">Cargo</th>
-              <th bgcolor="#FFFFFF" scope="row"><input name="cargo" type="text" id="cargo" size="40"/></th>
+              <th bgcolor="#FFFFFF" scope="row"><input name="cargo" type="text" id="cargo" size="40" data-toggle="popover" data-placement="right" data-content="Debe rellenar este campo"/></th>
               <td align="center" valign="middle" bgcolor="#FFFFFF">Jefe Inmediato Superior</td>
-              <td align="left" bgcolor="#FFFFFF"><input name="jefeSup" type="text" id="jefeSup" size="40" /></td>
+              <td align="left" bgcolor="#FFFFFF"><input name="jefeSup" type="text" id="jefeSup" size="40" data-toggle="popover" data-placement="left" data-content="Debe rellenar este campo"/></td>
 	    			</tr>
 						<tr>
               <th align="center" valign="middle" bgcolor="#FFFFFF" scope="row">Correo Electr&oacutenico</th>
-              <th bgcolor="#FFFFFF" scope="row"><input name="correo" type="text" id="correo" size="40"/></th>
+              <th bgcolor="#FFFFFF" scope="row"><input name="correo" type="text" id="correo" size="40" data-toggle="popover" data-placement="right" data-content="Debe rellenar este campo"/></th>
 							<td align="center" valign="middle" bgcolor="#FFFFFF">Como se Enter&oacute del Premio</td>
 			      	<th colspan="2" align="left" valign="middle" scope="row">
 						    <select name="seEntero" id="seEntero">
@@ -212,7 +212,7 @@ error_reporting(0);
 	<tr>
 		<td align="left" valign="top"><span id="obser1">
 			<p><label align="left">DESCRIPCI&OacuteN DEL PUESTO</label></p>
-        <p><textarea name="obser1" id="obser1" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea></p>
+        <p><textarea name="obser1" id="obser1" cols="120" rows="11" placeholder="Escriba aqu&iacute" data-toggle="popover" data-placement="left" data-content="Debe rellenar este campo"></textarea></p>
         </span>
 		</td>
 	</tr>
@@ -223,7 +223,7 @@ error_reporting(0);
 		<td align="left" valign="top"><span id="obser2">
 			<p><label align="left">Detalle los cursos, licenciaturas, posgrados o diplomaturas que ha tomado. Pude incluir cursos cortos.</label></p><br>
       <p><label align="left">Estudios terciarios y/o universitarios</label></p>
-        <p><textarea name="obser2" id="obser2" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea></p>
+        <p><textarea name="obser2" id="obser2" cols="120" rows="11" placeholder="Escriba aqu&iacute" data-toggle="popover" data-placement="left" data-content="Debe rellenar este campo"></textarea></p>
         </span>
 		</td>
 	</tr>
@@ -233,7 +233,7 @@ error_reporting(0);
 	<tr>
 		<td align="left" valign="top"><span id="obser3">
 			<p><label align="left">¿C&oacutemo constribuye su nivel acad&eacutemico a su desempe&ntildeo laboral?</label></p>
-        <p><textarea name="obser3" id="obser3" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea></p>
+        <p><textarea name="obser3" id="obser3" cols="120" rows="11" placeholder="Escriba aqu&iacute" data-toggle="popover" data-placement="left" data-content="Debe rellenar este campo"></textarea></p>
         </span>
 		</td>
 	</tr>
@@ -243,7 +243,7 @@ error_reporting(0);
 	<tr>
 		<td align="left" valign="top"><span id="obser4">
 			<p><label align="left">Cursos y seminarios</label></p>
-        <p><textarea name="obser4" id="obser4" cols="120" rows="11" placeholder="Detalle aqu&iacute el nombre de la instituci&oacuten, el nombre del curso y su duraci&oacuten. Si son varios, repita el procedimiento."></textarea></p>
+        <p><textarea name="obser4" id="obser4" cols="120" rows="11" placeholder="Detalle aqu&iacute el nombre de la instituci&oacuten, el nombre del curso y su duraci&oacuten. Si son varios, repita el procedimiento." data-toggle="popover" data-placement="left" data-content="Debe rellenar este campo"></textarea></p>
         </span>
 		</td>
 	</tr>
@@ -253,7 +253,7 @@ error_reporting(0);
 	<tr>
 		<td align="left" valign="top"><span id="obser5">
 			<p><label align="left">¿C&oacutemo contribuy&oacute la capacitaci&oacuten en su puesto de trabajo?</label></p>
-        <p><textarea name="obser5" id="obser5" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea></p>
+        <p><textarea name="obser5" id="obser5" cols="120" rows="11" placeholder="Escriba aqu&iacute" data-toggle="popover" data-placement="left" data-content="Debe rellenar este campo"></textarea></p>
         </span>
 		</td>
 	</tr>
@@ -263,7 +263,7 @@ error_reporting(0);
 	<tr>
 		<td align="left" valign="top"><span id="obser6">
 			<p><label align="left">¿Comparte los conocimientos adquiridos con sus compa&ntildeeros de trabajo?</label></p>
-        <p><textarea name="obser6" id="obser6" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea></p>
+        <p><textarea name="obser6" id="obser6" cols="120" rows="11" placeholder="Escriba aqu&iacute" data-toggle="popover" data-placement="left" data-content="Debe rellenar este campo"></textarea></p>
         </span>
 		</td>
 	</tr>
@@ -273,7 +273,7 @@ error_reporting(0);
 	<tr>
 		<td align="left" valign="top"><span id="obser7">
 			<p><label align="left">¿En qu&eacute otras tem&aacuteticas que aporten a su puesto de trabajo le gustar&iacutea capacitarse?</label></p>
-        <p><textarea name="obser7" id="obser7" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea></p>
+        <p><textarea name="obser7" id="obser7" cols="120" rows="11" placeholder="Escriba aqu&iacute" data-toggle="popover" data-placement="left" data-content="Debe rellenar este campo"></textarea></p>
         </span>
 		</td>
 	</tr>
@@ -283,7 +283,7 @@ error_reporting(0);
 	<tr>
 		<td align="left" valign="top"><span id="obser8">
 			<p><label align="left">¿Por qu&eacute se est&aacute postulando al premio?¿Por qu&eacute se postula en esta categor&iacutea?</label></p>
-        <p><textarea name="obser8" id="obser8" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea></p>
+        <p><textarea name="obser8" id="obser8" cols="120" rows="11" placeholder="Escriba aqu&iacute" data-toggle="popover" data-placement="left" data-content="Debe rellenar este campo"></textarea></p>
         </span>
 		</td>
 	</tr>
@@ -319,7 +319,7 @@ error_reporting(0);
                           <th height="26" align="left" scope="row">&nbsp;</th>
                           <th height="26" scope="row">&nbsp;</th>
                           <th scope="row"><a href="index.php">Volver a Ingresar Datos</a></th>
-                          <td colspan="2" align="center"><input type="submit" name="button2" id="button2" value="Confirmar la Votacion" /></td>
+                          <td colspan="2" align="center"><input type="button" name="button2" id="button2" value="Confirmar la Votacion" /></td>
                           <td>&nbsp;</td>
                           </tr>
                         </table>
@@ -334,6 +334,22 @@ error_reporting(0);
     </form></th>
   </tr>
 </table>
+<div class="modal fade" tabindex="-1" role="dialog" id="msgerror">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Error!</h4>
+      </div>
+      <div class="modal-body">
+        <p>Hay campos requeridos sin rellenar!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 <script type="text/javascript">
 var sprytextfield1 = new Spry.Widget.ValidationTextField("telvot", "none", {minChars:7, maxChars:12});
 var sprytextfield2 = new Spry.Widget.ValidationTextField("telef", "none", {minChars:7, maxChars:12});
@@ -349,6 +365,35 @@ var spryradio11 = new Spry.Widget.ValidationRadio("spryradio11");
 var spryradio13 = new Spry.Widget.ValidationRadio("spryradio13");
 var spryradio15 = new Spry.Widget.ValidationRadio("spryradio15");
 var spryradio17 = new Spry.Widget.ValidationRadio("spryradio17");
+</script>
+<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+  $("#button2").on("click", function(){
+    var hayerror = false;
+    $("input[type = text]").each(function(){
+      if ($(this).val().trim() == "") {
+        $(this).css("background-color","#f2dede");
+
+        hayerror =true;
+      }
+    });
+    $("textarea").each(function(){
+      if ($(this).attr("id") != "obser9" && $(this).attr("id") != "obser10") {
+        if ($(this).val().trim() == "") {
+          $(this).css("background-color","#f2dede");
+          hayerror =true;
+        }
+      }
+    });
+    if (hayerror) {
+        $("#msgerror").modal('show');
+    } else {
+      $("#ble").submit();
+    }
+
+  });
 </script>
 </body>
 </html>

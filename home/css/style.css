@@ -106,7 +106,7 @@ body {
 }
 
 .boton-olim input{
-  max-width: 30%;
+  max-width: 70%;
   height: auto;
 }
 
@@ -406,6 +406,14 @@ header.main .header-right {
 
 .pdf-white-color {
 	color: white;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+}
+
+.pdf-white-color:hover {
+	color: red;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
 }
 
 .fa-8x {
@@ -413,9 +421,15 @@ header.main .header-right {
 }
 
 .separador{
-  background: url(../images/linea ondulada-01.png);
+  background: url(../images/linea-ondulada-01.png);
   background-size: contain;
   background-repeat: repeat-x;
+  height: 10px;
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 /*Para centrar las imagenes del carousel de bootstrap*/
@@ -539,6 +553,7 @@ header.main .header-right {
 		height:auto;
 	}
 }
+
 @media only screen and (max-width: 1000px) {
 	.logos-gobierno .logos-img{
 		display:block;
@@ -665,3 +680,41 @@ img {
  .form-btn:active{
    opacity: 0.9;
  }
+
+h1{
+ font-size: 25px;
+}
+
+h3{
+ font-size: 14px;
+}
+
+@media (max-device-width: 480px) and (orientation: landscape) {
+  h1 {
+      font-size: 36px; /* Lower the max-height for smaller devices */
+  }
+  h3 {
+      font-size: 24px; /* Lower the max-height for smaller devices */
+  }
+  .boton-olim{
+    max-width: 70%;
+  }
+  .boton-olim input{
+    max-width: 30%;
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 36px; /* Lower the max-height for smaller devices */
+  }
+  h3 {
+    font-size: 24px; /* Lower the max-height for smaller devices */
+  }
+  .boton-olim{
+    max-width: 100%;
+  }
+  .boton-olim input{
+    max-width: 30%;
+  }
+}
