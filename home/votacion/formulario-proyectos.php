@@ -147,7 +147,7 @@ error_reporting(0);
               <th width="28%" bgcolor="#FFFFFF" scope="row"><label for="dni">
                 <input name="apeynom" type="text" id="apeynom" value="<?php echo $apeynompost;?>" size="40" readonly="readonly"/>
               </label></th>
-              <td width="22%" align="center" valign="middle" bgcolor="#FFFFFF">Direcci&oacuten Laboral<br /></td>
+              <td width="22%" align="center" valign="middle" bgcolor="#FFFFFF">Direcci&oacuten Laboral*<br /></td>
               <td width="28%" align="left" bgcolor="#FFFFFF"><input name="direc" type="text" id="direc" size="40" /></td>
             </tr>
             <tr>
@@ -163,7 +163,7 @@ error_reporting(0);
             <tr>
               <th align="center" valign="middle" bgcolor="#FFFFFF" scope="row">Oficina</th>
               <th bgcolor="#FFFFFF" scope="row"><input name="oficina" type="text" id="oficina" value="<?php echo $ofi;?>" size="40" readonly="readonly"/></th>
-              <td align="center" valign="middle" bgcolor="#FFFFFF">Localidad</td>
+              <td align="center" valign="middle" bgcolor="#FFFFFF">Localidad*</td>
               <td align="left" bgcolor="#FFFFFF"><input name="local" type="text" id="local" size="40" /></td>
 	    			</tr>
             <tr>
@@ -179,13 +179,13 @@ error_reporting(0);
 		          </th>
             </tr>
 						<tr>
-              <th align="center" valign="middle" bgcolor="#FFFFFF" scope="row">Cargo</th>
+              <th align="center" valign="middle" bgcolor="#FFFFFF" scope="row">Cargo*</th>
               <th bgcolor="#FFFFFF" scope="row"><input name="cargo" type="text" id="cargo" size="40"/></th>
-              <td align="center" valign="middle" bgcolor="#FFFFFF">Jefe Inmediato Superior</td>
+              <td align="center" valign="middle" bgcolor="#FFFFFF">Jefe Inmediato Superior*</td>
               <td align="left" bgcolor="#FFFFFF"><input name="jefeSup" type="text" id="jefeSup" size="40" /></td>
 	    			</tr>
 						<tr>
-              <th align="center" valign="middle" bgcolor="#FFFFFF" scope="row">Correo Electr&oacutenico</th>
+              <th align="center" valign="middle" bgcolor="#FFFFFF" scope="row">Correo Electr&oacutenico*</th>
               <th bgcolor="#FFFFFF" scope="row"><input name="correo" type="text" id="correo" size="40"/></th>
 							<td align="center" valign="middle" bgcolor="#FFFFFF">Como se Enter&oacute del Premio</td>
 			      	<th colspan="2" align="left" valign="middle" scope="row">
@@ -203,7 +203,7 @@ error_reporting(0);
             <tr>
               <th colspan="4" bgcolor="#FFFFFF" scope="row"><p>&nbsp;</p>
                 <h2>CATEGORIA: Proyectos especiales/transversales</h2>
-                <h4>Señale la o las temáticas correspondientes: </h4>
+                <h4>Señale la o las temáticas correspondientes:* </h4>
        <input type="checkbox" name="categoria" value="Proyectos" style="visibility: hidden;" checked>
 <!--Empieza tabla con formulario que agregamos-->
 <table width="100%" border="1">
@@ -236,7 +236,7 @@ error_reporting(0);
 	</tr>
 	<tr>
 		<td align="left" valign="top"><span id="obser2">
-			<p><label align="left"> T&iacutetulo del Proyecto: </label></p>
+			<p><label align="left"> T&iacutetulo del Proyecto:*</label></p>
       <p>                  <textarea name="obser2" id="obser2" cols="120" rows="11"placeholder="Escriba aqu&iacute"></textarea>
                          </span></p>
 		</td>
@@ -246,7 +246,7 @@ error_reporting(0);
 	</tr>
 	<tr>
     <td align="left" valign="top"><span id="obser3">
-      <p><label align="left"> Breve descripci&oacuten del Proyecto: </label></p>
+      <p><label align="left"> Breve descripci&oacuten del Proyecto:* </label></p>
       <p>                  <textarea name="obser3" id="obser3" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
                         </span></p>
     </td>
@@ -256,7 +256,7 @@ error_reporting(0);
 	</tr>
   <tr>
     <td align="left" valign="top"><span id="obser4">
-      <p><label align="left"> Cu&aacutel es el problema a solucionar a trav&eacute del Proyecto? </label></p>
+      <p><label align="left"> Cu&aacutel es el problema a solucionar a trav&eacute del Proyecto?* </label></p>
       <p>                  <textarea name="obser4" id="obser4" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
                         </span></p>
     </td>
@@ -266,7 +266,7 @@ error_reporting(0);
 	</tr>
   <tr>
     <td align="left" valign="top"><span id="obser5">
-      <p><label align="left">  Cu&aacutel es la soluci&oacuten planteada para el problema? </label></p>
+      <p><label align="left">  Cu&aacutel es la soluci&oacuten planteada para el problema?* </label></p>
       <p>                  <textarea name="obser5" id="obser5" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
                         </span></p>
     </td>
@@ -276,7 +276,7 @@ error_reporting(0);
 	</tr>
   <tr>
     <td align="left" valign="top"><span id="obser6">
-      <p><label align="left"> Qu&eacute resultados dio el proyecto o qu&eacute resultados espera del proyecto? </label></p>
+      <p><label align="left"> Qu&eacute resultados dio el proyecto o qu&eacute resultados espera del proyecto?* </label></p>
       <p>                  <textarea name="obser6" id="obser6" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
                         </span></p>
     </td>
@@ -286,7 +286,7 @@ error_reporting(0);
 	</tr>
   <tr>
     <td align="left" valign="top"><span id="obser7">
-      <p><label align="left"> De qu&eacute manera contribuy&oacute al proyecto? Cu&aacuteles fueron sus tareas? </label></p>
+      <p><label align="left"> De qu&eacute manera contribuy&oacute al proyecto? Cu&aacuteles fueron sus tareas?* </label></p>
       <p>                  <textarea name="obser7" id="obser7" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
                         </span></p>
     </td>
@@ -296,7 +296,7 @@ error_reporting(0);
 	</tr>
   <tr>
     <td align="left" valign="top"><span id="obser8">
-      <p><label align="left"> Por qu&eacute se est&aacute postulando al premio? Por qu&eacute se postula en esta categor&iacutea? </label></p>
+      <p><label align="left"> Por qu&eacute se est&aacute postulando al premio? Por qu&eacute se postula en esta categor&iacutea?* </label></p>
       <p>                  <textarea name="obser8" id="obser8" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
                         </span></p>
     </td>
@@ -347,7 +347,22 @@ error_reporting(0);
 </form></th>
 </tr>
 </table>
-
+<div class="modal fade" tabindex="-1" role="dialog" id="msgerror">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Error!</h4>
+      </div>
+      <div class="modal-body">
+        <p>Hay campos requeridos sin rellenar!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 <script type="text/javascript">
 var sprytextfield1 = new Spry.Widget.ValidationTextField("telvot", "none", {minChars:7, maxChars:12});
 var sprytextfield2 = new Spry.Widget.ValidationTextField("telef", "none", {minChars:7, maxChars:12});
@@ -362,5 +377,10 @@ var spryradio13 = new Spry.Widget.ValidationRadio("spryradio13");
 var spryradio15 = new Spry.Widget.ValidationRadio("spryradio15");
 var spryradio17 = new Spry.Widget.ValidationRadio("spryradio17");
 </script>
+
+<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/validation.js"></script>
+
 </body>
 </html>

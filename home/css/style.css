@@ -93,7 +93,7 @@ body {
 }
 
 .logos-olim img{
-  max-width: 18%;
+  max-width: 70%;
   height: auto;
 }
 
@@ -126,6 +126,11 @@ body {
     background-color: rgb(38, 128, 204);
     position: fixed;
     top: 120px;
+}
+
+.resenia {
+  background: transparent;
+  background-color: rgb(38, 161, 170);
 }
 
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
@@ -416,6 +421,18 @@ header.main .header-right {
   -moz-transition: all ease 0.3s;
 }
 
+.pdf-sky-color {
+	color: rgb(38, 161, 170);
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+}
+
+.pdf-sky-color:hover {
+	color: red;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+}
+
 .fa-8x {
 	font-size: 8em;
 }
@@ -483,6 +500,11 @@ header.main .header-right {
 	.logos-gobierno .logos-img.logo-gob {
 		display: none;
 	}
+
+  .logos-olim img{
+    max-width: 30%;
+    height: auto;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -682,11 +704,11 @@ img {
  }
 
 h1{
- font-size: 25px;
+ font-size: 20px;
 }
 
 h3{
- font-size: 14px;
+ font-size: 10px;
 }
 
 @media (max-device-width: 480px) and (orientation: landscape) {
@@ -716,5 +738,9 @@ h3{
   }
   .boton-olim input{
     max-width: 30%;
+  }
+  .logos-olim img{
+    max-width: 18%;
+    height: auto;
   }
 }

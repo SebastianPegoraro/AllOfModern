@@ -1,14 +1,22 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var elements = document.getElementsByTagName("INPUT");
-    for (var i = 0; i < elements.length; i++) {
-        elements[i].oninvalid = function(e) {
-            e.target.setCustomValidity("");
-            if (!e.target.validity.valid) {
-                e.target.setCustomValidity("This field cannot be left blank");
-            }
-        };
-        elements[i].oninput = function(e) {
-            e.target.setCustomValidity("");
-        };
+$("#button2").on("click", function(){
+  var hayerror = false;
+  $("input[type = text]").each(function(){
+    if ($(this).val().trim() == "") {
+      $(this).css("background-color","#f2dede");
+      hayerror =true;
     }
-})
+  });
+  $("textarea").each(function(){
+    if ($(this).attr("id") != "obser9" && $(this).attr("id") != "obser10") {
+      if ($(this).val().trim() == "") {
+        $(this).css("background-color","#f2dede");
+        hayerror =true;
+      }
+    }
+  });
+  if (hayerror) {
+      $("#msgerror").modal('show');
+  } else {
+    $("#ble").submit();
+  }
+});

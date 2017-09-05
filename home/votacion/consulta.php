@@ -1,7 +1,7 @@
 <?php
 header("Content-Type: text/html;charset=utf-8");
 include("conect.php");?>
-<?php 
+<?php
 function control($dni){
 	abrirBase();
 	mysql_query("SET NAMES 'utf8'");
@@ -14,7 +14,7 @@ function control($dni){
 	}
 	}
 ?>
-<?php 
+<?php
 error_reporting(0);
 
 $ac=$_POST['oculto'];
@@ -40,6 +40,17 @@ if($ac=='postulante'){
 		exit;
 		}
 	else{
+		abrirBase();
+	        mysql_query("SET NAMES 'utf8'");
+ 	      	$result = mysql_query("SELECT dnipostul FROM votos WHERE dnipostul=$dnipostul");
+	        cerrarBase();
+	        $row = mysql_fetch_array($result);
+		        if($row[0]!=""){
+      			 header("Location: error.php");
+    			 exit;
+    		}
+			else{
+
 			if($categoria=='1'){
 				header("Location: formulario-colaboracion.php?dni=$dnipostul&jur=$jurpost&categoria=$categoria");
 				exit;
@@ -57,6 +68,8 @@ if($ac=='postulante'){
 				exit;
 			}
 
+			exit;
+			}
 
 //			header("Location: formularioPE.php?dni=$dnipostul&jur=$jurpost");
 		exit;

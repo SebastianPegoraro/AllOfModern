@@ -31,7 +31,7 @@
 </head>
 
 <body ng-app="pep2016">
-  <a class="boton-voto" href="../home/votacion/index.php"><img src="images/boton-voto.png" alt="Registrá tu incidente"></a>
+  <a class="boton-voto" href="../home/votacion/index.php"><img src="images/boton-voto.png"></a>
   <div class="navbar-fixed-top">
     <header class="main container header-container-olim">
       <div class="header-left-prem"></div>
@@ -72,7 +72,7 @@
           <li><a href="../home/quienes-somos.html">QUIENES SOMOS</a></li>
           <li><a href="../home/contacto.html">CONTACTO</a></li>
           <li><a href="https://web.facebook.com/ModernizacionC"><i class="fa fa-facebook"></i></a></li>
-          <!-- Buscagor, para más adelante...
+          <!-- Buscagor, para ms adelante...
           <li><a href="#" class="fa fa-search"></a></li>
           <form class="navbar-form navbar-left">
             <div class="form-group">
@@ -122,25 +122,235 @@
     			  </a>
         </div>
       </div>
-    </div>
-  </div>
+    </div><!--FIN Slide-->
 
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <h2>REGLAMENTO</h2>
+    <!--Botones-->
+    <div class="row">
+      <div class="boton-olim" style="text-align: center">
+        <div class="col-md-4 col-xs-4">
+          <input id="resenia" type="image" src="images/resenia.png">
+          <h3>RESEÑA</h3>
         </div>
-        <div class="col-sm-12 formu img-rounded well" style="text-align: center;">
-            <a href="docs/Anexo-Premio.pdf" target="_blank">
-          		<strong class="pdf-white-color">
-          			<i class="fa fa-8x fa-file-pdf-o"></i>
-          			<br><br>
-          			<i class="fa fa-download"></i> ANEXO PREMIO
-          		</strong>
-          	</a>
+        <div class="col-md-4 col-xs-4">
+          <input id="reglamento" type="image" src="images/reglamento.png">
+          <h3>REGLAMENTO</h3>
+        </div>
+        <div class="col-md-4 col-xs-4">
+          <input id="frecuentes" type="image" src="images/preg-frecuentes.png">
+          <h3>PREGUNTAS FRECUENTES</h3>
         </div>
       </div>
     </div>
+
+    <!--Video Promocional-->
+    <div class="container">
+      <h1>Nuevo Premio Empleado P&uacuteblico 2017</h1>
+      <div class="row resenia well">
+        <div class="col-md-12 col-xs-12">
+          <br>
+        </div>
+        <div class="col-md-12 col-xs-12">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/O50RiJizZbQ" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="col-md-12 col-xs-12">
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="rese">
+      <div class="row">
+        <div class="col-md-5 col-xs-5 logos-olim" style="text-align: right;">
+          <img src="images/resenia.png" alt="">
+        </div>
+        <div class="col-md-7 col-xs-7">
+          <h2>RESEÑA</h2>
+        </div>
+        <div class="col-md-12 col-xs-12">
+          <br>
+        </div>
+      </div>
+      <div class="col-md-12 col-xs-12">
+        <br><br>
+      </div>
+      <div class="row resenia well">
+        <div class="col-md-12 col-xs-12 well">
+          <p><h1><strong>Qu&eacute es el Premio?</strong></h1></p>
+          <p><h3>En el marco de la Pol&iacutetica de Recursos Humanos aplicada por este Gobierno que pretende revalorizar al empleado p&uacuteblico,
+            pilar fundamental para lograr un Estado eficiente, el Premio tiene como finalidad Elevar los niveles de eficiencia, eficacia,
+            proactividad, identidad y bienestar de los servidores en su labor, destacando a los agentes del Poder Ejecutivo que posean un
+            desempeño en nivel sobresaliente que generan un valor agregado al servicio p&uacuteblico y requieren de un esfuerzo adicional.</h3></p>
+        </div>
+      </div>
+    </div>
+
+    <!--Reglamento :) -->
+    <div class="row" id="regla">
+      <div class="col-md-5 col-xs-5 logos-olim" style="text-align: right;">
+        <img src="images/reglamento.png" alt="">
+      </div>
+      <div class="col-md-7 col-xs-7">
+        <h2>REGLAMENTO</h2>
+      </div>
+      <div class="col-md-12 col-xs-12">
+        <br><br>
+      </div>
+      <div class="col-sm-12" style="text-align: center;">
+          <a href="docs/Anexo-Premio.pdf" target="_blank">
+        		<strong class="pdf-sky-color">
+        			<i class="fa fa-8x fa-file-pdf-o"></i>
+        			<br><br>
+        			<i class="fa fa-download"></i> ANEXO PREMIO
+        		</strong>
+        	</a>
+          <br><br>
+      </div>
+    </div>
+
+    <!-- Preguntas Frecuentes-->
+    <div class="container" id="frecu">
+      <div class="row">
+        <div class="col-md-5 col-xs-5 logos-olim" style="text-align: right;">
+          <img src="images/preg-frecuentes.png" alt="">
+        </div>
+        <div class="col-md-7 col-xs-7">
+          <h2>PREGUNTAS FRECUENTES</h2>
+        </div>
+        <div class="col-md-12 col-xs-12">
+          <br>
+        </div>
+      </div>
+      <div class="col-md-12 col-xs-12">
+        <br><br>
+      </div>
+      <div class="row resenia well">
+        <div class="col-md-12 col-xs-12">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingOne">
+                <h1 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <strong>- QUI&EacuteNES PUEDEN PARTICIPAR?</strong>
+                  </a>
+                </h1>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                  <p><strong>Si sos Empleado P&uacuteblico:</strong> Podes postularte si tenes 3 años de antigüedad por personalmente,por tel&eacutefono o v&iacutea web desde el 28 de Agosto
+                  al 15 de septiembre. (Ver reglamento). Tambi&eacuten podes votar a aquellos agentes de tu jurisdicci&oacuten.</p>
+
+                  <p><strong>Si sos Ciudadano:</strong> Podes inscribirte desde el 18 de septiembre al 6 de octubre para formar parte de la elecci&oacuten del ganador de cada jurisdicci&oacuten
+                  siendo parte del Tribunal Evaluador. Tambi&eacuten podes participar votando v&iacutea web a aquellos agentes que han llegado a la instancia final desde el
+                  16 de octubre al 5 de noviembre. En esta etapa no es necesario inscribirse.</p>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <strong>- CU&AacuteLES SON LAS ETAPAS DE PREMIO?</strong>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                  <p><strong>1era Etapa: Auto postulaci&oacuten</strong></p>
+                  <p>Aquellos agentes de que pertenezcan a la planta permanente del Estado, se encuentren comprendidos en la Ley No 2017 que posean tres o m&aacutes años
+                  de antigüedad podr&aacuten postularse en las siguientes categor&iacuteas:</p>
+                  <p>- Participaci&oacuten en proyectos transversales</p>
+                  <p>- Capacitaci&oacuten</p>
+                  <p>- Participaci&oacuten en organizaciones y/o entidades civiles</p>
+                  <p>- Innovaci&oacuten en el puesto de trabajo.</p>
+                  <br>
+
+                  <p><strong>2a ETAPA: Evaluaci&oacuten del jefe</strong></p>
+                  <p>El jefe inmediato superior del agente realizar&aacute una evaluaci&oacuten de desempeño.</p>
+                  <br>
+
+                  <p><strong>3a ETAPA: Votaci&oacuten interna</strong></p>
+                  <p>Podr&aacuten participar de esta etapa agentes que pertenezcan a la planta permanente del Estado, se encuentren comprendidos en la Ley No 2017 y pertenezcan
+                  a la jurisdicci&oacuten del postulado. Cada agente podr&aacute elegir un postulante por cada categor&iacutea.</p>
+                  <p>El agente que haya recibido la mayor cantidad de votos por categor&iacutea de su jurisdicci&oacuten pasar&aacute a la etapa de evaluaci&oacuten por el tribunal.</p>
+                  <br>
+
+                  <p><strong>4a ETAPA: An&aacutelisis del Tribunal</strong></p>
+                  <p>El tribunal elegir&aacute al agente ganador de cada jurisdicci&oacuten, evaluando el perfil enmascarado, lo escrito en el formulario de postulaci&oacuten, la
+                  evaluaci&oacuten del jefe y el n&uacutemero de votos obtenido por los compañeros.</p>
+                  <br>
+
+                  <p><strong>5a ETAPA: Votaci&oacuten Ciudadana</strong></p>
+                  <p>Se proceder&aacute a publicar “los perfiles” de los ganadores de cada jurisdicci&oacuten en el portal oficial de la provincia a fin de que los ciudadanos
+                  puedan votar y el que reciba la mayor cantidad de votos ser&aacute considerado <strong>“EMPLEADO P&UacuteBLICO DEL PODER EJECUTIVO DE LA PROVINCIA DEL CHACO DEL AÑO 2017”.</strong></p>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingThree">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <strong>- EN QU&Eacute CATEGOR&IacuteA ME PUEDO POSTULAR?</strong>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body">
+                  <p><strong>1) Participaci&oacuten en proyectos transversales</strong></p>
+                  <p>Se reconoce a aquellos agentes que participen en programas y/o proyectos nuevos complementarios a los definidos en su puesto de trabajo. Se
+                  evaluar&aacute la participaci&oacuten en proyectos con las siguientes tem&aacuteticas:</p>
+                  <p>A. Transparencia y acceso a la informaci&oacuten.</p>
+                  <p>B. Gesti&oacuten de tr&aacutemites</p>
+                  <p>C. Mejora continua de tr&aacutemites</p>
+                  <p>D. Participaci&oacuten ciudadana</p>
+                  <p>E. Servicio de atenci&oacuten al ciudadano</p>
+                  <p>F. Mejoras en la gesti&oacuten p&uacuteblica</p>
+                  <br>
+
+                  <p><strong>2) Capacitaci&oacuten</strong></p>
+                  <p>Esta categor&iacutea est&aacute destinada a agentes que participen de actividades de aprendizaje/enseñanza. Se eval&uacutea el nivel educativo alcanzado como
+                  as&iacute tambi&eacuten todos los cursos realizados y participaci&oacuten en seminarios con tem&aacuteticas acordes al puesto de trabajo y su contribuci&oacuten.</p>
+                  <br>
+
+                  <p><strong>3) Participaci&oacuten en organizaciones y/o entidades civiles</strong></p>
+                  <p>Hace referencia a la participaci&oacuten activa del agente en una organizaci&oacuten o entidad civil sin fines de lucro, es decir que el agente se encuentre
+                  efectivamente involucrado con las actividades de la entidad, ya que s&oacutelo participar&aacuten aquellas que se encuentren reconocidas por el Estado.</p>
+                  <p>Las tem&aacuteticas a evaluar deber&aacuten corresponder a alguna de las siguientes iniciativas:</p>
+                  <p>A. Medioambiente</p>
+                  <p>B. Salud</p>
+                  <p>C. Inclusi&oacuten social</p>
+                  <p>D. Seguridad</p>
+                  <p>E. Defensa del consumidor</p>
+                  <p>F. Educaci&oacuten</p>
+                  <p>G. Niñez, adolescencia y familia</p>
+                  <p>H. Asistencia social</p>
+                  <p>I. Recreaci&oacuten</p>
+                  <p>J. Comunicaci&oacuten</p>
+                  <br>
+
+                  <p><strong>4) Innovaci&oacuten en el puesto de trabajo</strong></p>
+                  <p>Esta categor&iacutea refiere al reconocimiento de aquellos agentes que aportan elementos novedosos para la soluci&oacuten de aspectos cr&iacuteticos en sus
+                  &aacutereas de trabajo y que lo destaca o diferencia de los dem&aacutes servidores de su dependencia en funci&oacuten de su proactividad y creatividad.</p>
+                  <p>Se eval&uacutea las siguientes tem&aacuteticas:</p>
+                  <p>A. Mejoramiento de procesos</p>
+                  <p>B. Incorporaci&oacuten de nuevas tecnolog&iacuteas</p>
+                  <p>C. Desarrollo de nuevos canales de informaci&oacuten/comunicaci&oacuten</p>
+                  <p>D. Formas alternativas de acceso a los servicios</p>
+                  <p>E. Reutilizaci&oacuten de insumos</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
 
     <!-- Footer -->
     <div class="footer-container">
@@ -167,6 +377,7 @@
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script type="text/javascript" src="js/slide.js"></script>
     <script src="less.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/smoothAuto-Scroll.js"></script>
 
   </body>
 
