@@ -256,7 +256,7 @@ error_reporting(0);
 	</tr>
   <tr>
     <td align="left" valign="top"><span id="obser4">
-      <p><label align="left"> Cu&aacutel es el problema a solucionar a trav&eacute del Proyecto?* </label></p>
+      <p><label align="left"> Cu&aacutel es el problema a solucionar a trav&eacutes del Proyecto?* </label></p>
       <p>                  <textarea name="obser4" id="obser4" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
                         </span></p>
     </td>

@@ -274,7 +274,7 @@ error_reporting(0);
 	</tr>
   <tr>
     <td align="left" valign="top"><span id="obser6">
-     <p><label align="left">Por qu&eacute se est&aacute postulando al premio? Por qu&eacute se postula en esta categor&iacute?*</label></p>
+     <p><label align="left">Por qu&eacute se est&aacute postulando al premio? Por qu&eacute se postula en esta categor&iacutea?*</label></p>
      <p>                   <textarea name="obser6" id="obser6" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
                         <span class="textareaRequiredMsg">Se necesita un valor.</span> </span>
     </p>

@@ -46,7 +46,7 @@ if($ac=='postulante'){
 	        cerrarBase();
 	        $row = mysql_fetch_array($result);
 		        if($row[0]!=""){
-      			 header("Location: error.php");
+      			 header("Location: error-cat.php");
     			 exit;
     		}
 			else{

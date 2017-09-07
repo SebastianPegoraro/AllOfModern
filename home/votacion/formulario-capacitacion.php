@@ -243,7 +243,7 @@ error_reporting(0);
 	<tr>
 		<td align="left" valign="top"><span id="obser4">
 			<p><label align="left">Cursos y seminarios*</label></p>
-        <p><textarea name="obser4" id="obser4" cols="120" rows="11" placeholder="Detalle aqu&iacute el nombre de la instituci&oacuten, el nombre del curso y su duraci&oacuten. Si son varios, repita el procedimiento." data-toggle="popover" data-placement="left" data-content="Debe rellenar este campo"></textarea></p>
+        <p><textarea name="obser4" id="obser4" cols="120" rows="11" placeholder="Detalle aqu&iacute el nombre de la institución, el nombre del curso y su duración. Si son varios, repita el procedimiento." data-toggle="popover" data-placement="left" data-content="Debe rellenar este campo"></textarea></p>
         </span>
 		</td>
 	</tr>
