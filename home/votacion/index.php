@@ -38,8 +38,8 @@
       <div class="header-middle">
         <div class="dt title-container">
           <div class="dtc va-middle">
-            <h1 class="header-title-premio">
-							Empleado P&uacuteblico del a&ntildeo <span class="anio">2017</span>
+            <h1 class="header-title-premio medium">
+							Empleado P&uacuteblico del a&ntildeo <span class="anio regular">2017</span>
 						</h1>
           </div>
           <div class="dtc va-middle text-right">
@@ -147,7 +147,7 @@
 					    <label for="categoria" class="col-sm-2 control-label">CATEGOR&IacuteA</label>
 					    <div class="col-sm-10">
 					    	<select class="form-control" name="categoria" id="categoria">
-				              <option value="1">COLABORACIÓN EN PROYECTOS SOCIALES</option>
+				              <option value="1">COLABORACI&OacuteN EN PROYECTOS SOCIALES</option>
 				              <option value="2">CAPACITACI&OacuteN</option>
 							        <option value="3">PROYECTOS ESPECIALES - TRANSVERSALES</option>
 				              <option value="4">INNOVACI&OacuteN EN EL PUESTO DE TRABAJO</option>

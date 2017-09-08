@@ -56,8 +56,8 @@ abrirBase();
       <div class="header-middle">
         <div class="dt title-container">
           <div class="dtc va-middle">
-            <h1 class="header-title-premio">
-							Empleado P&uacuteblico del a&ntildeo <span class="anio">2017</span>
+            <h1 class="header-title-premio medium">
+							Empleado P&uacuteblico del a&ntildeo <span class="anio regular">2017</span>
 						</h1>
           </div>
           <div class="dtc va-middle text-right">

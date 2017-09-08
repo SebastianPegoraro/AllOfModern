@@ -9,24 +9,61 @@
     font-weight: normal;
     font-style: normal;
 }
+
 /*Fuente Medium*/
+@font-face {
+	font-family: 'Geomanist_medium';
+	src: url('../fonts/geomanist/Geomanist-Medium.eot');
+	src: url('../fonts/geomanist/Geomanist-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/geomanist/Geomanist-Medium.woff2') format('woff2'),
+		url('../fonts/geomanist/Geomanist-Medium.woff') format('woff'),
+		url('../fonts/geomanist/Geomanist-Medium.ttf') format('truetype'),
+		url('../fonts/geomanist/Geomanist-Medium.svg#Geomanist-Medium') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
 .medium {
-    font-family: 'Geomanist';
+    font-family: 'Geomanist_medium';
     font-weight: 500;
     font-style: normal;
 }
+
 /*Fuente Regular*/
+@font-face {
+	font-family: 'Geomanist_regular';
+	src: url('../fonts/geomanist/Geomanist-Regular.eot');
+	src: url('../fonts/geomanist/Geomanist-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/geomanist/Geomanist-Regular.woff2') format('woff2'),
+		url('../fonts/geomanist/Geomanist-Regular.woff') format('woff'),
+		url('../fonts/geomanist/Geomanist-Regular.ttf') format('truetype'),
+		url('../fonts/geomanist/Geomanist-Regular.svg#Geomanist-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 .regular {
-    font-family: 'Geomanist';
+    font-family: 'Geomanist_regular';
     font-weight: normal;
     font-style: normal;
 }
+
 /*Fuente Book*/
+@font-face {
+	font-family: 'Geomanist_Book';
+	src: url('../fonts/geomanist/Geomanist-Book.eot');
+	src: url('../fonts/geomanist/Geomanist-Book.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/geomanist/Geomanist-Book.woff2') format('woff2'),
+		url('../fonts/geomanist/Geomanist-Book.woff') format('woff'),
+		url('../fonts/geomanist/Geomanist-Book.ttf') format('truetype'),
+		url('../fonts/geomanist/Geomanist-Book.svg#Geomanist-Book') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 .book {
-    font-family: 'Geomanist Book';
+    font-family: 'Geomanist_Book';
     font-weight: normal;
     font-style: normal;
 }
+
 /*Para quitar la sombra del carousel de bootstrap*/
 .carousel-control.left, .carousel-control.right {
    background-image:none !important;
@@ -40,7 +77,11 @@
 }
 
 .formu{
-  background: rgba(33,70,126, 0.9);
+  background: rgba(38, 128, 204, 0.9);
+}
+
+.video{
+  background: rgb(38, 128, 204);
 }
 
 body {
@@ -48,12 +89,11 @@ body {
 	background-image: url(../images/TRAMA-01.jpg);
   background-size: contain;
 	/*background-size: 200px 200px;*/
-	font-family: 'geomanist_regularregular', sans-serif;
   padding-top: 200px;
 }
 
 .logos-olim img{
-  max-width: 50%;
+  max-width: 70%;
   height: auto;
 }
 
@@ -66,7 +106,7 @@ body {
 }
 
 .boton-olim input{
-  max-width: 80%;
+  max-width: 70%;
   height: auto;
 }
 
@@ -83,9 +123,14 @@ body {
 
 .navbar-default {
 	  background: transparent;
-    background-color: #4cb2d4;
+    background-color: rgb(38, 128, 204);
     position: fixed;
     top: 120px;
+}
+
+.resenia {
+  background: transparent;
+  background-color: rgb(38, 161, 170);
 }
 
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
@@ -136,7 +181,6 @@ header.main {
 	text-align: center;
 	margin: 0;
 	display: none;
-	font-weight: bold;
 	color: white;
 	font-size: 400%;
   text-shadow: 5px 5px 20px #000000;
@@ -147,13 +191,13 @@ header.main {
 	margin: 0;
 	display: none;
 	font-weight: medium;
-	color: black;
+	color: rgb(51, 51, 51);
 	font-size: 400%;
 }
 
 .header-title-olim .anio {
 	font-weight: medium;
-	color: #599897;
+	color: rgb(69, 113, 183);
 }
 
 /*Titulos de Nuevo Premio*/
@@ -173,8 +217,7 @@ header.main {
 
 .header-title .anio {
 	font-size: 1.2em;
-	font-weight: bold;
-	color: #599897;
+	color: white;
 }
 
 img.header-logo-gob {
@@ -368,15 +411,42 @@ header.main .header-right {
 
 .pdf-white-color {
 	color: white;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+}
+
+.pdf-white-color:hover {
+	color: red;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+}
+
+.pdf-sky-color {
+	color: rgb(38, 161, 170);
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+}
+
+.pdf-sky-color:hover {
+	color: red;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
 }
 
 .fa-8x {
 	font-size: 8em;
 }
 
-.row .separador{
-  background: url(../images/linea ondulada-01.png);
+.separador{
+  background: url(../images/linea-ondulada-01.png);
+  background-size: contain;
   background-repeat: repeat-x;
+  height: 10px;
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 /*Para centrar las imagenes del carousel de bootstrap*/
@@ -412,16 +482,16 @@ header.main .header-right {
   position: absolute;
   z-index: 100;
   left: 10%;
-}
+  }
 
-header.main .header-left-acto {
-height: 122px;
-width: 220px;
-background: url(../images/logo-acto.png);
-position: absolute;
-z-index: 100;
-left: 10%;
-}
+  header.main .header-left-acto {
+  height: 122px;
+  width: 220px;
+  background: url(../images/logo-acto.png);
+  position: absolute;
+  z-index: 100;
+  left: 10%;
+  }
 
     img.header-logo-gob {
 		display: inline-block;
@@ -430,6 +500,11 @@ left: 10%;
 	.logos-gobierno .logos-img.logo-gob {
 		display: none;
 	}
+
+  .logos-olim img{
+    max-width: 30%;
+    height: auto;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -440,17 +515,17 @@ left: 10%;
   header.main .header-left-olim {
 		left: -16px;
 		background: url(../images/logo-olimp.png);
-    }
+  }
 
-    header.main .header-left-prem {
-  		left: -16px;
-  		background: url(../images/logo-Premio-12.png);
-      }
+  header.main .header-left-prem {
+		left: -16px;
+		background: url(../images/logo-Premio-12.png);
+  }
 
-      header.main .header-left-acto {
-    		left: -16px;
-    		background: url(../images/logo-acto.png);
-        }
+  header.main .header-left-acto {
+		left: -16px;
+		background: url(../images/logo-acto.png);
+  }
 
 	.header-title {
 		display: block;
@@ -500,6 +575,7 @@ left: 10%;
 		height:auto;
 	}
 }
+
 @media only screen and (max-width: 1000px) {
 	.logos-gobierno .logos-img{
 		display:block;
@@ -509,36 +585,40 @@ left: 10%;
 		padding: 1em 0;
 	}
 }
+
 img {
-border: none;
+  border: none;
 }
+
 .izquierda {
-float: left;
+  float: left;
 }
+
 .derecha {
-float: right;
+  float: right;
 }
+
 .centro {
-float: center;
+  float: center;
 }
 
 .botonMostrarMas{
-	  position:absolute;
-    bottom:1390px;
-    text-decoration: none;
-    padding: 5px;
-    font-weight: 60;
-    font-size: 12px;
-    color: #ffff;
-    background-color: #1883ba;
-    border-radius: 3px;
-    border: 2px solid #124a72;
-  }
+  position:absolute;
+  bottom:1390px;
+  text-decoration: none;
+  padding: 5px;
+  font-weight: 60;
+  font-size: 12px;
+  color: #ffff;
+  background-color: #1883ba;
+  border-radius: 3px;
+  border: 2px solid #124a72;
+}
 
-  .botonMostrarMas:hover{
-    color: #124a72;
-    background-color: #ffffff;
-  }
+.botonMostrarMas:hover{
+  color: #124a72;
+  background-color: #ffffff;
+}
 
 /*CSS para la transicion del slide*/
 .carousel-fade .carousel-inner > .item {
@@ -622,3 +702,45 @@ float: center;
  .form-btn:active{
    opacity: 0.9;
  }
+
+h1{
+ font-size: 20px;
+}
+
+h3{
+ font-size: 10px;
+}
+
+@media (max-device-width: 480px) and (orientation: landscape) {
+  h1 {
+      font-size: 36px; /* Lower the max-height for smaller devices */
+  }
+  h3 {
+      font-size: 24px; /* Lower the max-height for smaller devices */
+  }
+  .boton-olim{
+    max-width: 70%;
+  }
+  .boton-olim input{
+    max-width: 30%;
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 36px; /* Lower the max-height for smaller devices */
+  }
+  h3 {
+    font-size: 24px; /* Lower the max-height for smaller devices */
+  }
+  .boton-olim{
+    max-width: 100%;
+  }
+  .boton-olim input{
+    max-width: 30%;
+  }
+  .logos-olim img{
+    max-width: 18%;
+    height: auto;
+  }
+}
