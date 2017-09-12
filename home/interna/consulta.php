@@ -30,40 +30,14 @@ $categoria=$_POST['categoria'];
 if($ac=='postulante'){
 	abrirBase();
 	mysql_query("SET NAMES 'utf8'");
-	$result = mysql_query("SELECT * FROM padron WHERE Documento=$dnipostul and  Jur=$jurpost and antigue>=3");
+	$result = mysql_query("SELECT * FROM padron WHERE Documento=$dnipostul and  Jur=$jurpost");
 	cerrarBase();
 	$row = mysql_fetch_array($result);
 	if($row[1]==""){
 		header("Location: error.php");
 		exit;
 	}	else{
-		abrirBase();
-    mysql_query("SET NAMES 'utf8'");
-  	$result = mysql_query("SELECT dnipostul FROM votos WHERE dnipostul=$dnipostul");
-    cerrarBase();
-    $row = mysql_fetch_array($result);
-    if($row[0]!=""){
-	 		header("Location: error-cat.php");
-	 		exit;
-		}	else{
-			if($categoria=='1'){
-				header("Location: formulario-colaboracion.php?dni=$dnipostul&jur=$jurpost&categoria=$categoria");
-				exit;
-			}
-			if ($categoria=='2'){
-				header("Location: formulario-capacitacion.php?dni=$dnipostul&jur=$jurpost&categoria=$categoria");
-				exit;
-			}
-			if ($categoria=='3'){
-				header("Location: formulario-proyectos.php?dni=$dnipostul&jur=$jurpost&categoria=$categoria");
-				exit;
-			}
-			if ($categoria=='4'){
-				header("Location: formulario-innovacion.php?dni=$dnipostul&jur=$jurpost&categoria=$categoria");
-				exit;
-			}
-			exit;
-		}
+		header("Location: postulante.php")
 		exit;
 	}
 }

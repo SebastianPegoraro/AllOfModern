@@ -1,0 +1,746 @@
+@font-face {
+    font-family: 'geomanist_regularregular';
+    src: url('../fonts/geomanist/geomanist-regular-webfont.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/geomanist/geomanist-regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/geomanist/geomanist-regular-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/geomanist/geomanist-regular-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../fonts/geomanist/geomanist-regular-webfont.ttf') format('truetype'),
+         url('../fonts/geomanist/geomanist-regular-webfont.svg#geomanist_regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Fuente Medium*/
+@font-face {
+	font-family: 'Geomanist_medium';
+	src: url('../fonts/geomanist/Geomanist-Medium.eot');
+	src: url('../fonts/geomanist/Geomanist-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/geomanist/Geomanist-Medium.woff2') format('woff2'),
+		url('../fonts/geomanist/Geomanist-Medium.woff') format('woff'),
+		url('../fonts/geomanist/Geomanist-Medium.ttf') format('truetype'),
+		url('../fonts/geomanist/Geomanist-Medium.svg#Geomanist-Medium') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+.medium {
+    font-family: 'Geomanist_medium';
+    font-weight: 500;
+    font-style: normal;
+}
+
+/*Fuente Regular*/
+@font-face {
+	font-family: 'Geomanist_regular';
+	src: url('../fonts/geomanist/Geomanist-Regular.eot');
+	src: url('../fonts/geomanist/Geomanist-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/geomanist/Geomanist-Regular.woff2') format('woff2'),
+		url('../fonts/geomanist/Geomanist-Regular.woff') format('woff'),
+		url('../fonts/geomanist/Geomanist-Regular.ttf') format('truetype'),
+		url('../fonts/geomanist/Geomanist-Regular.svg#Geomanist-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.regular {
+    font-family: 'Geomanist_regular';
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Fuente Book*/
+@font-face {
+	font-family: 'Geomanist_Book';
+	src: url('../fonts/geomanist/Geomanist-Book.eot');
+	src: url('../fonts/geomanist/Geomanist-Book.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/geomanist/Geomanist-Book.woff2') format('woff2'),
+		url('../fonts/geomanist/Geomanist-Book.woff') format('woff'),
+		url('../fonts/geomanist/Geomanist-Book.ttf') format('truetype'),
+		url('../fonts/geomanist/Geomanist-Book.svg#Geomanist-Book') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.book {
+    font-family: 'Geomanist_Book';
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Para quitar la sombra del carousel de bootstrap*/
+.carousel-control.left, .carousel-control.right {
+   background-image:none !important;
+   filter:none !important;
+}
+
+/*Imagen de la pag de contacto y quienes somos*/
+.contacto img{
+  width: 100%;
+  height: auto;
+}
+
+.formu{
+  background: rgba(38, 128, 204, 0.9);
+}
+
+.video{
+  background: rgb(38, 128, 204);
+}
+
+body {
+	/*background-color: #EEE;*/
+	background-image: url(../images/TRAMA-01.jpg);
+  background-size: contain;
+	/*background-size: 200px 200px;*/
+  padding-top: 200px;
+}
+
+.logos-olim img{
+  max-width: 70%;
+  height: auto;
+}
+
+.boton-olim{
+  background-image: url(images/puntos-01.png);
+  background-size: cover;
+  background-repeat: repeat-x;
+  max-width: 100%;
+  background-clip: content-box;
+}
+
+.boton-olim input{
+  max-width: 70%;
+  height: auto;
+}
+
+.olim ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.olim li{
+  float: left;
+}
+
+.navbar-default {
+	  background: transparent;
+    background-color: rgb(38, 128, 204);
+    position: fixed;
+    top: 120px;
+}
+
+.resenia {
+  background: transparent;
+  background-color: rgb(38, 161, 170);
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: white;
+    /*background-color: transparent;*/
+    background-color: #124a72;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+/*Slide*/
+.slide {
+  max-width: 100%;
+  height: auto;
+}
+/*Quienes somos*/
+.qsomos{
+  width: 100%;
+  top: 200px;
+}
+
+.header-container {
+  width: 100%;
+  background: rgba(33,70,126, 0.999999999);
+}
+/*Header de Olimpiadas, Acto y Nuevo Premio*/
+.header-container-olim{
+  width: 100%;
+  background: rgb(255,255,255);
+}
+
+header.main {
+	height: 122px;
+	position: relative;
+	padding: 0;
+}
+
+.title-container {
+	width: 100%;
+	height: 100%;
+}
+
+.header-title {
+	text-align: center;
+	margin: 0;
+	display: none;
+	color: white;
+	font-size: 400%;
+  text-shadow: 5px 5px 20px #000000;
+}
+/*Titulos de Acto, Olimpiadas y Nuevo Premio*/
+.header-title-olim {
+	text-align: center;
+	margin: 0;
+	display: none;
+	font-weight: medium;
+	color: rgb(51, 51, 51);
+	font-size: 400%;
+}
+
+.header-title-olim .anio {
+	font-weight: medium;
+	color: rgb(69, 113, 183);
+}
+
+/*Titulos de Nuevo Premio*/
+.header-title-premio {
+	text-align: center;
+	margin: 0;
+	display: none;
+	font-weight: medium;
+	color: black;
+	font-size: 400%;
+}
+
+.header-title-premio .anio {
+	font-weight: medium;
+	color: #599897;
+}
+
+.header-title .anio {
+	font-size: 1.2em;
+	color: white;
+}
+
+img.header-logo-gob {
+	display: none;
+	margin-right: 20px;
+	height: 120px;
+	width: auto;
+}
+
+/*Para el logo de la cabezara izquierda Olimpiadas */
+header.main .header-left-olim {
+	height: 122px;
+	width: 220px;
+	background: url(../images/logo-olimp.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 100;
+	left: 10%;
+}
+
+/*Para el logo de la cabezara izquierda Premio*/
+header.main .header-left-prem {
+	height: 122px;
+	width: 220px;
+	background: url(../images/logo-Premio-12.png);
+	position: absolute;
+	z-index: 100;
+	left: 10%;
+}
+
+/*Para el logo de la cabezara izquierda Acto*/
+header.main .header-left-acto {
+	height: 122px;
+	width: 220px;
+	background: url(../images/logo-acto.png);
+	position: absolute;
+	z-index: 100;
+	left: 10%;
+}
+
+header.main .header-middle {
+	height: 122px;
+	font-weight: bold;
+	padding-left: 152px;
+}
+
+header.main .header-right {
+	height: 122px;
+	width: 43px;
+	background: url(../images/header-right.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 100;
+	right: 0px;
+	top: 0;
+}
+
+.navbar-brand {
+	  /*height: 67px;*/
+    width: 150px;
+    /*background: transparent url(../images/nav-left.png);*/
+    background-color: none;
+    background-repeat: no-repeat;
+}
+
+.dt {
+	display: table;
+}
+
+.dtc {
+	display: table-cell;
+}
+
+.va-middle {
+	vertical-align: middle;
+}
+
+.va-bottom-middle {
+	vertical-align: bottom;
+}
+
+.slider-container {
+	padding: 10px 30px;
+}
+
+.fa-custom-flip {
+  -webkit-animation: fa-custom-flip 1s infinite linear;
+  animation: fa-custom-flip 1s infinite linear;
+}
+
+@-webkit-keyframes fa-custom-flip {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  75% {
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes fa-custom-flip {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  75% {
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+.footer-container {
+	background-color: #323232;
+  padding: 20px 0;
+	margin-top: 20px;
+}
+
+.footer-container [class^="col-sm"] {
+	margin-bottom: 15px;
+}
+
+.footer-container .left {
+	text-align: center;
+}
+
+.footer-container .middle {
+	text-align: center;
+}
+
+.footer-container .right {
+	text-align: center;
+}
+
+.logo-footer {
+	height: 100%;
+}
+
+.slider-img-container {
+	text-align: center;
+}
+
+.slider-img {
+	display: inline-block!important;
+}
+
+.slick-slide {
+	outline: none;
+}
+
+.slick-prev:before, .slick-next:before {
+	color: #4cb2d4;
+	font-size: 30px;
+}
+
+.boton-voto {
+	position: fixed;
+	right: 0px;
+	top: 200px;
+	z-index: 200;
+}
+
+.boton input {
+	width: 100%;
+	height: auto;
+}
+
+.pdf-white-color {
+	color: white;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+}
+
+.pdf-white-color:hover {
+	color: red;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+}
+
+.pdf-sky-color {
+	color: rgb(38, 161, 170);
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+}
+
+.pdf-sky-color:hover {
+	color: red;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+}
+
+.fa-8x {
+	font-size: 8em;
+}
+
+.separador{
+  background: url(../images/linea-ondulada-01.png);
+  background-size: contain;
+  background-repeat: repeat-x;
+  height: 10px;
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+/*Para centrar las imagenes del carousel de bootstrap*/
+.carousel-inner img {
+  margin: auto;
+}
+
+/* LOGOS GOBIERNO */
+.logos-gobierno .logos-img {
+	display:inline-block;
+	padding:0 1em;
+}
+
+.logos-gobierno .logos-img.logo-gob {
+	display: inline-block;
+}
+
+@media only screen and (min-width: 500px) {
+    header.main .header-left-olim {
+    height: 122px;
+    width: 220px;
+    background: url(../images/logo-olimp.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 100;
+    left: 10%;
+  }
+
+  header.main .header-left-prem {
+  height: 122px;
+  width: 220px;
+  background: url(../images/logo-Premio-12.png);
+  position: absolute;
+  z-index: 100;
+  left: 10%;
+  }
+
+  header.main .header-left-acto {
+  height: 122px;
+  width: 220px;
+  background: url(../images/logo-acto.png);
+  position: absolute;
+  z-index: 100;
+  left: 10%;
+  }
+
+    img.header-logo-gob {
+		display: inline-block;
+	}
+
+	.logos-gobierno .logos-img.logo-gob {
+		display: none;
+	}
+
+  .logos-olim img{
+    max-width: 30%;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+	header.main {
+		padding: 0 0 0 43px;
+	}
+
+  header.main .header-left-olim {
+		left: -16px;
+		background: url(../images/logo-olimp.png);
+  }
+
+  header.main .header-left-prem {
+		left: -16px;
+		background: url(../images/logo-Premio-12.png);
+  }
+
+  header.main .header-left-acto {
+		left: -16px;
+		background: url(../images/logo-acto.png);
+  }
+
+	.header-title {
+		display: block;
+	}
+
+  .header-title-olim {
+		display: block;
+	}
+
+  .header-title-premio {
+		display: block;
+	}
+
+	.navbar-center{
+        float:none;
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+    }
+
+    .footer-container .left {
+		text-align: left;
+	}
+
+	.footer-container .middle {
+		text-align: center;
+	}
+
+	.footer-container .right {
+		text-align: right;
+	}
+
+	.boton-voto img {
+		width: 150px;
+		height: auto;
+	}
+
+	.va-bottom-middle {
+		vertical-align: middle;
+	}
+}
+
+/* LOGOS GOBIERNO */
+@media only screen and (max-width: 370px) {
+	img.logo-footer.largo{
+		width:280px;
+		height:auto;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.logos-gobierno .logos-img{
+		display:block;
+		padding:1em 0em;
+	}
+	.footer-container {
+		padding: 1em 0;
+	}
+}
+
+img {
+  border: none;
+}
+
+.izquierda {
+  float: left;
+}
+
+.derecha {
+  float: right;
+}
+
+.centro {
+  float: center;
+}
+
+.botonMostrarMas{
+  position:absolute;
+  bottom:1390px;
+  text-decoration: none;
+  padding: 5px;
+  font-weight: 60;
+  font-size: 12px;
+  color: #ffff;
+  background-color: #1883ba;
+  border-radius: 3px;
+  border: 2px solid #124a72;
+}
+
+.botonMostrarMas:hover{
+  color: #124a72;
+  background-color: #ffffff;
+}
+
+/*CSS para la transicion del slide*/
+.carousel-fade .carousel-inner > .item {
+    transition-property: opacity;
+}
+.carousel-fade .carousel-inner > .item,
+.carousel-fade .carousel-inner > .item.active.left {
+    opacity: 0;
+}
+.carousel-fade .carousel-inner > .item.active,
+.carousel-fade .carousel-inner > .item.next.left {
+    opacity: 1;
+}
+.carousel-fade .carousel-inner > .next,
+.carousel-fade .carousel-inner > .prev,
+.carousel-fade .carousel-inner > .active.left,
+.carousel-fade .carousel-inner > .active.right {
+    left: 0;
+}
+.carousel-fade .carousel-inner > .item.next,
+.carousel-fade .carousel-inner > .item.active.right,
+.carousel-fade .carousel-inner > .item.prev,
+.carousel-fade .carousel-inner > .item.active.left {
+    transform: translate3d(0, 0, 0);
+}
+
+/*Estilos para las consultas de las Olimpiadas*/
+.form{
+    width: 100%;
+    padding: 15px;
+    background:#f8f8f8;
+    border:1px solid rgba(0, 0, 0, 0.075);
+    color:#727272 !important;
+    font-size:13px;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+
+  .form:hover{
+    border:1px solid rgb(38, 128, 204);
+  }
+
+  .form:focus{
+    color: white;
+    outline: none;
+    border:1px solid rgb(38, 128, 204);
+  }
+
+  .textarea{
+    height: 200px;
+    max-height: 200px;
+    max-width: 100%;
+  }
+
+  .form-btn{
+   width:180px;
+   display: block;
+   height: auto;
+   padding:15px;
+   color:#fff;
+   background: rgb(38, 128, 204);
+   border:none;
+   border-radius:3px;
+   outline: none;
+   -webkit-transition: all 0.3s;
+   -moz-transition: all 0.3s;
+   transition: all 0.3s;
+   margin:auto;
+   box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+   -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+   -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+ }
+
+ .form-btn:hover{
+   background:#111;
+   color: white;
+   border:none;
+ }
+
+ .form-btn:active{
+   opacity: 0.9;
+ }
+
+h1{
+ font-size: 20px;
+}
+
+h3{
+ font-size: 10px;
+}
+
+@media (max-device-width: 480px) and (orientation: landscape) {
+  h1 {
+      font-size: 36px; /* Lower the max-height for smaller devices */
+  }
+  h3 {
+      font-size: 24px; /* Lower the max-height for smaller devices */
+  }
+  .boton-olim{
+    max-width: 70%;
+  }
+  .boton-olim input{
+    max-width: 30%;
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 36px; /* Lower the max-height for smaller devices */
+  }
+  h3 {
+    font-size: 24px; /* Lower the max-height for smaller devices */
+  }
+  .boton-olim{
+    max-width: 100%;
+  }
+  .boton-olim input{
+    max-width: 30%;
+  }
+  .logos-olim img{
+    max-width: 18%;
+    height: auto;
+  }
+}

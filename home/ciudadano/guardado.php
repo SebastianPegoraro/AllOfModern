@@ -31,14 +31,15 @@
 </head>
 
 <body ng-app="pep2016">
+
   <div class="navbar-fixed-top">
     <header class="main container header-container-olim">
-      <div class="header-left-acto"></div>
+      <div class="header-left-prem"></div>
       <div class="header-middle">
         <div class="dt title-container">
           <div class="dtc va-middle">
             <h1 class="header-title-premio medium">
-							Acto Empleado P&uacuteblico <span class="anio regular">2017</span>
+							Empleado P&uacuteblico del a&ntildeo <span class="anio regular">2017</span>
 						</h1>
           </div>
           <div class="dtc va-middle text-right">
@@ -67,9 +68,9 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="../home/index.html">INICIO</a></li>
-          <li><a href="../home/quienes-somos.html">QUIENES SOMOS</a></li>
-          <li><a href="../home/contacto.html">CONTACTO</a></li>
+          <li><a href="../index.html">INICIO</a></li>
+          <li><a href="../quienes-somos.html">QUIENES SOMOS</a></li>
+          <li><a href="../contacto.html">CONTACTO</a></li>
           <li><a href="https://web.facebook.com/ModernizacionC"><i class="fa fa-facebook"></i></a></li>
           <!-- Buscagor, para más adelante...
           <li><a href="#" class="fa fa-search"></a></li>
@@ -85,23 +86,29 @@
     <!-- /.container-fluid -->
   </nav>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 contacto">
-        <img src="images/SLIDE-ACTO-01.png" alt="">
-      </div>
-    </div>
-  </div>
+
+	<div class="container">
+		<div class="col-sm-8 col-sm-offset-2">
+      <form class="well">
+        <h2>
+  				INSCRIPCIÓN GUARDADA CORRECTAMENTE!<br>
+  				<small></small>
+  			</h2>
+      </form>
+
+		</div>
+	</div>
+
 
   <!-- Footer -->
   <div class="footer-container">
     <footer class="main container-fluid">
       <div class="logos-gobierno text-center">
         <div class="logos-img">
-          <img class="logo-footer" src="images/modenizacion blanco-01.png" alt="">
+          <img class="logo-footer" src="images/modern.png" alt="">
         </div>
         <div class="logos-img">
-          <img class="logo-footer" src="images/secretaria blanco-01.png" alt="">
+          <img class="logo-footer" src="images/secret.png" alt="">
         </div>
         <div class="logos-img">
           <img class="logo-footer" src="images/chaco blanco-01.png" alt="">

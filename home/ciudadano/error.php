@@ -31,14 +31,19 @@
 </head>
 
 <body ng-app="pep2016">
+	<?php
+	error_reporting(0);
+	session_start();
+	session_destroy();
+	?>
   <div class="navbar-fixed-top">
     <header class="main container header-container-olim">
-      <div class="header-left-acto"></div>
+      <div class="header-left-prem"></div>
       <div class="header-middle">
         <div class="dt title-container">
           <div class="dtc va-middle">
             <h1 class="header-title-premio medium">
-							Acto Empleado P&uacuteblico <span class="anio regular">2017</span>
+							Empleado P&uacuteblico del a&ntildeo <span class="anio regular">2017</span>
 						</h1>
           </div>
           <div class="dtc va-middle text-right">
@@ -67,17 +72,10 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="../home/index.html">INICIO</a></li>
-          <li><a href="../home/quienes-somos.html">QUIENES SOMOS</a></li>
-          <li><a href="../home/contacto.html">CONTACTO</a></li>
+          <li><a href="../index.html">INICIO</a></li>
+          <li><a href="../quienes-somos.html">QUIENES SOMOS</a></li>
+          <li><a href="../contacto.html">CONTACTO</a></li>
           <li><a href="https://web.facebook.com/ModernizacionC"><i class="fa fa-facebook"></i></a></li>
-          <!-- Buscagor, para más adelante...
-          <li><a href="#" class="fa fa-search"></a></li>
-          <form class="navbar-form navbar-left">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Buscador">
-            </div>
-          </form>-->
         </ul>
       </div>
       <!-- /.navbar-collapse -->
@@ -85,39 +83,59 @@
     <!-- /.container-fluid -->
   </nav>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 contacto">
-        <img src="images/SLIDE-ACTO-01.png" alt="">
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2>
+					ERROR!<br>
+				</h2>
+				<form id="form1" name="form1" method="post" action="consulta.php" class="form-horizontal well">
+          <h4>Si está experimentando inconvenientes, no dude en contactarnos.</h4>
+            <div class="contacto">
+                <img src="images/CONTACTO-01.png" alt="">
+            </div>
+
+
+    <tr>
+    <th colspan="2" align="center" valign="middle" bgcolor="#FFFFFF" scope="row"><h2><a href="index.html"><br />
+      Volver a Ingresar Datos</a><br />
+    </h2></th>
+  </tr>
+</table>
+<h1>&nbsp;</h1>
+				</form>
+			</div>
+		</div>
+
+	</div>
+</body>
+
+<!-- Footer -->
+<div class="footer-container">
+  <footer class="main container-fluid">
+    <div class="logos-gobierno text-center">
+      <div class="logos-img">
+        <img class="logo-footer" src="images/modern.png" alt="">
+      </div>
+      <div class="logos-img">
+        <img class="logo-footer" src="images/secret.png" alt="">
+      </div>
+      <div class="logos-img">
+        <img class="logo-footer" src="images/chaco blanco-01.png" alt="">
       </div>
     </div>
-  </div>
+  </footer>
+</div>
 
-  <!-- Footer -->
-  <div class="footer-container">
-    <footer class="main container-fluid">
-      <div class="logos-gobierno text-center">
-        <div class="logos-img">
-          <img class="logo-footer" src="images/modenizacion blanco-01.png" alt="">
-        </div>
-        <div class="logos-img">
-          <img class="logo-footer" src="images/secretaria blanco-01.png" alt="">
-        </div>
-        <div class="logos-img">
-          <img class="logo-footer" src="images/chaco blanco-01.png" alt="">
-        </div>
-      </div>
-    </footer>
-  </div>
-
-  <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/angular.min.js"></script>
-  <script type="text/javascript" src="js/angular-ui-router.min.js"></script>
-  <script type="text/javascript" src="js/app.js"></script>
-  <script type="text/javascript" src="js/slick.min.js"></script>
-  <script type="text/javascript" src="js/slide.js"></script>
-  <script src="less.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script type="text/javascript" src="js/slide.js"></script>
+<script src="less.js" type="text/javascript"></script>
 
 </body>
 
