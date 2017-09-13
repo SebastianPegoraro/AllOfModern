@@ -2,6 +2,7 @@
 header("Content-Type: text/html;charset=utf-8");
 include("conect.php");
 $jurpost=$_REQUEST['jur'];
+$dnipost=$_REQUEST['dni'];
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -93,45 +94,61 @@ $jurpost=$_REQUEST['jur'];
 <div class="container">
   <h3>PODES VOTAR A UN COMPAÑERO POR CATEGORÍA</h3>
   <div class="container form-group well">
-    <div class="row text-center">
-      <div class="col-md-12 col-xs-12">
-        <h1><span class="label label-primary">COLABORACI&OacuteN EN PROYECTOS SOCIALES</span></h1>
-      </div>
-    </div>
-    <?php
-    abrirBase();
-  	mysql_query("SET NAMES 'utf8'");
-  	$result = mysql_query("SELECT NomyApePos FROM votos WHERE categoria=1 AND juris=$jurpost");
-  	cerrarBase();
-    $row = mysql_fetch_array($result);
-    if ($row[0] != "") {
-      
+    <form class="" action="index.html" method="post">
+      <div class="container"><!--Colaboracion-->
+        <div class="row text-center">
+          <div class="col-md-12 col-xs-12">
+            <h1><span class="label label-primary">COLABORACI&OacuteN EN PROYECTOS SOCIALES</span></h1>
+          </div>
+        </div>
+        <?php
+        abrirBase();
+      	mysql_query("SET NAMES 'utf8'");
+      	$result = mysql_query("SELECT NomyApePos FROM votos WHERE categoria=1 AND juris=$jurpost");
+      	cerrarBase();
+        $row = mysql_fetch_array($result);
+        if ($row[0] != "") {
+          foreach ($row as $value) {
+            ?>
+            <div class="row text-center">
+              <div class="col-md-10 col-xs-10">
+                <h3><span class="label label-success"><?php $value ?></span></h3>
+              </div>
+              <div class="col-md-2 col-xs-2">
+                <input type="button" name="voto" value="<?php $value ?>" id="voto">
+                <input type="checkbox" name="dnivot" value="<?php $dnivot ?>" style="visibility: hidden;" checked>
+              </div>
+            </div>
+          <?php
+          }
+        }else {
+          ?>
+          <div class="row text-center">
+            <div class="col-md-12 col-xs-12">
+              <h3><span class="label label-default">Nadie de esta Jurisdicción se postuló en esta categoría</span></h3>
+            </div>
+          </div>
+          <?php
+        }
+        ?>
+      </div><!--Fin Colaboracion-->
 
-    }else {
-      ?>
       <div class="row text-center">
         <div class="col-md-12 col-xs-12">
-          <h3><span class="label label-default">Nadie de esta Jurisdicción se postuló en esta categoría</span></h3>
+          <h1><span class="label label-primary">CAPACITACI&OacuteN</span></h1>
         </div>
       </div>
-    <?php
-    }
-    ?>
-    <div class="row text-center">
-      <div class="col-md-12 col-xs-12">
-        <h1><span class="label label-primary">CAPACITACI&OacuteN</span></h1>
+      <div class="row text-center">
+        <div class="col-md-12 col-xs-12">
+          <h1><span class="label label-primary">PROYECTOS ESPECIALES - TRANSVERSALES</span></h1>
+        </div>
       </div>
-    </div>
-    <div class="row text-center">
-      <div class="col-md-12 col-xs-12">
-        <h1><span class="label label-primary">PROYECTOS ESPECIALES - TRANSVERSALES</span></h1>
+      <div class="row text-center">
+        <div class="col-md-12 col-xs-12">
+          <h1><span class="label label-primary">INNOVACI&OacuteN EN EL PUESTO DE TRABAJO</span></h1>
+        </div>
       </div>
-    </div>
-    <div class="row text-center">
-      <div class="col-md-12 col-xs-12">
-        <h1><span class="label label-primary">INNOVACI&OacuteN EN EL PUESTO DE TRABAJO</span></h1>
-      </div>
-    </div>
+    </form>
   </div>
 </div>
 

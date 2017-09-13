@@ -37,7 +37,7 @@ if($ac=='postulante'){
 		header("Location: error.php");
 		exit;
 	}	else{
-		header("Location: postulante.php?jur=$jurpost")
+		header("Location: postulante.php?jur=$jurpost&dni=$dni");
 		exit;
 	}
 }
