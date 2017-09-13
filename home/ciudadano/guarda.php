@@ -19,14 +19,14 @@ $seEntero = $_POST['seEntero'];
 //Verifica si ya se inscribio el ciudadano
 abrirBase();
 	mysql_query("SET NAMES 'utf8'");
-	$result = mysql_query("SELECT * FROM ciudadano WHERE DNI=$dnipostul");
+	$result = mysql_query("SELECT * FROM ciudadano WHERE dni=$dnipostul");
 cerrarBase();
 	$row = mysql_fetch_array($result);
 	if ($row[0]==""){
 		//Guardamos el voto en la BD
 		abrirBase();
 			mysql_query("SET NAMES 'utf8'");
-			$result = mysql_query("INSERT INTO ciudadano (ApeyNom, DNI, Direccion, Localidad, Telefono, Correo, Facebook, Ocupacion, SeEntero) VALUES ('$apynompos', '$dnipostul', '$direcpos',
+			$result = mysql_query("INSERT INTO ciudadano (nomyape, dni, direccion, localidad, telefono, correo, facebook, ocupacion, seentero) VALUES ('$apynompos', '$dnipostul', '$direcpos',
 				'$localidad', '$telefonopos', '$correo', '$facebook', '$ocupacion', '$seEntero')");
 		cerrarBase();
 
