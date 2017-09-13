@@ -89,6 +89,7 @@
 			<div class="col-sm-12">
 				<h2>
 					ERROR!<br>
+          <small>Es probable que usted ya esté inscripto</small>
 				</h2>
 				<form id="form1" name="form1" method="post" action="consulta.php" class="form-horizontal well">
           <h4>Si está experimentando inconvenientes, no dude en contactarnos.</h4>

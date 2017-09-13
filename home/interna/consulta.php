@@ -25,7 +25,7 @@ $dnipostul=$_REQUEST['dnipostulante'];
 $jurpost=$_REQUEST['jurpost'];
 $categoria=$_POST['categoria'];
 
-//Comprueba que el postulante y el votante sean aptos
+//Comprueba que el votante y la jurisdiccion sean aptos
 
 if($ac=='postulante'){
 	abrirBase();
@@ -37,7 +37,7 @@ if($ac=='postulante'){
 		header("Location: error.php");
 		exit;
 	}	else{
-		header("Location: postulante.php")
+		header("Location: postulante.php?jur=$jurpost")
 		exit;
 	}
 }

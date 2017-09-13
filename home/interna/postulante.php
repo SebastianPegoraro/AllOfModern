@@ -1,3 +1,8 @@
+<?php
+header("Content-Type: text/html;charset=utf-8");
+include("conect.php");
+$jurpost=$_REQUEST['jur'];
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -31,7 +36,6 @@
 </head>
 
 <body ng-app="pep2016">
-  <a class="boton-voto" href="../home/votacion/index.php"><img src="images/boton-voto.png"></a>
   <div class="navbar-fixed-top">
     <header class="main container header-container-olim">
       <div class="header-left-prem"></div>
@@ -94,6 +98,25 @@
         <h1><span class="label label-primary">COLABORACI&OacuteN EN PROYECTOS SOCIALES</span></h1>
       </div>
     </div>
+    <?php
+    abrirBase();
+  	mysql_query("SET NAMES 'utf8'");
+  	$result = mysql_query("SELECT NomyApePos FROM votos WHERE categoria=1 AND juris=$jurpost");
+  	cerrarBase();
+    $row = mysql_fetch_array($result);
+    if ($row[0] != "") {
+      
+
+    }else {
+      ?>
+      <div class="row text-center">
+        <div class="col-md-12 col-xs-12">
+          <h3><span class="label label-default">Nadie de esta Jurisdicción se postuló en esta categoría</span></h3>
+        </div>
+      </div>
+    <?php
+    }
+    ?>
     <div class="row text-center">
       <div class="col-md-12 col-xs-12">
         <h1><span class="label label-primary">CAPACITACI&OacuteN</span></h1>
