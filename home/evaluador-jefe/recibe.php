@@ -1,4 +1,4 @@
-<?php 
+<?php
 function valor($obser){
 	switch($obser){
 		case 1: $obser=5; break;
@@ -130,10 +130,24 @@ Variables de 9: $honest1---$honest2---$obserhonest--$totalhonest<br>
 //insertar en la BD
 //FALTA GUARDAR LAS OBSERVACIONES DE CADA UNO
 
+$cola1 = $POST_['cola1'];
+$cola2 = $POST_['cola2'];
+$capa1 = $POST_['capa1'];
+$capa2 = $POST_['capa2'];
+$proy = $POST_['proy'];
+$inno1 = $POST_['inno1'];
+$inno2 = $POST_['inno2'];
+
+
 conectar();
 	mysql_query("SET NAMES 'utf8'");
-	$result = mysql_query("INSERT INTO evaluacion (dnipostul, cargo, npost, dedicacion1, dedicacion2, obserdedica, supera1, supera2, obsersupera, proact1, proact2, obserproact, aprend1, aprend2, obseraprend, comyresp1, comyresp2, obsercompyresp, resppyp1, resppyp2, obserresppyp, punt1, punt2, obserpunt, colycop1, colycop2, obsercolycop, honest1, honest2, obserhonest, total) VALUES ('$dni','$cargo','$npostul','$dedicacion1','$dedicacion2','$obserdedica','$supera1','$supera2','$obsersupera','$proact1','$proact2','$obserproact','$aprend1','$aprend2','$obseraprend','$comyresp1','$comyresp2','$obsercompyresp','$resppyp1','$resppyp2','$obserrespyp','$punt1','$punt2','$obserpunt','$colycop1','$colycop2','$obsercolycop','$honest1','$honest2','$obserhonest','$total')"); 
-	
+	$result = mysql_query("INSERT INTO evaluacion (dnipostul, cargo, npost, dedicacion1, dedicacion2, obserdedica, supera1, supera2, obsersupera, proact1, proact2, obserproact,
+		aprend1, aprend2, obseraprend, comyresp1, comyresp2, obsercompyresp, resppyp1, resppyp2, obserresppyp, punt1, punt2, obserpunt, colycop1, colycop2, obsercolycop, honest1,
+		honest2, obserhonest, total, cola1, cola2, capa1, capa1, proy, inno1, inno2) VALUES ('$dni','$cargo','$npostul','$dedicacion1','$dedicacion2','$obserdedica','$supera1',
+			'$supera2','$obsersupera','$proact1','$proact2','$obserproact','$aprend1','$aprend2','$obseraprend','$comyresp1','$comyresp2','$obsercompyresp','$resppyp1','$resppyp2',
+			'$obserrespyp','$punt1','$punt2','$obserpunt','$colycop1','$colycop2','$obsercolycop','$honest1','$honest2','$obserhonest','$total','$cola1','$cola2','$capa1','$capa2',
+			'$proy','$inno1','$inno2')");
+
 	$result = mysql_query("update padronfinal set Evaluado='Si' where dnipostul=$dni");
 desconectar();
 header("Location: final.html");

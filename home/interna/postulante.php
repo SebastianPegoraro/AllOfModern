@@ -94,7 +94,7 @@ $dnipost=$_REQUEST['dni'];
 <div class="container">
   <h3>PODES VOTAR A UN COMPAÑERO POR CATEGORÍA</h3>
   <div class="container form-group well">
-    <form class="" action="index.html" method="post">
+    <form class="" action="guarda.php" method="post">
       <div class="container"><!--Colaboracion-->
         <div class="row text-center">
           <div class="col-md-12 col-xs-12">
@@ -104,7 +104,7 @@ $dnipost=$_REQUEST['dni'];
         <?php
         abrirBase();
       	mysql_query("SET NAMES 'utf8'");
-      	$result = mysql_query("SELECT NomyApePos FROM votos WHERE categoria=1 AND juris=$jurpost");
+      	$result = mysql_query("SELECT NomyApePos FROM votos WHERE categoria=Capacitacion AND juris=$jurpost");
       	cerrarBase();
         $row = mysql_fetch_array($result);
         if ($row[0] != "") {
@@ -115,7 +115,7 @@ $dnipost=$_REQUEST['dni'];
                 <h3><span class="label label-success"><?php $value ?></span></h3>
               </div>
               <div class="col-md-2 col-xs-2">
-                <input type="button" name="voto" value="<?php $value ?>" id="voto">
+                <input type="submit" name="voto" value="<?php $value ?>" id="voto">
                 <input type="checkbox" name="dnivot" value="<?php $dnivot ?>" style="visibility: hidden;" checked>
               </div>
             </div>

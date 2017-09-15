@@ -1,4 +1,4 @@
-<?php 
+<?php
 include("conect.php");
 $dni=$_POST['dni'];
 $npostul=$_POST['npostul'];
@@ -6,9 +6,9 @@ $cargo=$_POST['cargo'];
 conectar();
 	mysql_query("SET NAMES 'utf8'");
 	$result = mysql_query("SELECT evaluado FROM padronfinal WHERE dnipostul=$dni");
-	desconectar();
-	$row = mysql_fetch_array($result);
-	$evaluado=$row[0];
+desconectar();
+$row = mysql_fetch_array($result);
+$evaluado=$row[0];
 if(($evaluado=="Si") || ($dni=="")){
 	header("Location: error.html");
 	}
@@ -17,79 +17,94 @@ if(($evaluado=="Si") || ($dni=="")){
 
 <!DOCTYPE html>
 <html lang="es">
-<link href="../SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
-<!--<script src="../SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>-->
 
 <head>
   <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CHACO - Premio al Empleado Público 2016</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Empleado P&uacuteblico del A&ntildeo</title>
   <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/slick/slick.css" rel="stylesheet">
-    <link href="css/slick/slick-theme.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/slick/slick.css" rel="stylesheet">
+  <link href="css/slick/slick-theme.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet/less" type="text/css" href="styles.less" />
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="SpryAssets/SpryValidationRadio.js" type="text/javascript"></script>
-<script language=JavaScript>
-function subir() {
-   var myForm = document.form1;
-   myForm.dedicacion1.focus();
-   }
-</script>
+		<script language=JavaScript>
+		function subir() {
+		   var myForm = document.form1;
+		   myForm.cargo.focus();
+		   }
+		</script>
+
 </head>
 
-<body>
-
-<div class="header-container">
-    <header class="main container">
-      <div class="header-left"></div>
+<body ng-app="pep2016">
+  <div class="navbar-fixed-top">
+    <header class="main container header-container-olim">
+      <div class="header-left-prem"></div>
       <div class="header-middle">
         <div class="dt title-container">
           <div class="dtc va-middle">
-            <h1 class="header-title">
-              Empleado P&uacuteblico del a&ntildeo <span class="anio">2016</span>
-            </h1>
+            <h1 class="header-title-premio medium">
+							Empleado P&uacuteblico del a&ntildeo <span class="anio regular">2017</span>
+						</h1>
+          </div>
+          <div class="dtc va-middle text-right">
+            <ul class="fa-ul">
+              <li><img src="images/logo chaco gris-01.png" alt="" class="img header-logo-gob"></li>
+            </ul>
           </div>
         </div>
       </div>
     </header>
   </div>
-  <nav class="navbar navbar-default">
-    <div class="container">
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid book">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
         <a class="navbar-brand" href="#"></a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-center"> 
-          <li>
-            <a href="../index.html"><i class="fa fa-lg fa-home"></i>&nbsp;&nbsp;Portada</a>
-          </li>               
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="../index.html">INICIO</a></li>
+          <li><a href="../quienes-somos.html">QUIENES SOMOS</a></li>
+          <li><a href="../contacto.html">CONTACTO</a></li>
+          <li><a href="https://web.facebook.com/ModernizacionC"><i class="fa fa-facebook"></i></a></li>
+          <!-- Buscagor, para ms adelante...
+          <li><a href="#" class="fa fa-search"></a></li>
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Buscador">
+            </div>
+          </form>-->
         </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
   </nav>
-  <div class="container">
-    
 
+
+
+	<div class="container">
 <table width="924" height="579" border="1" align="center" cellspacing="4" bgcolor="#CCCCCC">
   <tr>
     <th colspan="2" align="left" valign="top" bgcolor="#FFFFFF" scope="row"><form id="form1" name="form1" method="post" action="recibe.php">
@@ -603,14 +618,14 @@ function subir() {
           <td colspan="5" bgcolor="#999999">&nbsp;</td>
         </tr>
         <tr>
-          <td>Concepto9: Honestidad</td>
+          <td>Concepto9: Ética laboral</td>
           <td width="115" align="center">Siempre</td>
           <td width="180" align="center">Regularmente</td>
           <td width="107" align="center">Nunca</td>
           <td width="99" align="center">NS/NC</td>
         </tr>
         <tr>
-          <td width="375"><p>Se comporta y expresa con coherencia y sinceridad.</p></td>
+          <td width="375"><p>Es leal a los principios del organismo.</p></td>
           <td colspan="4"><div id="spryradio17">
             <table width="517" border="0">
               <tr>
@@ -631,7 +646,7 @@ function subir() {
             <span class="radioRequiredMsg">Realice una selección.</span></div></td>
 </tr>
         <tr>
-          <td><p>Orienta su vida y su trabajo según sus valores.</p></td>
+          <td><p>Cuida los bienes del Estado y sus recursos, velando por la economía del material y la información que le fueron confiados.</p></td>
           <td colspan="4"><div id="spryradio18">
             <table width="517" border="0">
               <tr>
@@ -656,18 +671,75 @@ function subir() {
           <td colspan="4"><label for="obserdedica7"></label>
             <textarea name="obserhonest" id="obserhonest" cols="50" rows="5"></textarea></td>
         </tr>
-        <tr> </tr>
-        <tr> </tr>
-        <tr> </tr>
-        <tr> </tr>
-        <tr> </tr>
-        <tr> </tr>
-        <tr> </tr>
-        <tr> </tr>
-        <tr> </tr>
-        <tr> </tr>
-        <tr> </tr>
-        <tr> </tr>
+      </table>
+      <table width="100%" border="1">
+        <tr>
+          <td colspan="5" bgcolor="#999999">&nbsp;</td>
+        </tr>
+        <tr>
+          <th>PREGUNTAS ABIERTAS</th>
+        </tr>
+        <?php
+        conectar();
+        	mysql_query("SET NAMES 'utf8'");
+        	$resul = mysql_query("SELECT categoria FROM voto WHERE dnipostul=$dni");
+        desconectar();
+        $fila = mysql_fetch_array($resul);
+        $jurisdiccion = $fila[0];
+        ?>
+        <?php
+        if ($jurisdiccion == 'Colaboracion') {
+          ?>
+          <tr>
+            <td>¿Considera que su actividad social impacta positivamente en las actividades laborales?</td>
+            <td colspan="4"><label for="obserdedica7"></label>
+              <textarea name="cola1" id="cola1" cols="50" rows="5"></textarea></td>
+          </tr>
+          <tr>
+            <td>¿Apoya la postulación del agente en la categoría capacitación? ¿Por qué?</td>
+            <td colspan="4"><label for="obserdedica7"></label>
+              <textarea name="cola2" id="cola2" cols="50" rows="5"></textarea></td>
+          </tr>
+          <?php
+        }
+        if ($jurisdiccion == 'Capacitacion') {
+           ?>
+           <tr>
+             <td>¿El agente aplica en el ámbito laboral los conocimientos adquiridos a través de las jornadas de capacitación?</td>
+             <td colspan="4"><label for="obserdedica7"></label>
+               <textarea name="capa1" id="capa1" cols="50" rows="5"></textarea></td>
+           </tr>
+           <tr>
+             <td>¿Apoya la postulación del agente en la categoría capacitación? ¿Por qué?</td>
+             <td colspan="4"><label for="obserdedica7"></label>
+               <textarea name="capa2" id="capa2" cols="50" rows="5"></textarea></td>
+           </tr>
+           <?php
+        }
+        if ($jurisdiccion == 'Proyectos') {
+           ?>
+           <tr>
+             <td>¿Apoya la postulación del agente en la categoría capacitación? ¿Por qué?</td>
+             <td colspan="4"><label for="obserdedica7"></label>
+               <textarea name="proy" id="proy" cols="50" rows="5"></textarea></td>
+           </tr>
+           <?php
+        }
+        if ($jurisdiccion == 'Innovacion') {
+           ?>
+           <tr>
+             <td>¿El agente produjo un cambio positivo en su ámbito laboral con el proyecto en cuestión?</td>
+             <td colspan="4"><label for="obserdedica7"></label>
+               <textarea name="inno1" id="inno1" cols="50" rows="5"></textarea></td>
+           </tr>
+           <tr>
+             <td>¿Apoya la postulación del agente en la categoría Innovación en el puesto de trabajo? ¿Por qué?</td>
+             <td colspan="4"><label for="obserdedica7"></label>
+               <textarea name="inno2" id="inno2" cols="50" rows="5"></textarea></td>
+           </tr>
+           <?php
+        }
+        ?>
       </table>
       <table width="100%" border="1">
         <tr>
@@ -678,24 +750,37 @@ function subir() {
 </tr>
 </table>
 
+
+</div>
+
+<!-- Footer -->
 <div class="footer-container">
   <footer class="main container-fluid">
     <div class="logos-gobierno text-center">
       <div class="logos-img">
-        <img class="logo-footer largo" src="images/logo-sggc.png" alt="">
+        <img class="logo-footer" src="images/modenizacion blanco-01.png" alt="">
       </div>
       <div class="logos-img">
-        <img class="logo-footer" src="images/logo-sub-cgpe.png" alt="">
+        <img class="logo-footer" src="images/secretaria blanco-01.png" alt="">
       </div>
       <div class="logos-img">
-        <img class="logo-footer" src="images/logo-dgme.png" alt="">
-      </div>
-      <div class="logos-img">
-        <img class="logo-footer" src="images/logo-chacogob.png" alt="">
+        <img class="logo-footer" src="images/chaco blanco-01.png" alt="">
       </div>
     </div>
   </footer>
 </div>
+
+<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script type="text/javascript" src="js/slide.js"></script>
+<script src="less.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/smoothAuto-Scroll.js"></script>
+<script type="text/javascript" src="../SpryAssets/SpryValidationTextField.js"></script>
+
 <script type="text/javascript">
 var spryradio1 = new Spry.Widget.ValidationRadio("spryradio1");
 var spryradio2 = new Spry.Widget.ValidationRadio("spryradio2");
@@ -718,4 +803,3 @@ var spryradio17 = new Spry.Widget.ValidationRadio("spryradio17");
 </script>
 </body>
 </html>
-

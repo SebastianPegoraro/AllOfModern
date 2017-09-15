@@ -19,6 +19,10 @@
 		    	url: "/faq",
 		    	templateUrl: "partials/faq.html"
 		    })
+		    .state('politicas', {
+		    	url: "/politicas",
+		    	templateUrl: "partials/politicas.html"
+		    })
 	    ;
 
 	});
