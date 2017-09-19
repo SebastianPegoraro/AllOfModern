@@ -73,9 +73,9 @@ $dnipost=$_REQUEST['dni'];
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="../home/index.html">INICIO</a></li>
-          <li><a href="../home/quienes-somos.html">QUIENES SOMOS</a></li>
-          <li><a href="../home/contacto.html">CONTACTO</a></li>
+          <li><a href="../index.html">INICIO</a></li>
+          <li><a href="../quienes-somos.html">QUIENES SOMOS</a></li>
+          <li><a href="../contacto.html">CONTACTO</a></li>
           <li><a href="https://web.facebook.com/ModernizacionC"><i class="fa fa-facebook"></i></a></li>
           <!-- Buscagor, para ms adelante...
           <li><a href="#" class="fa fa-search"></a></li>
@@ -104,7 +104,7 @@ $dnipost=$_REQUEST['dni'];
         <?php
         abrirBase();
       	mysql_query("SET NAMES 'utf8'");
-      	$result = mysql_query("SELECT NomyApePos FROM votos WHERE categoria=Capacitacion AND juris=$jurpost");
+      	$result = mysql_query("SELECT NomyApePos FROM votos WHERE categoria=Colaboracion AND juris=$jurpost");
       	cerrarBase();
         $row = mysql_fetch_array($result);
         if ($row[0] != "") {

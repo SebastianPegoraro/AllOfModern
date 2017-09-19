@@ -14,7 +14,7 @@ $cargo=$_POST['cargo'];
 //Controla si ya habia votado
 conectar();
 	mysql_query("SET NAMES 'utf8'");
-	$result = mysql_query("SELECT evaluado FROM padronfinal WHERE dnipostul=$dni");
+	$result = mysql_query("SELECT evaluado FROM votos WHERE dnipostul=$dni");
 	desconectar();
 	$row = mysql_fetch_array($result);
 	$evaluado=$row[0];
@@ -130,13 +130,13 @@ Variables de 9: $honest1---$honest2---$obserhonest--$totalhonest<br>
 //insertar en la BD
 //FALTA GUARDAR LAS OBSERVACIONES DE CADA UNO
 
-$cola1 = $POST_['cola1'];
-$cola2 = $POST_['cola2'];
-$capa1 = $POST_['capa1'];
-$capa2 = $POST_['capa2'];
-$proy = $POST_['proy'];
-$inno1 = $POST_['inno1'];
-$inno2 = $POST_['inno2'];
+$cola1 = $_POST['cola1'];
+$cola2 = $_POST['cola2'];
+$capa1 = $_POST['capa1'];
+$capa2 = $_POST['capa2'];
+$proy = $_POST['proy'];
+$inno1 = $_POST['inno1'];
+$inno2 = $_POST['inno2'];
 
 
 conectar();
@@ -148,7 +148,7 @@ conectar();
 			'$obserrespyp','$punt1','$punt2','$obserpunt','$colycop1','$colycop2','$obsercolycop','$honest1','$honest2','$obserhonest','$total','$cola1','$cola2','$capa1','$capa2',
 			'$proy','$inno1','$inno2')");
 
-	$result = mysql_query("update padronfinal set Evaluado='Si' where dnipostul=$dni");
+	$result = mysql_query("UPDATE votos SET evaluado='Si' WHERE dnipostul=$dni");
 desconectar();
 header("Location: final.html");
 

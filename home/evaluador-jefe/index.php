@@ -3,7 +3,7 @@ error_reporting(0);
 $postulante=$_REQUEST['dni'];
 conectar();
 	mysql_query("SET NAMES 'utf8'");
-	$result = mysql_query("SELECT dnipostul, NomyApePos, Oficina, npostulante FROM votos WHERE dnipostul=$postulante");
+	$result = mysql_query("SELECT dnipostul, NomyApePos, Oficina, npostulante, evaluado FROM votos WHERE dnipostul=$postulante");
 	desconectar();
 	$row = mysql_fetch_array($result);
 	$dni=$row[0];

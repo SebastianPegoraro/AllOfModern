@@ -5,13 +5,13 @@ $npostul=$_POST['npostul'];
 $cargo=$_POST['cargo'];
 conectar();
 	mysql_query("SET NAMES 'utf8'");
-	$result = mysql_query("SELECT evaluado FROM padronfinal WHERE dnipostul=$dni");
+	$result = mysql_query("SELECT evaluado FROM votos WHERE dnipostul=$dni");
 desconectar();
 $row = mysql_fetch_array($result);
 $evaluado=$row[0];
 if(($evaluado=="Si") || ($dni=="")){
 	header("Location: error.html");
-	}
+}
 
 ?>
 
@@ -470,12 +470,6 @@ if(($evaluado=="Si") || ($dni=="")){
           <td colspan="4"><label for="obserdedica4"></label>
             <textarea name="obserrespyp" id="obserrespyp" cols="50" rows="5"></textarea></td>
         </tr>
-        <tr> </tr>
-        <tr> </tr>
-        <tr> </tr>
-        <tr> </tr>
-        <tr> </tr>
-        <tr> </tr>
       </table>
       <table width="100%" border="1">
         <tr>
@@ -535,14 +529,6 @@ if(($evaluado=="Si") || ($dni=="")){
           <td colspan="4"><label for="obserdedica5"></label>
             <textarea name="obserpunt" id="obserpunt" cols="50" rows="5"></textarea></td>
         </tr>
-        <tr> </tr>
-        <tr> </tr>
-        <tr> </tr>
-        <tr> </tr>
-        <tr> </tr>
-        <tr> </tr>
-        <tr> </tr>
-        <tr> </tr>
       </table>
       <table width="100%" border="1">
         <tr>
@@ -602,16 +588,6 @@ if(($evaluado=="Si") || ($dni=="")){
           <td colspan="4"><label for="obserdedica6"></label>
             <textarea name="obsercolycop" id="obsercolycop" cols="50" rows="5"></textarea></td>
         </tr>
-        <tr> </tr>
-        <tr> </tr>
-        <tr> </tr>
-        <tr> </tr>
-        <tr> </tr>
-        <tr> </tr>
-        <tr> </tr>
-        <tr> </tr>
-        <tr> </tr>
-        <tr> </tr>
       </table>
       <table width="100%" border="1">
         <tr>
@@ -702,7 +678,8 @@ if(($evaluado=="Si") || ($dni=="")){
           </tr>
           <?php
         }
-        if ($jurisdiccion == 'Capacitacion') {
+
+        if ($jurisdiccion == ' ') {
            ?>
            <tr>
              <td>¿El agente aplica en el ámbito laboral los conocimientos adquiridos a través de las jornadas de capacitación?</td>
@@ -716,6 +693,7 @@ if(($evaluado=="Si") || ($dni=="")){
            </tr>
            <?php
         }
+
         if ($jurisdiccion == 'Proyectos') {
            ?>
            <tr>
@@ -725,6 +703,7 @@ if(($evaluado=="Si") || ($dni=="")){
            </tr>
            <?php
         }
+
         if ($jurisdiccion == 'Innovacion') {
            ?>
            <tr>

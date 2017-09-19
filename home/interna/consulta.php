@@ -30,7 +30,7 @@ $categoria=$_POST['categoria'];
 if($ac=='postulante'){
 	abrirBase();
 	mysql_query("SET NAMES 'utf8'");
-	$result = mysql_query("SELECT * FROM padron WHERE Documento=$dnipostul and  Jur=$jurpost");
+	$result = mysql_query("SELECT * FROM padron WHERE Documento=$dnipostul AND Jur=$jurpost");
 	cerrarBase();
 	$row = mysql_fetch_array($result);
 	if($row[1]==""){
