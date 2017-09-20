@@ -77,13 +77,6 @@ $dnipost=$_REQUEST['dni'];
           <li><a href="../quienes-somos.html">QUIENES SOMOS</a></li>
           <li><a href="../contacto.html">CONTACTO</a></li>
           <li><a href="https://web.facebook.com/ModernizacionC"><i class="fa fa-facebook"></i></a></li>
-          <!-- Buscagor, para ms adelante...
-          <li><a href="#" class="fa fa-search"></a></li>
-          <form class="navbar-form navbar-left">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Buscador">
-            </div>
-          </form>-->
         </ul>
       </div>
       <!-- /.navbar-collapse -->
@@ -133,21 +126,120 @@ $dnipost=$_REQUEST['dni'];
         ?>
       </div><!--Fin Colaboracion-->
 
-      <div class="row text-center">
-        <div class="col-md-12 col-xs-12">
-          <h1><span class="label label-primary">CAPACITACI&OacuteN</span></h1>
+      <div class="container"><!--Capacitacion-->
+        <div class="row text-center">
+          <div class="col-md-12 col-xs-12">
+            <h1><span class="label label-primary">CAPACITACI&OacuteN</span></h1>
+          </div>
         </div>
-      </div>
-      <div class="row text-center">
-        <div class="col-md-12 col-xs-12">
-          <h1><span class="label label-primary">PROYECTOS ESPECIALES - TRANSVERSALES</span></h1>
+        <?php
+        abrirBase();
+        	mysql_query("SET NAMES 'utf8'");
+        	$result = mysql_query("SELECT NomyApePos FROM votos WHERE categoria=" " AND juris=$jurpost");
+      	cerrarBase();
+        $row = mysql_fetch_array($result);
+        if ($row[0] != "") {
+          foreach ($row as $value) {
+            ?>
+            <div class="row text-center">
+              <div class="col-md-10 col-xs-10">
+                <h3><span class="label label-success"><?php $value ?></span></h3>
+              </div>
+              <div class="col-md-2 col-xs-2">
+                <input type="submit" name="voto" value="<?php $value ?>" id="voto">
+                <input type="checkbox" name="dnivot" value="<?php $dnivot ?>" style="visibility: hidden;" checked>
+              </div>
+            </div>
+          <?php
+          }
+        }else {
+          ?>
+          <div class="row text-center">
+            <div class="col-md-12 col-xs-12">
+              <h3><span class="label label-default">Nadie de esta Jurisdicción se postuló en esta categoría</span></h3>
+            </div>
+          </div>
+          <?php
+        }
+        ?>
+      </div><!--Fin Capacitacion-->
+
+      <div class="container"><!--Proyectos-->
+        <div class="row text-center">
+          <div class="col-md-12 col-xs-12">
+            <h1><span class="label label-primary">PROYECTOS ESPECIALES - TRANSVERSALES</span></h1>
+          </div>
         </div>
-      </div>
-      <div class="row text-center">
-        <div class="col-md-12 col-xs-12">
-          <h1><span class="label label-primary">INNOVACI&OacuteN EN EL PUESTO DE TRABAJO</span></h1>
+        <?php
+        abrirBase();
+        	mysql_query("SET NAMES 'utf8'");
+        	$result = mysql_query("SELECT NomyApePos FROM votos WHERE categoria=Proyectos AND juris=$jurpost");
+      	cerrarBase();
+        $row = mysql_fetch_array($result);
+        if ($row[0] != "") {
+          foreach ($row as $value) {
+            ?>
+            <div class="row text-center">
+              <div class="col-md-10 col-xs-10">
+                <h3><span class="label label-success"><?php $value ?></span></h3>
+              </div>
+              <div class="col-md-2 col-xs-2">
+                <input type="submit" name="voto" value="<?php $value ?>" id="voto">
+                <input type="checkbox" name="dnivot" value="<?php $dnivot ?>" style="visibility: hidden;" checked>
+              </div>
+            </div>
+          <?php
+          }
+        }else {
+          ?>
+          <div class="row text-center">
+            <div class="col-md-12 col-xs-12">
+              <h3><span class="label label-default">Nadie de esta Jurisdicción se postuló en esta categoría</span></h3>
+            </div>
+          </div>
+          <?php
+        }
+        ?>
+      </div><!--Fin Proyectos-->
+
+      <div class="container"><!--Innovacion-->
+        <div class="row text-center">
+          <div class="col-md-12 col-xs-12">
+            <h1><span class="label label-primary">INNOVACI&OacuteN EN EL PUESTO DE TRABAJO</span></h1>
+          </div>
         </div>
-      </div>
+        <?php
+        abrirBase();
+        	mysql_query("SET NAMES 'utf8'");
+        	$result = mysql_query("SELECT NomyApePos FROM votos WHERE categoria=Innovacion AND juris=$jurpost");
+      	cerrarBase();
+        $row = mysql_fetch_array($result);
+        if ($row[0] != "") {
+          foreach ($row as $value) {
+            ?>
+            <div class="row text-center">
+              <div class="col-md-10 col-xs-10">
+                <h3><span class="label label-success"><?php $value ?></span></h3>
+              </div>
+              <div class="col-md-2 col-xs-2">
+                <input type="submit" name="voto" value="<?php $value ?>" id="voto">
+                <input type="checkbox" name="dnivot" value="<?php $dnivot ?>" style="visibility: hidden;" checked>
+              </div>
+            </div>
+          <?php
+          }
+        }else {
+          ?>
+          <div class="row text-center">
+            <div class="col-md-12 col-xs-12">
+              <h3><span class="label label-default">Nadie de esta Jurisdicción se postuló en esta categoría</span></h3>
+            </div>
+          </div>
+          <?php
+        }
+        ?>
+      </div><!--Fin Innovacion-->
+
     </form>
   </div>
 </div>
