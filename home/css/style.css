@@ -400,8 +400,13 @@ header.main .header-right {
 .boton-voto {
 	position: fixed;
 	right: 0px;
-	top: 200px;
+	top: 170px;
 	z-index: 200;
+}
+
+.boton-voto img {
+	width: 90px;
+	height: auto;
 }
 
 .boton input {
@@ -561,6 +566,10 @@ header.main .header-right {
 	.boton-voto img {
 		width: 150px;
 		height: auto;
+	}
+
+  .boton-voto {
+		top: 164px;
 	}
 
 	.va-bottom-middle {

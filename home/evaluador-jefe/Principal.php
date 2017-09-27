@@ -113,7 +113,7 @@ if(($evaluado=="Si") || ($dni=="")){
       </table>
       <table width="100%" border="1">
         <tr><a name="arriba"></a>
-          <td>Concepto 1: Dedicación
+          <td>Concepto 1: Dedicaci&oacuten
             <input name="dni" type="hidden" id="dni" value="<?php echo $dni; ?>" />
             <input name="npostul" type="hidden" id="npostul" value="<?php echo $npostul; ?>" />
             <input name="cargo" type="hidden" id="cargo" value="<?php echo $cargo; ?>" /></td>
@@ -123,7 +123,7 @@ if(($evaluado=="Si") || ($dni=="")){
           <td width="99" align="center">NS/NC</td>
         </tr>
         <tr>
-          <td width="375">Realiza una ocupación plena de su tiempo laboral.</td>
+          <td width="375">Realiza una ocupaci&oacuten plena de su tiempo laboral.</td>
           <td colspan="4"><div id="spryradio1">
             <table width="517" border="0">
               <tr>
@@ -141,7 +141,7 @@ if(($evaluado=="Si") || ($dni=="")){
                 </label></td>
                 </tr>
               </table>
-            <span class="radioRequiredMsg">Realice una selección.</span></div></td>
+            <span class="radioRequiredMsg">Realice una selecci&oacuten.</span></div></td>
         </tr>
         <tr>
           <td><p>Cumple con los objetivos y tareas encomendadas, aprovechando de forma plena su tiempo laboral.</p></td>
@@ -162,7 +162,7 @@ if(($evaluado=="Si") || ($dni=="")){
                 </label></td>
               </tr>
             </table>
-            <span class="radioRequiredMsg">Realice una selección.</span></div></td>
+            <span class="radioRequiredMsg">Realice una selecci&oacuten.</span></div></td>
         </tr>
         <tr>
           <td>Observaciones:</td>
@@ -175,14 +175,14 @@ if(($evaluado=="Si") || ($dni=="")){
     </table>
       <table width="100%" border="1">
         <tr>
-          <td>Concepto 2: Deseo de superación</td>
+          <td>Concepto 2: Deseo de superaci&oacuten</td>
           <td width="115" align="center">Siempre</td>
           <td width="180" align="center">Regularmente</td>
           <td width="107" align="center">Nunca</td>
           <td width="99" align="center">NS/NC</td>
         </tr>
         <tr>
-          <td width="375"><p>Posee espíritu de superación. Tiene ímpetu para capacitarse y fijarse nuevas metas dentro de la organización.</p></td>
+          <td width="375"><p>Posee esp&iacuteritu de superaci&oacuten. Tiene &iacutempetu para capacitarse y fijarse nuevas metas dentro de la organizaci&oacuten.</p></td>
           <td colspan="4"><div id="spryradio3">
             <table width="517" border="0">
               <tr>
@@ -200,7 +200,7 @@ if(($evaluado=="Si") || ($dni=="")){
                 </label></td>
               </tr>
             </table>
-            <span class="radioRequiredMsg">Realice una selección.</span></div></td>
+            <span class="radioRequiredMsg">Realice una selecci&oacuten.</span></div></td>
         </tr>
         <tr>
           <td><p>Brinda importancia a las necesidades de alcanzar los objetivos, realiza aportes para ello.</p></td>
@@ -221,7 +221,7 @@ if(($evaluado=="Si") || ($dni=="")){
                 </label></td>
               </tr>
             </table>
-            <span class="radioRequiredMsg">Realice una selección.</span></div></td>
+            <span class="radioRequiredMsg">Realice una selecci&oacuten.</span></div></td>
         </tr>
         <tr>
           <td>Observaciones:</td>
@@ -259,10 +259,10 @@ if(($evaluado=="Si") || ($dni=="")){
                   </label></td>
                 </tr>
               </table>
-            <span class="radioRequiredMsg">Realice una selección.</span></div></td>
+            <span class="radioRequiredMsg">Realice una selecci&oacuten.</span></div></td>
 </tr>
         <tr>
-          <td><p>Supera los obstáculos y realiza repetidos intentos para alcanzar los objetivos manteniéndose firme en un proyecto hasta completarlo.</p></td>
+          <td><p>Supera los obst&aacuteculos y realiza repetidos intentos para alcanzar los objetivos manteni&eacutendose firme en un proyecto hasta completarlo.</p></td>
           <td colspan="4"><div id="spryradio6">
             <table width="517" border="0">
               <tr>
@@ -280,7 +280,7 @@ if(($evaluado=="Si") || ($dni=="")){
                   </label></td>
                 </tr>
               </table>
-            <span class="radioRequiredMsg">Realice una selección.</span></div></td>
+            <span class="radioRequiredMsg">Realice una selecci&oacuten.</span></div></td>
 </tr>
         <tr>
           <td>Observaciones:</td>
@@ -300,7 +300,7 @@ if(($evaluado=="Si") || ($dni=="")){
           <td width="99" align="center">NS/NC</td>
         </tr>
         <tr>
-          <td width="375"><p>Busca y comparte información útil para la resolución de situaciones.</p></td>
+          <td width="375"><p>Busca y comparte informaci&oacuten &uacutetil para la resoluci&oacuten de situaciones.</p></td>
           <td colspan="4"><div id="spryradio7">
             <table width="517" border="0">
               <tr>
@@ -318,10 +318,10 @@ if(($evaluado=="Si") || ($dni=="")){
                   </label></td>
                 </tr>
               </table>
-            <span class="radioRequiredMsg">Realice una selección.</span></div></td>
+            <span class="radioRequiredMsg">Realice una selecci&oacuten.</span></div></td>
 </tr>
         <tr>
-          <td><p>Emprende acciones para difundir nuevas tecnologías y metodologías de la organización.</p></td>
+          <td><p>Emprende acciones para difundir nuevas tecnolog&iacuteas y metodolog&iacuteas de la organizaci&oacuten.</p></td>
           <td colspan="4"><div id="spryradio8">
             <table width="517" border="0">
               <tr>
@@ -339,7 +339,7 @@ if(($evaluado=="Si") || ($dni=="")){
                   </label></td>
                 </tr>
               </table>
-            <span class="radioRequiredMsg">Realice una selección.</span></div></td>
+            <span class="radioRequiredMsg">Realice una selecci&oacuten.</span></div></td>
 </tr>
         <tr>
           <td>Observaciones:</td>
@@ -379,7 +379,7 @@ if(($evaluado=="Si") || ($dni=="")){
                   </label></td>
                 </tr>
               </table>
-            <span class="radioRequiredMsg">Realice una selección.</span></div></td>
+            <span class="radioRequiredMsg">Realice una selecci&oacuten.</span></div></td>
 </tr>
         <tr>
           <td><p>Defiende los intereses del grupo de trabajo como si fueran propios.</p></td>
@@ -400,7 +400,7 @@ if(($evaluado=="Si") || ($dni=="")){
                   </label></td>
                 </tr>
               </table>
-            <span class="radioRequiredMsg">Realice una selección.</span></div></td>
+            <span class="radioRequiredMsg">Realice una selecci&oacuten.</span></div></td>
 </tr>
         <tr>
           <td>Observaciones:</td>
@@ -442,7 +442,7 @@ if(($evaluado=="Si") || ($dni=="")){
                   </label></td>
                 </tr>
               </table>
-            <span class="radioRequiredMsg">Realice una selección.</span></div></td>
+            <span class="radioRequiredMsg">Realice una selecci&oacuten.</span></div></td>
 </tr>
         <tr>
           <td><p>Escucha, respeta y valora las ideas y propuestas de sus pares y colaboradores.</p></td>
@@ -463,7 +463,7 @@ if(($evaluado=="Si") || ($dni=="")){
                   </label></td>
                 </tr>
               </table>
-            <span class="radioRequiredMsg">Realice una selección.</span></div></td>
+            <span class="radioRequiredMsg">Realice una selecci&oacuten.</span></div></td>
 </tr>
         <tr>
           <td>Observaciones:</td>
@@ -501,7 +501,7 @@ if(($evaluado=="Si") || ($dni=="")){
                   </label></td>
                 </tr>
               </table>
-            <span class="radioRequiredMsg">Realice una selección.</span></div></td>
+            <span class="radioRequiredMsg">Realice una selecci&oacuten.</span></div></td>
 </tr>
         <tr>
           <td><p>Comunica de su inasistencia.</p></td>
@@ -522,7 +522,7 @@ if(($evaluado=="Si") || ($dni=="")){
                   </label></td>
                 </tr>
               </table>
-            <span class="radioRequiredMsg">Realice una selección.</span></div></td>
+            <span class="radioRequiredMsg">Realice una selecci&oacuten.</span></div></td>
 </tr>
         <tr>
           <td>Observaciones:</td>
@@ -535,14 +535,14 @@ if(($evaluado=="Si") || ($dni=="")){
           <td colspan="5" bgcolor="#999999">&nbsp;</td>
         </tr>
         <tr>
-          <td>Concepto 8: Colaboración y Cooperación</td>
+          <td>Concepto 8: Colaboraci&oacuten y Cooperaci&oacuten</td>
           <td width="115" align="center">Siempre</td>
           <td width="180" align="center">Regularmente</td>
           <td width="107" align="center">Nunca</td>
           <td width="99" align="center">NS/NC</td>
         </tr>
         <tr>
-          <td width="375"><p>Motiva al grupo a integrar sus ideas y a llegar a consenso. Colabora para la obtención de un objetivo común.</p></td>
+          <td width="375"><p>Motiva al grupo a integrar sus ideas y a llegar a consenso. Colabora para la obtenci&oacuten de un objetivo com&uacuten.</p></td>
           <td colspan="4"><div id="spryradio15">
             <table width="517" border="0">
               <tr>
@@ -560,10 +560,10 @@ if(($evaluado=="Si") || ($dni=="")){
                   </label></td>
                 </tr>
               </table>
-            <span class="radioRequiredMsg">Realice una selección.</span></div></td>
+            <span class="radioRequiredMsg">Realice una selecci&oacuten.</span></div></td>
 </tr>
         <tr>
-          <td><p>Contribuye en el orden y limpieza en el ámbito de trabajo.</p></td>
+          <td><p>Contribuye en el orden y limpieza en el &aacutembito de trabajo.</p></td>
           <td colspan="4"><div id="spryradio16">
             <table width="517" border="0">
               <tr>
@@ -581,7 +581,7 @@ if(($evaluado=="Si") || ($dni=="")){
                   </label></td>
                 </tr>
               </table>
-            <span class="radioRequiredMsg">Realice una selección.</span></div></td>
+            <span class="radioRequiredMsg">Realice una selecci&oacuten.</span></div></td>
 </tr>
         <tr>
           <td>Observaciones:</td>
@@ -594,7 +594,7 @@ if(($evaluado=="Si") || ($dni=="")){
           <td colspan="5" bgcolor="#999999">&nbsp;</td>
         </tr>
         <tr>
-          <td>Concepto9: Ética laboral</td>
+          <td>Concepto9: &eacutetica laboral</td>
           <td width="115" align="center">Siempre</td>
           <td width="180" align="center">Regularmente</td>
           <td width="107" align="center">Nunca</td>
@@ -619,10 +619,10 @@ if(($evaluado=="Si") || ($dni=="")){
                   </label></td>
                 </tr>
               </table>
-            <span class="radioRequiredMsg">Realice una selección.</span></div></td>
+            <span class="radioRequiredMsg">Realice una selecci&oacuten.</span></div></td>
 </tr>
         <tr>
-          <td><p>Cuida los bienes del Estado y sus recursos, velando por la economía del material y la información que le fueron confiados.</p></td>
+          <td><p>Cuida los bienes del Estado y sus recursos, velando por la econom&iacutea del material y la informaci&oacuten que le fueron confiados.</p></td>
           <td colspan="4"><div id="spryradio18">
             <table width="517" border="0">
               <tr>
@@ -640,7 +640,7 @@ if(($evaluado=="Si") || ($dni=="")){
                   </label></td>
                 </tr>
               </table>
-            <span class="radioRequiredMsg">Realice una selección.</span></div></td>
+            <span class="radioRequiredMsg">Realice una selecci&oacuten.</span></div></td>
 </tr>
         <tr>
           <td>Observaciones:</td>
@@ -672,7 +672,7 @@ if(($evaluado=="Si") || ($dni=="")){
               <textarea name="cola1" id="cola1" cols="50" rows="5"></textarea></td>
           </tr>
           <tr>
-            <td>¿Apoya la postulación del agente en la categoría capacitación? ¿Por qué?</td>
+            <td>¿Apoya la postulaci&oacuten del agente en la categor&iacutea capacitaci&oacuten? ¿Por qu&eacute?</td>
             <td colspan="4"><label for="obserdedica7"></label>
               <textarea name="cola2" id="cola2" cols="50" rows="5"></textarea></td>
           </tr>
@@ -682,12 +682,12 @@ if(($evaluado=="Si") || ($dni=="")){
         if ($jurisdiccion == 'Capacitacion') {
            ?>
            <tr>
-             <td>¿El agente aplica en el ámbito laboral los conocimientos adquiridos a través de las jornadas de capacitación?</td>
+             <td>¿El agente aplica en el &aacutembito laboral los conocimientos adquiridos a trav&eacutes de las jornadas de capacitaci&oacuten?</td>
              <td colspan="4"><label for="obserdedica7"></label>
                <textarea name="capa1" id="capa1" cols="50" rows="5"></textarea></td>
            </tr>
            <tr>
-             <td>¿Apoya la postulación del agente en la categoría capacitación? ¿Por qué?</td>
+             <td>¿Apoya la postulaci&oacuten del agente en la categor&iacutea capacitaci&oacuten? ¿Por qu&eacute?</td>
              <td colspan="4"><label for="obserdedica7"></label>
                <textarea name="capa2" id="capa2" cols="50" rows="5"></textarea></td>
            </tr>
@@ -697,7 +697,7 @@ if(($evaluado=="Si") || ($dni=="")){
         if ($jurisdiccion == 'Proyectos') {
            ?>
            <tr>
-             <td>¿Apoya la postulación del agente en la categoría capacitación? ¿Por qué?</td>
+             <td>¿Apoya la postulaci&oacuten del agente en la categor&iacutea proyectos transversales? ¿Por qu&eacute?</td>
              <td colspan="4"><label for="obserdedica7"></label>
                <textarea name="proy" id="proy" cols="50" rows="5"></textarea></td>
            </tr>
@@ -707,12 +707,12 @@ if(($evaluado=="Si") || ($dni=="")){
         if ($jurisdiccion == 'Innovacion') {
            ?>
            <tr>
-             <td>¿El agente produjo un cambio positivo en su ámbito laboral con el proyecto en cuestión?</td>
+             <td>¿El agente produjo un cambio positivo en su &aacutembito laboral con el proyecto en cuesti&oacuten?</td>
              <td colspan="4"><label for="obserdedica7"></label>
                <textarea name="inno1" id="inno1" cols="50" rows="5"></textarea></td>
            </tr>
            <tr>
-             <td>¿Apoya la postulación del agente en la categoría Innovación en el puesto de trabajo? ¿Por qué?</td>
+             <td>¿Apoya la postulaci&oacuten del agente en la categor&iacutea Innovaci&oacuten en el puesto de trabajo? ¿Por qu&eacute?</td>
              <td colspan="4"><label for="obserdedica7"></label>
                <textarea name="inno2" id="inno2" cols="50" rows="5"></textarea></td>
            </tr>

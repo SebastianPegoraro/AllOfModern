@@ -1,10 +1,7 @@
-<?php 
+<?php
 header("Content-Type: text/html;charset=utf-8");
 include("conect.php");
-require_once("class.phpmailer.php");
-include("cuenta.txt");
 error_reporting(0);
-
 
 $nomvotado=$_POST['nomvotado'];
 $dnivotante=$_POST['dnivotante'];
@@ -25,8 +22,6 @@ $row = mysql_fetch_array($result);
 			cerrarBase();
 			header("Location: guardado.php");
 		}
-
 		header("Location: error.php");
 	}
-
 ?>
