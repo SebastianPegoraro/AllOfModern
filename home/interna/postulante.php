@@ -2,7 +2,12 @@
 header("Content-Type: text/html;charset=utf-8");
 include("conect.php");
 $jurpost=$_REQUEST['jur'];
-$dnipost=$_REQUEST['dni'];
+$dnivotante=$_REQUEST['dni'];
+  abrirBase();
+        mysql_query("SET NAMES 'utf8'");
+        $result = mysql_query("SELECT JurDenominacion FROM padron WHERE Documento=$dnivotante");
+  cerrarBase();
+        $jurpost = mysql_fetch_array($result);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -77,6 +82,13 @@ $dnipost=$_REQUEST['dni'];
           <li><a href="../quienes-somos.html">QUIENES SOMOS</a></li>
           <li><a href="../contacto.html">CONTACTO</a></li>
           <li><a href="https://web.facebook.com/ModernizacionC"><i class="fa fa-facebook"></i></a></li>
+          <!-- Buscagor, para ms adelante...
+          <li><a href="#" class="fa fa-search"></a></li>
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Buscador">
+            </div>
+          </form>-->
         </ul>
       </div>
       <!-- /.navbar-collapse -->
@@ -97,19 +109,17 @@ $dnipost=$_REQUEST['dni'];
         <?php
         abrirBase();
       	mysql_query("SET NAMES 'utf8'");
-      	$result = mysql_query("SELECT NomyApePos FROM votos WHERE categoria=Colaboracion AND juris=$jurpost");
+      	$resulta = mysql_query("SELECT NomyApePos FROM votos WHERE categoria='Colaboracion' AND juris='$jurpost[0]'");
       	cerrarBase();
-        $row = mysql_fetch_array($result);
-        if ($row[0] != "") {
-          foreach ($row as $value) {
+
+        $fila = mysql_fetch_row($resulta);
+        if ($fila[0] != "") {
+          foreach ($fila as $value) {
             ?>
             <div class="row text-center">
-              <div class="col-md-10 col-xs-10">
-                <h3><span class="label label-success"><?php $value ?></span></h3>
-              </div>
-              <div class="col-md-2 col-xs-2">
-                <input type="submit" name="voto" value="<?php $value ?>" id="voto">
-                <input type="checkbox" name="dnivot" value="<?php $dnivot ?>" style="visibility: hidden;" checked>
+              <div class="col-md-12 col-xs-12">
+                <input type="radio" name="nomvotado" value="<?php $value ?>">
+                <h3><span class="label label-success"><?php echo $value ?></span></h3>
               </div>
             </div>
           <?php
@@ -134,20 +144,17 @@ $dnipost=$_REQUEST['dni'];
         </div>
         <?php
         abrirBase();
-        	mysql_query("SET NAMES 'utf8'");
-        	$result = mysql_query("SELECT NomyApePos FROM votos WHERE categoria=" " AND juris=$jurpost");
-      	cerrarBase();
-        $row = mysql_fetch_array($result);
-        if ($row[0] != "") {
-          foreach ($row as $value) {
+        mysql_query("SET NAMES 'utf8'");
+        $resulta = mysql_query("SELECT NomyApePos FROM votos WHERE categoria='Capacitacion' AND juris='$jurpost[0]'");
+        cerrarBase();
+        $fila = mysql_fetch_row($resulta);
+        if ($fila[0] != "") {
+          foreach ($fila as $value) {
             ?>
             <div class="row text-center">
-              <div class="col-md-10 col-xs-10">
-                <h3><span class="label label-success"><?php $value ?></span></h3>
-              </div>
-              <div class="col-md-2 col-xs-2">
-                <input type="submit" name="voto" value="<?php $value ?>" id="voto">
-                <input type="checkbox" name="dnivot" value="<?php $dnivot ?>" style="visibility: hidden;" checked>
+              <div class="col-md-12 col-xs-12">
+                <input type="radio" name="nomvotado" value="<?php $value ?>">
+                <h3><span class="label label-success"><?php echo $value ?></span></h3>
               </div>
             </div>
           <?php
@@ -172,20 +179,17 @@ $dnipost=$_REQUEST['dni'];
         </div>
         <?php
         abrirBase();
-        	mysql_query("SET NAMES 'utf8'");
-        	$result = mysql_query("SELECT NomyApePos FROM votos WHERE categoria=Proyectos AND juris=$jurpost");
-      	cerrarBase();
-        $row = mysql_fetch_array($result);
-        if ($row[0] != "") {
-          foreach ($row as $value) {
+        mysql_query("SET NAMES 'utf8'");
+        $resulta = mysql_query("SELECT NomyApePos FROM votos WHERE categoria='Proyectos' AND juris='$jurpost[0]'");
+        cerrarBase();
+        $fila = mysql_fetch_row($resulta);
+        if ($fila[0] != "") {
+          foreach ($fila as $value) {
             ?>
             <div class="row text-center">
-              <div class="col-md-10 col-xs-10">
-                <h3><span class="label label-success"><?php $value ?></span></h3>
-              </div>
-              <div class="col-md-2 col-xs-2">
-                <input type="submit" name="voto" value="<?php $value ?>" id="voto">
-                <input type="checkbox" name="dnivot" value="<?php $dnivot ?>" style="visibility: hidden;" checked>
+              <div class="col-md-12 col-xs-12">
+                <input type="radio" name="nomvotado" value="<?php $value ?>">
+                <h3><span class="label label-success"><?php echo $value ?></span></h3>
               </div>
             </div>
           <?php
@@ -210,20 +214,17 @@ $dnipost=$_REQUEST['dni'];
         </div>
         <?php
         abrirBase();
-        	mysql_query("SET NAMES 'utf8'");
-        	$result = mysql_query("SELECT NomyApePos FROM votos WHERE categoria=Innovacion AND juris=$jurpost");
-      	cerrarBase();
-        $row = mysql_fetch_array($result);
-        if ($row[0] != "") {
-          foreach ($row as $value) {
+        mysql_query("SET NAMES 'utf8'");
+        $resulta = mysql_query("SELECT NomyApePos FROM votos WHERE categoria='Innovacion' AND juris='$jurpost[0]'");
+        cerrarBase();
+        $fila = mysql_fetch_row($resulta);
+        if ($fila[0] != " ") {
+          foreach ($fila as $value) {
             ?>
             <div class="row text-center">
-              <div class="col-md-10 col-xs-10">
-                <h3><span class="label label-success"><?php $value ?></span></h3>
-              </div>
-              <div class="col-md-2 col-xs-2">
-                <input type="submit" name="voto" value="<?php $value ?>" id="voto">
-                <input type="checkbox" name="dnivot" value="<?php $dnivot ?>" style="visibility: hidden;" checked>
+              <div class="col-md-12 col-xs-12">
+                <input type="radio" name="nomvotado" value="<?php $value ?>">
+                <h3><span class="label label-success"><?php echo $value ?></span></h3>
               </div>
             </div>
           <?php
@@ -239,6 +240,15 @@ $dnipost=$_REQUEST['dni'];
         }
         ?>
       </div><!--Fin Innovacion-->
+      
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-12 col-xs-12">
+            <input type="checkbox" name="dnivotante" value="<?php $dnivotante ?>" style="visibility: hidden;" checked>
+            <span class="glyphicon glyphicon-align-left" aria-hidden="true"><input type="submit" name="Confirmar"> </span>
+          </div>
+        </div>
+      </div>
 
     </form>
   </div>

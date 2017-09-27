@@ -143,10 +143,11 @@ conectar();
 	mysql_query("SET NAMES 'utf8'");
 	$result = mysql_query("INSERT INTO evaluacion (dnipostul, cargo, npost, dedicacion1, dedicacion2, obserdedica, supera1, supera2, obsersupera, proact1, proact2, obserproact,
 		aprend1, aprend2, obseraprend, comyresp1, comyresp2, obsercompyresp, resppyp1, resppyp2, obserresppyp, punt1, punt2, obserpunt, colycop1, colycop2, obsercolycop, honest1,
-		honest2, obserhonest, total, cola1, cola2, capa1, capa1, proy, inno1, inno2) VALUES ('$dni','$cargo','$npostul','$dedicacion1','$dedicacion2','$obserdedica','$supera1',
+		honest2, obserhonest, total, cola1, cola2, capa1, capa2, proy, inno1, inno2) VALUES ('$dni','$cargo','$npostul','$dedicacion1','$dedicacion2','$obserdedica','$supera1',
 			'$supera2','$obsersupera','$proact1','$proact2','$obserproact','$aprend1','$aprend2','$obseraprend','$comyresp1','$comyresp2','$obsercompyresp','$resppyp1','$resppyp2',
 			'$obserrespyp','$punt1','$punt2','$obserpunt','$colycop1','$colycop2','$obsercolycop','$honest1','$honest2','$obserhonest','$total','$cola1','$cola2','$capa1','$capa2',
 			'$proy','$inno1','$inno2')");
+//die(var_dump($result));
 
 	$result = mysql_query("UPDATE votos SET evaluado='Si' WHERE dnipostul=$dni");
 desconectar();

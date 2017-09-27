@@ -3,9 +3,11 @@ include("conect.php");
 //controlar seguridad
 $dnipost=$_REQUEST['dni'];
 $jurpost=$_REQUEST['jurpost'];
+//$votante=$_REQUEST['votante'];
+//$categoria = $_REQUEST[''];
 if($dnipost==""){
-  header("Location: index.html");
-  }
+	header("Location: index.html");
+	}
 //Tiramos una consulta a la base para traer los datos
 //Postulante
 abrirBase();
@@ -16,6 +18,13 @@ abrirBase();
 	$jurdenomin=$row[0];
 	$apeynompost=$row[1];
 	$ofi=$row[2];
+//Votante
+//abrirBase();
+//	mysql_query("SET NAMES 'utf8'");
+//	$result = mysql_query("SELECT ApellidoyNombres FROM padron WHERE Documento=$votante and Jur=$jurpost");
+//	cerrarBase();
+//	$row = mysql_fetch_array($result);
+//	$apeynomvot=$row[0];
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -56,8 +65,8 @@ abrirBase();
       <div class="header-middle">
         <div class="dt title-container">
           <div class="dtc va-middle">
-            <h1 class="header-title-premio medium">
-							Empleado P&uacuteblico del a&ntildeo <span class="anio regular">2017</span>
+            <h1 class="header-title-premio">
+							Empleado P&uacuteblico del a&ntildeo <span class="anio">2017</span>
 						</h1>
           </div>
           <div class="dtc va-middle text-right">
@@ -147,15 +156,15 @@ error_reporting(0);
               <th width="28%" bgcolor="#FFFFFF" scope="row"><label for="dni">
                 <input name="apeynom" type="text" id="apeynom" value="<?php echo $apeynompost;?>" size="40" readonly="readonly"/>
               </label></th>
-              <td width="22%" align="center" valign="middle" bgcolor="#FFFFFF">Direcci&oacuten Laboral*<br /></td>
-              <td width="28%" align="left" bgcolor="#FFFFFF"><input name="direc" type="text" id="direc" size="40"/></td>
+              <td width="22%" align="center" valign="middle" bgcolor="#FFFFFF">Direcci&oacuten Laboral<br /></td>
+              <td width="28%" align="left" bgcolor="#FFFFFF"><input name="direc" type="text" id="direc" size="40" /></td>
             </tr>
             <tr>
               <th align="center" valign="middle" bgcolor="#FFFFFF" scope="row">Jurisdicci&oacuten</th>
               <th bgcolor="#FFFFFF" scope="row"><input name="jur" type="text" id="jur" value="<?php echo $jurdenomin;?>" size="40" readonly="readonly"/></th>
               <td align="center" valign="middle" bgcolor="#FFFFFF">Tel&eacutefono Personal/Laboral*</td>
               <td align="left" bgcolor="#FFFFFF"><span id="telef">
-              <input name="telef" type="text" id="telef" size="40"/>
+              <input name="telef" type="text" id="telef" size="40" />
               <br />
               <span class="textfieldRequiredMsg">Se necesita un valor.</span><span class="textfieldMinCharsMsg"><br />
               No se cumple el m&iacutenimo de caracteres requerido(7).</span><span class="textfieldMaxCharsMsg">Se ha superado el n&uacutemero m&aacuteximo de caracteres(12).</span></span></td>
@@ -163,7 +172,7 @@ error_reporting(0);
             <tr>
               <th align="center" valign="middle" bgcolor="#FFFFFF" scope="row">Oficina</th>
               <th bgcolor="#FFFFFF" scope="row"><input name="oficina" type="text" id="oficina" value="<?php echo $ofi;?>" size="40" readonly="readonly"/></th>
-              <td align="center" valign="middle" bgcolor="#FFFFFF">Localidad*</td>
+              <td align="center" valign="middle" bgcolor="#FFFFFF">Localidad</td>
               <td align="left" bgcolor="#FFFFFF"><input name="local" type="text" id="local" size="40" /></td>
 	    			</tr>
             <tr>
@@ -179,14 +188,14 @@ error_reporting(0);
 		          </th>
             </tr>
 						<tr>
-              <th align="center" valign="middle" bgcolor="#FFFFFF" scope="row">Cargo*</th>
-              <th bgcolor="#FFFFFF" scope="row"><input name="cargo" type="text" id="cargo" size="40" /></th>
-              <td align="center" valign="middle" bgcolor="#FFFFFF">Jefe Inmediato Superior*</td>
+              <th align="center" valign="middle" bgcolor="#FFFFFF" scope="row">Cargo</th>
+              <th bgcolor="#FFFFFF" scope="row"><input name="cargo" type="text" id="cargo" size="40"/></th>
+              <td align="center" valign="middle" bgcolor="#FFFFFF">Jefe Inmediato Superior</td>
               <td align="left" bgcolor="#FFFFFF"><input name="jefeSup" type="text" id="jefeSup" size="40" /></td>
 	    			</tr>
 						<tr>
-              <th align="center" valign="middle" bgcolor="#FFFFFF" scope="row">Correo Electr&oacutenico*</th>
-              <th bgcolor="#FFFFFF" scope="row"><input name="correo" type="text" id="correo" size="40" /></th>
+              <th align="center" valign="middle" bgcolor="#FFFFFF" scope="row">Correo Electr&oacutenico</th>
+              <th bgcolor="#FFFFFF" scope="row"><input name="correo" type="text" id="correo" size="40"/></th>
 							<td align="center" valign="middle" bgcolor="#FFFFFF">Como se Enter&oacute del Premio</td>
 			      	<th colspan="2" align="left" valign="middle" scope="row">
 						    <select name="seEntero" id="seEntero">
@@ -205,14 +214,14 @@ error_reporting(0);
                 <h2>CATEGORIA: Capacitaci&oacuten</h2>
                 <h4>Se eval&uacutea el nivel educativo alcanzado como as&iacute tambi&eacuten todos los cursos realizados
                 y participaci&oacuten en seminarios con tem&aacuteticas acordes al puesto de trabajo</h4>
-       <input type="checkbox" name="categoria" value="Capacitacion" style="visibility: hidden;" checked>
+
 <!--Empiezan las preguntas abiertas -->
 <p>&nbsp;</p>
 <table>
 	<tr>
 		<td align="left" valign="top"><span id="obser1">
-			<p><label align="left">DESCRIPCI&OacuteN DEL PUESTO*</label></p>
-        <p><textarea name="obser1" id="obser1" cols="120" rows="11" placeholder="Escriba aqu&iacute" ></textarea></p>
+			<label align="left">DESCRIPCI&OacuteN DEL PUESTO</label>
+        <textarea name="obser1" id="obser1" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
         </span>
 		</td>
 	</tr>
@@ -221,9 +230,9 @@ error_reporting(0);
 	</tr>
 	<tr>
 		<td align="left" valign="top"><span id="obser2">
-			<p><label align="left">Detalle los cursos, licenciaturas, posgrados o diplomaturas que ha tomado. Pude incluir cursos cortos.</label></p><br>
-      <p><label align="left">Estudios terciarios y/o universitarios*</label></p>
-        <p><textarea name="obser2" id="obser2" cols="120" rows="11" placeholder="Escriba aqu&iacute" ></textarea></p>
+			<label align="left">Detalle los cursos, licenciaturas, posgrados o diplomaturas que ha tomado. Pude incluir cursos cortos.</label><br>
+      <label align="left">Estudios terciarios y/o universitarios</label>
+        <textarea name="obser2" id="obser2" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
         </span>
 		</td>
 	</tr>
@@ -232,8 +241,8 @@ error_reporting(0);
 	</tr>
 	<tr>
 		<td align="left" valign="top"><span id="obser3">
-			<p><label align="left">¿C&oacutemo constribuye su nivel acad&eacutemico a su desempe&ntildeo laboral?*</label></p>
-        <p><textarea name="obser3" id="obser3" cols="120" rows="11" placeholder="Escriba aqu&iacute" ></textarea></p>
+			<label align="left">¿C&oacutemo constribuye su nivel acad&eacutemico a su desempe&ntildeo laboral?</label>
+        <textarea name="obser3" id="obser3" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
         </span>
 		</td>
 	</tr>
@@ -242,8 +251,8 @@ error_reporting(0);
 	</tr>
 	<tr>
 		<td align="left" valign="top"><span id="obser4">
-			<p><label align="left">Cursos y seminarios*</label></p>
-        <p><textarea name="obser4" id="obser4" cols="120" rows="11" placeholder="Detalle aqu&iacute el nombre de la institución, el nombre del curso y su duración. Si son varios, repita el procedimiento."></textarea></p>
+			<label align="left">Cursos y seminarios</label>
+        <textarea name="obser4" id="obser4" cols="120" rows="11" placeholder="Detalle aqu&iacute el nombre de la instituci&oacuten, el nombre del curso y su duraci&oacuten. Si son varios, repita el procedimiento."></textarea>
         </span>
 		</td>
 	</tr>
@@ -252,8 +261,8 @@ error_reporting(0);
 	</tr>
 	<tr>
 		<td align="left" valign="top"><span id="obser5">
-			<p><label align="left">¿C&oacutemo contribuy&oacute la capacitaci&oacuten en su puesto de trabajo?*</label></p>
-        <p><textarea name="obser5" id="obser5" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea></p>
+			<label align="left">¿C&oacutemo contribuy&oacute la capacitaci&oacuten en su puesto de trabajo?</label>
+        <textarea name="obser5" id="obser5" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
         </span>
 		</td>
 	</tr>
@@ -262,8 +271,8 @@ error_reporting(0);
 	</tr>
 	<tr>
 		<td align="left" valign="top"><span id="obser6">
-			<p><label align="left">¿Comparte los conocimientos adquiridos con sus compa&ntildeeros de trabajo?*</label></p>
-        <p><textarea name="obser6" id="obser6" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea></p>
+			<label align="left">¿Comparte los conocimientos adquiridos con sus compa&ntildeeros de trabajo?</label>
+        <textarea name="obser6" id="obser6" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
         </span>
 		</td>
 	</tr>
@@ -272,8 +281,8 @@ error_reporting(0);
 	</tr>
 	<tr>
 		<td align="left" valign="top"><span id="obser7">
-			<p><label align="left">¿En qu&eacute otras tem&aacuteticas que aporten a su puesto de trabajo le gustar&iacutea capacitarse?*</label></p>
-        <p><textarea name="obser7" id="obser7" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea></p>
+			<label align="left">¿En qu&eacute otras tem&aacuteticas que aporten a su puesto de trabajo le gustar&iacutea capacitarse?</label>
+        <textarea name="obser7" id="obser7" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
         </span>
 		</td>
 	</tr>
@@ -282,8 +291,8 @@ error_reporting(0);
 	</tr>
 	<tr>
 		<td align="left" valign="top"><span id="obser8">
-			<p><label align="left">¿Por qu&eacute se est&aacute postulando al premio?¿Por qu&eacute se postula en esta categor&iacutea?*</label></p>
-        <p><textarea name="obser8" id="obser8" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea></p>
+			<label align="left">¿Por qu&eacute se est&aacute postulando al premio?¿Por qu&eacute se postula en esta categor&iacutea?</label>
+        <textarea name="obser8" id="obser8" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
         </span>
 		</td>
 	</tr>
@@ -292,8 +301,8 @@ error_reporting(0);
 	</tr>
 	<tr>
 		<td align="left" valign="top"><span id="obser9">
-			<p><label align="left">¿Qu&eacute otras categor&iacuteas adem&aacutes de las actuales cree que merecen reconocimiento?</label></p>
-        <p><textarea name="obser9" id="obser9" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea></p>
+			<label align="left">¿Qu&eacute otras categor&iacuteas adem&aacutes de las actuales cree que merecen reconocimiento?</label>
+        <textarea name="descrip" id="descrip" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
         </span>
 		</td>
 	</tr>
@@ -302,8 +311,8 @@ error_reporting(0);
 	</tr>
 	<tr>
 		<td align="left" valign="top"><span id="obser10">
-			<p><label align="left">Sugerencias</label></label></p>
-        <p><textarea name="obser10" id="obser10" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea></p>
+			<label align="left">Sugerencias</label></label>
+        <textarea name="obser10" id="obser10" cols="120" rows="11" placeholder="Escriba aqu&iacute"></textarea>
         </span>
 		</td>
 	</tr>
@@ -319,7 +328,7 @@ error_reporting(0);
                           <th height="26" align="left" scope="row">&nbsp;</th>
                           <th height="26" scope="row">&nbsp;</th>
                           <th scope="row"><a href="index.php">Volver a Ingresar Datos</a></th>
-                          <td colspan="2" align="center"><input type="button" name="button2" id="button2" value="Confirmar la Votacion" /></td>
+                          <td colspan="2" align="center"><input type="submit" name="button2" id="button2" value="Confirmar la Votacion" /></td>
                           <td>&nbsp;</td>
                           </tr>
                         </table>
@@ -334,22 +343,6 @@ error_reporting(0);
     </form></th>
   </tr>
 </table>
-<div class="modal fade" tabindex="-1" role="dialog" id="msgerror">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Error!</h4>
-      </div>
-      <div class="modal-body">
-        <p>Hay campos requeridos sin rellenar!</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
 <script type="text/javascript">
 var sprytextfield1 = new Spry.Widget.ValidationTextField("telvot", "none", {minChars:7, maxChars:12});
 var sprytextfield2 = new Spry.Widget.ValidationTextField("telef", "none", {minChars:7, maxChars:12});
@@ -366,9 +359,5 @@ var spryradio13 = new Spry.Widget.ValidationRadio("spryradio13");
 var spryradio15 = new Spry.Widget.ValidationRadio("spryradio15");
 var spryradio17 = new Spry.Widget.ValidationRadio("spryradio17");
 </script>
-<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/validation.js"></script>
-
 </body>
 </html>

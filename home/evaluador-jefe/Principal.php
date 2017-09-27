@@ -658,7 +658,7 @@ if(($evaluado=="Si") || ($dni=="")){
         <?php
         conectar();
         	mysql_query("SET NAMES 'utf8'");
-        	$resul = mysql_query("SELECT categoria FROM voto WHERE dnipostul=$dni");
+        	$resul = mysql_query("SELECT categoria FROM votos WHERE dnipostul=$dni");
         desconectar();
         $fila = mysql_fetch_array($resul);
         $jurisdiccion = $fila[0];
@@ -679,7 +679,7 @@ if(($evaluado=="Si") || ($dni=="")){
           <?php
         }
 
-        if ($jurisdiccion == ' ') {
+        if ($jurisdiccion == 'Capacitacion') {
            ?>
            <tr>
              <td>¿El agente aplica en el ámbito laboral los conocimientos adquiridos a través de las jornadas de capacitación?</td>
