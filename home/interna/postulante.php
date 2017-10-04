@@ -97,13 +97,14 @@ $dnivotante=$_REQUEST['dni'];
   </nav>
 
 <div class="container">
-  <h3>PODES VOTAR A UN COMPAÑERO POR CATEGORÍA</h3>
+  <h3 class="book">PODES VOTAR A UN COMPAÑERO POR CATEGORÍA</h3>
   <div class="container form-group well">
     <form class="" action="guarda.php" method="post">
+
       <div class="container"><!--Colaboracion-->
         <div class="row text-center">
           <div class="col-md-12 col-xs-12">
-            <h1><span class="label label-primary">COLABORACI&OacuteN EN PROYECTOS SOCIALES</span></h1>
+            <h3><span class="label label-primary">COLABORACI&OacuteN EN PROYECTOS SOCIALES</span></h3>
           </div>
         </div>
         <?php
@@ -111,24 +112,21 @@ $dnivotante=$_REQUEST['dni'];
       	mysql_query("SET NAMES 'utf8'");
       	$resulta = mysql_query("SELECT NomyApePos FROM votos WHERE categoria='Colaboracion' AND juris='$jurpost[0]'");
       	cerrarBase();
-
         $fila = mysql_fetch_row($resulta);
         if ($fila[0] != "") {
-          foreach ($fila as $value) {
             ?>
             <div class="row text-center">
               <div class="col-md-12 col-xs-12">
-                <input type="radio" name="nomvotado" value="<?php $value ?>">
-                <h3><span class="label label-success"><?php echo $value ?></span></h3>
+                <h1><input type="radio" name="nomvotado" value="<?php echo $fila[0] ?>">
+                <span class="label label-success"><?php echo $fila[0] ?></span></h1>
               </div>
             </div>
           <?php
-          }
         }else {
           ?>
           <div class="row text-center">
             <div class="col-md-12 col-xs-12">
-              <h3><span class="label label-default">Nadie de esta Jurisdicción se postuló en esta categoría</span></h3>
+              <h1><span class="label label-default">Nadie de esta Jurisdicción se postuló en esta categoría</span></h>
             </div>
           </div>
           <?php
@@ -139,7 +137,7 @@ $dnivotante=$_REQUEST['dni'];
       <div class="container"><!--Capacitacion-->
         <div class="row text-center">
           <div class="col-md-12 col-xs-12">
-            <h1><span class="label label-primary">CAPACITACI&OacuteN</span></h1>
+            <h3><span class="label label-primary">CAPACITACI&OacuteN</span></h3>
           </div>
         </div>
         <?php
@@ -149,21 +147,19 @@ $dnivotante=$_REQUEST['dni'];
         cerrarBase();
         $fila = mysql_fetch_row($resulta);
         if ($fila[0] != "") {
-          foreach ($fila as $value) {
             ?>
             <div class="row text-center">
               <div class="col-md-12 col-xs-12">
-                <input type="radio" name="nomvotado" value="<?php $value ?>">
-                <h3><span class="label label-success"><?php echo $value ?></span></h3>
+                <h1><input type="radio" name="nomvotado" value="<?php echo $fila[0] ?>">
+                <span class="label label-success"><?php echo $fila[0] ?></span></h1>
               </div>
             </div>
           <?php
-          }
         }else {
           ?>
           <div class="row text-center">
             <div class="col-md-12 col-xs-12">
-              <h3><span class="label label-default">Nadie de esta Jurisdicción se postuló en esta categoría</span></h3>
+              <h1><span class="label label-default">Nadie de esta Jurisdicción se postuló en esta categoría</span></h1>
             </div>
           </div>
           <?php
@@ -174,7 +170,7 @@ $dnivotante=$_REQUEST['dni'];
       <div class="container"><!--Proyectos-->
         <div class="row text-center">
           <div class="col-md-12 col-xs-12">
-            <h1><span class="label label-primary">PROYECTOS ESPECIALES - TRANSVERSALES</span></h1>
+            <h3><span class="label label-primary">PROYECTOS ESPECIALES - TRANSVERSALES</span></h3>
           </div>
         </div>
         <?php
@@ -184,21 +180,19 @@ $dnivotante=$_REQUEST['dni'];
         cerrarBase();
         $fila = mysql_fetch_row($resulta);
         if ($fila[0] != "") {
-          foreach ($fila as $value) {
             ?>
             <div class="row text-center">
               <div class="col-md-12 col-xs-12">
-                <input type="radio" name="nomvotado" value="<?php $value ?>">
-                <h3><span class="label label-success"><?php echo $value ?></span></h3>
+                <h1><input type="radio" name="nomvotado" value="<?php echo $fila[0] ?>">
+                <span class="label label-success"><?php echo $fila[0] ?></span></h1>
               </div>
             </div>
           <?php
-          }
         }else {
           ?>
           <div class="row text-center">
             <div class="col-md-12 col-xs-12">
-              <h3><span class="label label-default">Nadie de esta Jurisdicción se postuló en esta categoría</span></h3>
+              <h1><span class="label label-default">Nadie de esta Jurisdicción se postuló en esta categoría</span></h1>
             </div>
           </div>
           <?php
@@ -209,7 +203,7 @@ $dnivotante=$_REQUEST['dni'];
       <div class="container"><!--Innovacion-->
         <div class="row text-center">
           <div class="col-md-12 col-xs-12">
-            <h1><span class="label label-primary">INNOVACI&OacuteN EN EL PUESTO DE TRABAJO</span></h1>
+            <h3><span class="label label-primary">INNOVACI&OacuteN EN EL PUESTO DE TRABAJO</span></h3>
           </div>
         </div>
         <?php
@@ -218,34 +212,32 @@ $dnivotante=$_REQUEST['dni'];
         $resulta = mysql_query("SELECT NomyApePos FROM votos WHERE categoria='Innovacion' AND juris='$jurpost[0]'");
         cerrarBase();
         $fila = mysql_fetch_row($resulta);
-        if ($fila[0] != " ") {
-          foreach ($fila as $value) {
+        if ($fila[0] != "") {
             ?>
             <div class="row text-center">
               <div class="col-md-12 col-xs-12">
-                <input type="radio" name="nomvotado" value="<?php $value ?>">
-                <h3><span class="label label-success"><?php echo $value ?></span></h3>
+                <h1><input type="radio" name="nomvotado" value="<?php echo $fila[0] ?>">
+                <span class="label label-success"><?php echo $fila[0] ?></span></h1>
               </div>
             </div>
           <?php
-          }
         }else {
           ?>
           <div class="row text-center">
             <div class="col-md-12 col-xs-12">
-              <h3><span class="label label-default">Nadie de esta Jurisdicción se postuló en esta categoría</span></h3>
+              <h1><span class="label label-default">Nadie de esta Jurisdicción se postuló en esta categoría</span></h1>
             </div>
           </div>
           <?php
         }
         ?>
       </div><!--Fin Innovacion-->
-      
+
       <div class="container">
         <div class="row text-center">
           <div class="col-md-12 col-xs-12">
-            <input type="checkbox" name="dnivotante" value="<?php $dnivotante ?>" style="visibility: hidden;" checked>
-            <span class="glyphicon glyphicon-align-left" aria-hidden="true"><input type="submit" name="Confirmar"> </span>
+            <input type="checkbox" name="dnivotante" value="<?php echo $dnivotante ?>" style="visibility: hidden;" checked>
+            <input class="btn btn-success" type="submit" name="Confirmar" value="Confirmar">
           </div>
         </div>
       </div>

@@ -404,7 +404,19 @@ header.main .header-right {
 	z-index: 200;
 }
 
+.boton-voto-int {
+	position: fixed;
+	right: 0px;
+	top: 265px;
+	z-index: 200;
+}
+
 .boton-voto img {
+	width: 90px;
+	height: auto;
+}
+
+.boton-voto-int img {
 	width: 90px;
 	height: auto;
 }
@@ -568,8 +580,17 @@ header.main .header-right {
 		height: auto;
 	}
 
-  .boton-voto {
+  	.boton-voto {
 		top: 164px;
+	}
+
+	.boton-voto-int img {
+		width: 150px;
+		height: auto;
+	}
+
+	.boton-voto-int {
+		top: 315px;
 	}
 
 	.va-bottom-middle {
