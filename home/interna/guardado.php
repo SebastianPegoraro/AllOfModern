@@ -38,8 +38,8 @@
       <div class="header-middle">
         <div class="dt title-container">
           <div class="dtc va-middle">
-            <h1 class="header-title-premio">
-							Empleado P&uacuteblico del a&ntildeo <span class="anio">2017</span>
+            <h1 class="header-title-premio medium">
+							Empleado P&uacuteblico del a&ntildeo <span class="anio regular">2017</span>
 						</h1>
           </div>
           <div class="dtc va-middle text-right">
@@ -87,15 +87,11 @@
   </nav>
 
 
-	<div class="container">
-		<div class="col-sm-8 col-sm-offset-2">
-      <form class="well">
-        <h2>
-  				VOTO GUARDADO CORRECTAMENTE<br>
-  				<small>MUCHAS GRACIAS POR PARTICIPAR EN LA VOTACI&OacuteN!</small>
-  			</h2>
-      </form>
-
+  <div class="container">
+		<div class="row">
+			<div class="col-sm-12 text-center contacto">
+				<img src="images/GUARDADO-INT.png" alt="">
+			</div>
 		</div>
 	</div>
 

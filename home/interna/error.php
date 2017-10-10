@@ -85,30 +85,19 @@
 
 
 	<div class="container">
-		<div class="row">
-			<div class="col-sm-12">
-				<h2>
-					ERROR<br>
-				</h2>
-				<form id="form1" name="form1" method="post" action="consulta.php" class="form-horizontal well">
-          <h4>Si está experimentando inconvenientes, no dude en contactarnos.</h4>
-            <div class="contacto">
-                <img src="images/CONTACTO-01.png" alt="">
-            </div>
-
-
-    <tr>
-    <th colspan="2" align="center" valign="middle" bgcolor="#FFFFFF" scope="row"><h2><a href="index.php"><br />
-      Volver a Ingresar Datos</a><br />
-    </h2></th>
-  </tr>
-</table>
-<h1>&nbsp;</h1>
-				</form>
+    <div class="row text-center votos-img">
+      <div class="rocol-md-12 col-xs-12">
+        <img src="images/ERROR-HEAD.png" alt="">
+      </div>
+    </div>
+		<div class="row text-center interna">
+			<div class="col-md-12 col-xs-12 contacto">
+        <img src="images/ERROR-INT.png" alt="">
+        <h3><input class="voto-submit book" type="button" onclick="window.location='./index.html'" value="VOLVER"></h3>
 			</div>
 		</div>
-
 	</div>
+
 </body>
 
 <!-- Footer -->

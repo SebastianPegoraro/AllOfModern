@@ -64,6 +64,24 @@
     font-style: normal;
 }
 
+/*Fuente Bold*/
+@font-face {
+	font-family: 'Geomanist_Bold';
+	src: url('../fonts/geomanist/Geomanist-Bold.eot');
+	src: url('../fonts/geomanist/Geomanist-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/geomanist/Geomanist-Bold.woff2') format('woff2'),
+		url('../fonts/geomanist/Geomanist-Bold.woff') format('woff'),
+		url('../fonts/geomanist/Geomanist-Bold.ttf') format('truetype'),
+		url('../fonts/geomanist/Geomanist-Bold.svg#Geomanist-Bold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.bold {
+    font-family: 'Geomanist_Bold';
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*Para quitar la sombra del carousel de bootstrap*/
 .carousel-control.left, .carousel-control.right {
    background-image:none !important;
@@ -505,6 +523,14 @@ header.main .header-right {
     max-width: 30%;
     height: auto;
   }
+	.interna{
+		border-radius: 0.5%;
+		margin-top: -15px;
+	}
+	.voto-submit {
+		width: 100px;
+		padding: 10px;
+	}
 }
 
 @media only screen and (min-width: 768px) {
@@ -544,7 +570,7 @@ header.main .header-right {
         margin: 0 auto;
         display: table;
         table-layout: fixed;
-    }
+  }
 
     .footer-container .left {
 		text-align: left;
@@ -566,6 +592,14 @@ header.main .header-right {
 	.va-bottom-middle {
 		vertical-align: middle;
 	}
+	.interna{
+		border-radius: 0.5%;
+		margin-top: -15px;
+	}
+	.voto-submit {
+		width: 100px;
+		padding: 10px;
+	}
 }
 
 /* LOGOS GOBIERNO */
@@ -573,6 +607,14 @@ header.main .header-right {
 	img.logo-footer.largo{
 		width:280px;
 		height:auto;
+	}
+	.interna{
+		border-radius: 0.5%;
+		margin-top: -15px;
+	}
+	.voto-submit {
+		width: 100px;
+		padding: 10px;
 	}
 }
 
@@ -583,6 +625,10 @@ header.main .header-right {
 	}
 	.footer-container {
 		padding: 1em 0;
+	}
+	.voto-submit {
+		width: 100px;
+		padding: 10px;
 	}
 }
 
@@ -707,6 +753,10 @@ h1{
  font-size: 20px;
 }
 
+h2 {
+	font-size: 15px;
+}
+
 h3{
  font-size: 10px;
 }
@@ -715,6 +765,9 @@ h3{
   h1 {
       font-size: 36px; /* Lower the max-height for smaller devices */
   }
+	h2 {
+		font-size: 30px;
+	}
   h3 {
       font-size: 24px; /* Lower the max-height for smaller devices */
   }
@@ -724,12 +777,23 @@ h3{
   .boton-olim input{
     max-width: 30%;
   }
+	.interna{
+		border-radius: 0.5%;
+		margin-top: -15px;
+	}
+	.voto-submit {
+		width: 100px;
+		padding: 10px;
+	}
 }
 
 @media (min-width: 768px) {
   h1 {
     font-size: 36px; /* Lower the max-height for smaller devices */
   }
+	h2 {
+		font-size: 30px;
+	}
   h3 {
     font-size: 24px; /* Lower the max-height for smaller devices */
   }
@@ -743,4 +807,49 @@ h3{
     max-width: 18%;
     height: auto;
   }
+	.interna{
+		border-radius: 0.5%;
+		margin-top: -15px;
+	}
+	.voto-submit {
+		width: 100px;
+		padding: 10px;
+	}
+}
+
+.interna {
+  background-color: rgba(40, 153, 153, 0.8);
+  border-radius: 1.3%;
+	margin-top: -15px;
+}
+
+.white {
+  color: white;
+	text-shadow: 1px 1px 3px #000000;
+}
+
+.voto-submit {
+ width: 300px;
+ display: block;
+ height: auto;
+ padding: 15px;
+ color:#fff;
+ background:#8EC046;
+ border:none;
+ outline: none;
+ -webkit-transition: all 0.3s;
+ -moz-transition: all 0.3s;
+ transition: all 0.3s;
+ margin:auto;
+ box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+ -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+ -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+ text-shadow: 1px 1px 3px #000000;
+ box-shadow: 0px 5px 10px rgba(0,0,0, 0.9);
+}
+
+.votos-img img{
+	position: relative;
+	width: 100%;
+  height: auto;
 }
