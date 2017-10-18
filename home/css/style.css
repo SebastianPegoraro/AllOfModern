@@ -851,3 +851,23 @@ h3{
   color: white;
 	text-shadow: 1px 1px 3px #000000;
 }
+
+.descarga-btn {
+ width: 150%;
+ display: block;
+ height: auto;
+ padding: 15px;
+ color:#fff;
+ background: rgb(0, 31, 109);
+ border:none;
+ outline: none;
+ -webkit-transition: all 0.3s;
+ -moz-transition: all 0.3s;
+ transition: all 0.3s;
+ margin:auto;
+ box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+ -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+ -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+ text-shadow: 1px 1px 3px #000000;
+ box-shadow: 0px 5px 10px rgba(0,0,0, 0.9);
+}

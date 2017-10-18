@@ -128,7 +128,7 @@ include("conect.php");
 
     <div class="row">
       <div class="col-md-3 col-xs-3 contacto">
-        <img src="http://data.whicdn.com/images/209120463/original.gif" alt="Loading" title="Loading" />
+        <img src="images/acto-dni.gif" alt="Loading"/>
       </div>
       <div class="col-md-9 col-xs-9 acto text-center">
         <br>
@@ -150,7 +150,7 @@ include("conect.php");
           ?>
           <div class="row">
             <div class="col-md-3 col-xs-3 contacto">
-              <img src="" alt="">
+              <img src="images/acto-error.gif" alt="">
             </div>
             <div class="col-md-9 col-xs-9 acto text-center">
               <br>
@@ -164,34 +164,17 @@ include("conect.php");
           </div>
           <?php
         } else {
-          $dniagasajado = $_GET('dniagasajado');
+          $dniagasajado = $_REQUEST['dniagasajado'];
           abrirBase();
         	mysql_query("SET NAMES 'utf8'");
         	$result = mysql_query("SELECT * FROM agasajados WHERE dni=$dniagasajado");
         	cerrarBase();
         	$row = mysql_fetch_array($result);
-          if ($row == "") {
+          if ($row != "") {
           ?>
             <div class="row">
               <div class="col-md-3 col-xs-3 contacto">
-                <img src="" alt="">
-              </div>
-              <div class="col-md-9 col-xs-9 acto text-center">
-                <br>
-                <h1 class="ingdni bold">ERROR!</h1>
-                <br>
-                <br>
-                <h2 class="bold white">Lo sentimos, usted no es uno de los agasajados por el Día del Empleado Público</h2>
-                <br>
-                <br>
-              </div>
-            </div>
-          <?php
-          } else {
-          ?>
-            <div class="row">
-              <div class="col-md-3 col-xs-3 contacto">
-                <img src="http://img30.laughinggif.com/pic/HTTP2RhdGEud2hpY2RuLmNvbS9pbWFnZXMvMTkxOTExNzcyL2xhcmdlLmdpZgloglog.gif" alt="Loading" title="Loading" />
+                <img src="images/acto-descarga.gif" alt="Loading"/>
               </div>
               <div class="col-md-9 col-xs-9 acto text-center">
                 <br>
@@ -200,6 +183,9 @@ include("conect.php");
                 <div class="row">
                   <div class="col-md-2 col-xs-2 col-md-offset-5 col-xs-offset-5">
                     <img src="images/pdf.png" alt="">
+                  </div>
+                  <div class="col-md-3 col-xs-3 col-md-offset-4 col-xs-offset-4">
+                    <h3><input class="descarga-btn book" data-toggle="modal" data-target="#myModal" type="submit" name="Confirmar" value="DESCARGAR"></h3>
                   </div>
                 </div>
                 <br>
@@ -210,12 +196,51 @@ include("conect.php");
               </div>
             </div>
           <?php
+          } else {
+          ?>
+          <div class="row">
+            <div class="col-md-3 col-xs-3 contacto">
+              <img src="images/acto-error.gif" alt="">
+            </div>
+            <div class="col-md-9 col-xs-9 acto text-center">
+              <br>
+              <h1 class="ingdni bold">ERROR!</h1>
+              <br>
+              <br>
+              <h2 class="bold white">Lo sentimos, usted no es uno de los agasajados por el Día del Empleado Público</h2>
+              <br>
+              <br>
+            </div>
+          </div>
+          <?php
           }
         }
       }
     ?>
 
   </div>
+
+  <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Ingrese su número de celular...</h4>
+        </div>
+        <div class="modal-body">
+          <p>Es importante facilitar un número válido, ya que desde la organización se contactarán para informar detalles en relación al encuentro. </p>
+          <form class="form-group" action="guarda.php" method="post">
+            <input class="form-control" type="text" placeholder="362 455-5555" name="telefono">
+            <input type="hidden" name="dni" value="<?php echo $dniagasajado; ?>">
+            <input type="submit" name="boton" id="boton" class="form-btn" value="Confirmar Celular">
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
 
   <!-- Footer -->
   <div class="footer-container">
@@ -242,6 +267,7 @@ include("conect.php");
   <script type="text/javascript" src="js/slick.min.js"></script>
   <script type="text/javascript" src="js/slide.js"></script>
   <script src="less.js" type="text/javascript"></script>
+  <script type="text/javascript" src="js/validation.js"></script>
 
 </body>
 
