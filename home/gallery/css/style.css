@@ -9071,3 +9071,8 @@ h3{
     height: auto;
   }
 }
+
+.boton input {
+	width: 100%;
+	height: auto;
+}
