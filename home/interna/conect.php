@@ -1,7 +1,7 @@
 <?php
 function abrirBase()
 {
-	mysql_connect("localhost", "root", "root*root");
+	mysql_connect("localhost", "root", "");
 	mysql_select_db("empleado_publico2017");
 }
 
